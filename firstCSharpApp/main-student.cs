@@ -27,7 +27,7 @@ namespace firstCSharpApp
         //logout
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
             frmLogin formLogin = new frmLogin();
             formLogin.Show();
         }
