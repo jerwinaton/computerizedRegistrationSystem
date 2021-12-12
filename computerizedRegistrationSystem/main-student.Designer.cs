@@ -1,6 +1,6 @@
 ﻿namespace firstCSharpApp
 {
-    partial class frmHome
+    partial class frmMainStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -185,14 +185,14 @@
             this.panelContainer.Size = new System.Drawing.Size(729, 555);
             this.panelContainer.TabIndex = 1;
             // 
-            // frmHome
+            // frmMainStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 555);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
-            this.Name = "frmHome";
+            this.Name = "frmMainStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UDM Portal | Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHome_FormClosing);

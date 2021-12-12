@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace firstCSharpApp
 {
-    public partial class frmHome : Form
+    public partial class frmMainStudent : Form
     {
-        public frmHome()
+        public frmMainStudent()
         {
             InitializeComponent();
             //set the home user control as default page

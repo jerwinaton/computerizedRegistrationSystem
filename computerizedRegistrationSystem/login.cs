@@ -58,6 +58,7 @@ namespace firstCSharpApp
                     OleDbCommand command = new OleDbCommand();//create command
                     command.Connection = Program.connection;//give command the connection string
 
+                    string who; //variable which will be used to identify which user is loggin in
 
                     //to know if the user is an admin, or a teacher, or a student
                     //based on their username
@@ -65,16 +66,19 @@ namespace firstCSharpApp
                     //if it is an admin, search in the adminAccounts table
                     if (enteredUsername.Contains("admin"))
                     {
+                        who = "admin";
                       command.CommandText = "select * from adminAccounts where username='" + enteredUsername + "' and password='" + enteredPassword + "' ";
                     }
                     //if it is a teacher, search in the teacherAccounts table
                     else if (enteredUsername.Contains("teacher"))
                     {
+                        who = "teacher";
                         //code
                     }
                     //else search in the studentsAccounts table
                     else
                     {
+                        who = "student";
                         //code
                     }
 
@@ -98,9 +102,26 @@ namespace firstCSharpApp
                         //username and password was found in the database
                         //login
                         frmLogin formLogin = new frmLogin();
-                        frmHome formHome = new frmHome();
-                        Hide();
-                        formHome.Show();
+                        frmMainAdmin formAdmin = new frmMainAdmin();
+                        frmMainStudent formStudent = new frmMainStudent();
+                        //frmMainTeacher formTeacher = new frmMainTeacher();
+
+                        Hide();//hide this form
+
+                        //decide what form to open based on who is logging in
+                        if (who == "admin")
+                        {
+                          formAdmin.Show();
+                        }
+                        else if (who == "teacher")
+                        {
+                           // frmMainTeacher.Show();
+                        }
+                        else
+                        {
+                            formStudent.Show();
+                        }
+                     
                         Program.connection.Close(); //close the connection
                     }
                     else
