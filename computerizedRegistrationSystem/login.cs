@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace firstCSharpApp
+namespace computerizedRegistrationSystem
 {
     public partial class frmLogin : Form
     {

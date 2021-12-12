@@ -1,4 +1,4 @@
-﻿namespace firstCSharpApp
+﻿namespace computerizedRegistrationSystem
 {
     partial class frmMainAdmin
     {
@@ -170,7 +170,7 @@
             // 
             // pictureBoxUserImage
             // 
-            this.pictureBoxUserImage.BackgroundImage = global::firstCSharpApp.Properties.Resources.udm_logo1;
+            this.pictureBoxUserImage.BackgroundImage = global::computerizedRegistrationSystem.Properties.Resources.udm_logo1;
             this.pictureBoxUserImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxUserImage.Location = new System.Drawing.Point(38, 9);
             this.pictureBoxUserImage.Name = "pictureBoxUserImage";

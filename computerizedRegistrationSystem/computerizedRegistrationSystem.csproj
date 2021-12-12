@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AF3DE12A-7CE3-423E-9156-04DE5EEA4D8A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>firstCSharpApp</RootNamespace>
-    <AssemblyName>firstCSharpApp</AssemblyName>
+    <RootNamespace>computerizedRegistrationSystem</RootNamespace>
+    <AssemblyName>Computerized Registration System - UDM</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,7 +52,8 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>firstCSharpApp.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">

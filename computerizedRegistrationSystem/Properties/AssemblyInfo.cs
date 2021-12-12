@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("firstCSharpApp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("UDM Student Portal | CRS")]
+[assembly: AssemblyDescription("UDM Student Portal | Computerized Registration System")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("firstCSharpApp")]
+[assembly: AssemblyProduct("UDM Student Portal | CRS")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

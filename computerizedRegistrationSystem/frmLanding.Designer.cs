@@ -1,4 +1,4 @@
-﻿namespace firstCSharpApp
+﻿namespace computerizedRegistrationSystem
 {
     partial class frmLanding
     {

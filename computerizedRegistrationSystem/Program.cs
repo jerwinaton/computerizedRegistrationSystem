@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Data.OleDb; //for connection of database
 using System.Configuration; //so we can use the connection string we set on app.config
 
-namespace firstCSharpApp
+namespace computerizedRegistrationSystem
 
 {
     static class Program

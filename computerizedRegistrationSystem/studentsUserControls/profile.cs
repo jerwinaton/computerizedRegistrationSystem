@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace firstCSharpApp
+namespace computerizedRegistrationSystem
 {
     public partial class profile : UserControl
     {
