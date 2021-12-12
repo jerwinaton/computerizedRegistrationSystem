@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace firstCSharpApp
 {
@@ -20,59 +21,120 @@ namespace firstCSharpApp
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            try
-            { 
-                Program.connection.Open(); //open database connection which was defined in
-                                            //the program.cs line 18 as a global variable
-                MessageBox.Show("connected");
-                Program.connection.Close(); //close the connection
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Error" + error);
-            }
+           
          }
         
         //login button clicked
         private void button1_Click(object sender, EventArgs e)
         {
-            //set username and password for example
-            string username = "20-22-0859";
-            string password = "default";
             //get value of username and password textboxes
             string enteredUsername = textBoxUserName.Text;
             string enteredPassword = textBoxPassword.Text;
 
-            //if username or password is incorrent, open a msgbox and don't login
-            if(username != enteredUsername || password != enteredPassword)
-            {
-                string message = "Username or Password was not found in the Database";
-                string title = "Error";
-                MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Retry)
-                {
-                    textBoxUserName.Text = "";
-                    textBoxPassword.Text = "";
-                }
-                else
-                {
-                //do nothing
-                }
-
-            }
-            //if username or password is correct, procced to homepage
-            else if (username == enteredUsername && password == enteredPassword)
-            {
-                frmLogin formLogin = new frmLogin();
-                frmHome formHome = new frmHome();
-                Hide();
-                formHome.Show();
-            }
         
-            
+            if (enteredUsername == "")//check if empty
+            {
+                string message = "Please enter your username.";
+                string title = "Login Failed";
+                MessageBox.Show(message, title);
+                textBoxUserName.Select(); //focus on username textbox
+            }
+            else if (enteredPassword == "")//check if empty
+            {
+                string message = "Please enter your password.";
+                string title = "Login Failed";
+                MessageBox.Show(message, title);
+                textBoxPassword.Select(); //focus on password textbox
+            }
+            else //if username and password is not empty then proceed
+            {
+          
+                try
+                {
+                    //open database connection which was defined in
+                    //the program.cs line 18 as a global variable
+                    Program.connection.Open();
 
-        }
+                    OleDbCommand command = new OleDbCommand();//create command
+                    command.Connection = Program.connection;//give command the connection string
+
+
+                    //to know if the user is an admin, or a teacher, or a student
+                    //based on their username
+
+                    //if it is an admin, search in the adminAccounts table
+                    if (enteredUsername.Contains("admin"))
+                    {
+                      command.CommandText = "select * from adminAccounts where username='" + enteredUsername + "' and password='" + enteredPassword + "' ";
+                    }
+                    //if it is a teacher, search in the teacherAccounts table
+                    else if (enteredUsername.Contains("teacher"))
+                    {
+                        //code
+                    }
+                    //else search in the studentsAccounts table
+                    else
+                    {
+                        //code
+                    }
+
+                    //EXECUTE THE QUERY
+                    //AFTER THIS LINE THE commandText value could be selecting to adminAccounts Table,
+                    //or teacherAccounts Table, or studentsAccounts Table. 
+                    //It depends on the username
+
+                    //use executeReader for select queiries, ExecuteNonQuery for insert, update, delete 
+                    //read the data using this
+                    OleDbDataReader reader = command.ExecuteReader();
+                    int count = 0;
+
+                    while (reader.Read())//continue reading until finished reading all of the data
+                    {
+                        count = count + 1; //if found increment count
+                                           //count++
+                    }
+                    if (count == 1) //if found
+                    {
+                        //username and password was found in the database
+                        //login
+                        frmLogin formLogin = new frmLogin();
+                        frmHome formHome = new frmHome();
+                        Hide();
+                        formHome.Show();
+                        Program.connection.Close(); //close the connection
+                    }
+                    else
+                    {
+                        //username and password was NOT found in the database
+                        //if username or password is incorrent, open a msgbox and don't login
+                        string message = "Username or Password was not found in the Database";
+                        string title = "Login Failed";
+                        MessageBoxButtons buttons = MessageBoxButtons.RetryCancel;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Retry)
+                        {
+                            textBoxUserName.Text = "";
+                            textBoxPassword.Text = "";
+                            textBoxUserName.Select();
+                        }
+                        Program.connection.Close(); //close the connection
+                    }
+                    Program.connection.Close(); //close the connection
+                }
+                catch (Exception error) //show error 
+                {
+                    MessageBox.Show("Error " + error);
+                }
+
+            }//end of else (if username and password is not empty then proceed)
+
+
+        }//end of login button
+        
+
+
+        //other functions 
+
         //change forgot password color on Mouse Hover
         private void lnkForgotPassword_MouseHover(object sender, EventArgs e)
         {
@@ -119,7 +181,7 @@ namespace firstCSharpApp
                 button1_Click(sender, e);
                 }
         }
-
+        //back button
         private void iconButton1_Click(object sender, EventArgs e)
         {
             Hide();
