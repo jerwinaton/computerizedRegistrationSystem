@@ -86,6 +86,9 @@ namespace firstCSharpApp
             if ( result == DialogResult.No)
                 {
                 e.Cancel = true;
+            }else if (result == DialogResult.Yes)
+            {
+                Application.ExitThread();
             }
             
         }
@@ -104,6 +107,13 @@ namespace firstCSharpApp
                 {
                 button1_Click(sender, e);
                 }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            frmLanding formLanding = new frmLanding();
+            formLanding.Show();
         }
     }
 }
