@@ -29,7 +29,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -37,7 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,8 +52,7 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>firstCSharpApp.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -125,6 +124,12 @@
     <Compile Include="frmLanding.Designer.cs">
       <DependentUpon>frmLanding.cs</DependentUpon>
     </Compile>
+    <Compile Include="main-admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main-admin.Designer.cs">
+      <DependentUpon>main-admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +182,9 @@
     </Compile>
     <EmbeddedResource Include="frmLanding.resx">
       <DependentUpon>frmLanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main-admin.resx">
+      <DependentUpon>main-admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
@@ -259,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UUDMB2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="adminUserControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
