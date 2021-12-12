@@ -20,6 +20,17 @@ namespace firstCSharpApp
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            try
+            { 
+                Program.connection.Open(); //open database connection which was defined in
+                                            //the program.cs line 18 as a global variable
+                MessageBox.Show("connected");
+                Program.connection.Close(); //close the connection
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error" + error);
+            }
          }
         
         //login button clicked

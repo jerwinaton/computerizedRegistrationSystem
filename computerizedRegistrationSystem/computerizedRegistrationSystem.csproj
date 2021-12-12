@@ -215,8 +215,8 @@
     <EmbeddedResource Include="studentsUserControls\schedule.resx">
       <DependentUpon>schedule.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\fonts\Raleway-Italic.ttf" />
-    <None Include="bin\fonts\Raleway-Regular.ttf" />
+    <EmbeddedResource Include="bin\fonts\Raleway-Italic.ttf" />
+    <EmbeddedResource Include="bin\fonts\Raleway-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
