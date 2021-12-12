@@ -33,5 +33,13 @@ namespace computerizedRegistrationSystem
         {
 
         }
+        //admission button clicked
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide(); //hide this form
+            frmAdmission formAdmission = new frmAdmission();
+            //open admission form
+            formAdmission.Show();
+        }
     }
 }

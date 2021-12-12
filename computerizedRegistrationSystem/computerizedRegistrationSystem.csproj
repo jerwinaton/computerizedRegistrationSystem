@@ -119,6 +119,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminUserControls\UCaccounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UCaccounts.Designer.cs">
+      <DependentUpon>UCaccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admission.Designer.cs">
+      <DependentUpon>admission.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLanding.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +193,12 @@
     <Compile Include="studentsUserControls\schedule.Designer.cs">
       <DependentUpon>schedule.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminUserControls\UCaccounts.resx">
+      <DependentUpon>UCaccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admission.resx">
+      <DependentUpon>admission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLanding.resx">
       <DependentUpon>frmLanding.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,8 +287,6 @@
   <ItemGroup>
     <None Include="Resources\UUDMB2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="adminUserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

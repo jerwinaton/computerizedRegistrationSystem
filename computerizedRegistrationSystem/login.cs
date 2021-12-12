@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Drawing.Text;
 
 namespace computerizedRegistrationSystem
 {
@@ -21,7 +22,7 @@ namespace computerizedRegistrationSystem
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-           
+       
          }
         
         //login button clicked

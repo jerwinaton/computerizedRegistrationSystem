@@ -28,6 +28,7 @@ namespace computerizedRegistrationSystem
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLanding());
         }
+       
     }
 
 }
