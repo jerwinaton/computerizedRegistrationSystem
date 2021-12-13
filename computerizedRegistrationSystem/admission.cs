@@ -16,9 +16,7 @@ namespace computerizedRegistrationSystem
     {
         private bool TOR = false, diploma = false, picture=false; //declared in the class scope so other methods can use it
         private byte[] diplomaContent,TORContent;
-        public bool closedByShowTempAccountForm = false; // use this for the program to know if this form is being closed via another form
-                                                        //and if it is, then override the MessageBox confirmation on closing 
-
+        private frmLanding frmLanding = new frmLanding();
 
         public frmAdmission()
         {
@@ -104,9 +102,8 @@ namespace computerizedRegistrationSystem
             }
             else if (result == DialogResult.Yes)
             {
-                Hide();
-                frmLanding formLanding = new frmLanding();
-                formLanding.Show();
+                frmLanding.Show();
+                Close();
             }
 
         }
@@ -135,29 +132,12 @@ namespace computerizedRegistrationSystem
         //form closing confirm first thru messagebox
         private void frmAdmission_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!closedByShowTempAccountForm)//if not closed via another form
-            {
-                string message = "Are you sure you want to exit the application?";
-                string title = "Exit the program";
-                SendKeys.Send("{Tab}");
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                //if No is selected cancel form closing event
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
-                else if (result == DialogResult.Yes)
-                {
-                    Application.ExitThread();
-                }
-            }
-            else//if closed via ShowTempAccountForm 
-            {
-                Close();
-            }
         
+          
+            frmLanding.Show();
+           
+           
+
         }
         //validate the form
         private bool canProceed()
@@ -407,8 +387,7 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("diploma", OleDbType.Binary).Value = diplomaContent;  //insert to database as byte
                         command.Parameters.AddWithValue("tor_filename", OleDbType.VarChar).Value = lblUploadTOR.Text;
                         command.Parameters.AddWithValue("tor", OleDbType.Binary).Value = TORContent;  //insert to database as byte
-                        // command.Parameters.AddWithValue("username_temp", OleDbType.VarChar).Value = 
-                        // command.Parameters.AddWithValue("password_temp", OleDbType.VarChar).Value = 
+                     
                         command.Parameters.AddWithValue("date_applied", OleDbType.Date).Value = DateTime.Today;
                         //27 commands
                       
@@ -416,10 +395,10 @@ namespace computerizedRegistrationSystem
                         if (dataInserted > 0)
                         {
                             DialogResult okay = MessageBox.Show("The form was submitted successfully!");
-                            Program.connection.Close();
+                       
                             if (okay==DialogResult.OK)
                             {
-                                Program.connection.Open();
+                        
                                 //we will create a temporary username and password for the applicant
                                 //it must be in this format
                                 //username: applicant_[applicant_id] or applicant_2
@@ -441,6 +420,8 @@ namespace computerizedRegistrationSystem
                             
                                 frmShow.Show();
                                 //show the showTempAccount form
+                                // command.Parameters.AddWithValue("username_temp", OleDbType.VarChar).Value = 
+                                // command.Parameters.AddWithValue("password_temp", OleDbType.VarChar).Value = 
                                 Program.connection.Close();
                             }
                         }
@@ -458,7 +439,7 @@ namespace computerizedRegistrationSystem
                     {
                         Program.connection.Close();
                     }
-               // dateTimePickerBirthDate.Value.ToString("MM-dd-yyyy"));
+              
              
        
 

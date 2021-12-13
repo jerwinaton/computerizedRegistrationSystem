@@ -103,6 +103,7 @@
             this.Name = "frmLanding";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "UDM Student Portal";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLanding_FormClosing);
             this.Load += new System.EventHandler(this.frmLanding_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

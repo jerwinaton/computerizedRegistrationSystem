@@ -29,12 +29,11 @@ namespace computerizedRegistrationSystem
         }
         private void btnUnderstood_Click(object sender, EventArgs e)
         {
+
+            frmAdmission form2 = new frmAdmission();
+            form2.Close();
             Close(); // close this form
-            frmAdmission frmAdmission = new frmAdmission();
-            frmAdmission.Hide();
-            //back to landing form
-            frmLanding frmLanding = new frmLanding();
-            frmLanding.Show();
+           
            
         }
     }
