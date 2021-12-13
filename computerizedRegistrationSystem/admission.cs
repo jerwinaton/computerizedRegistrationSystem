@@ -17,6 +17,7 @@ namespace computerizedRegistrationSystem
         private bool TOR = false, diploma = false, picture=false; //declared in the class scope so other methods can use it
         private byte[] diplomaContent,TORContent;
         private frmLanding frmLanding = new frmLanding();
+        private string id,last_name; // to be used below in inserting temporary username and password
 
         public frmAdmission()
         {
@@ -411,17 +412,26 @@ namespace computerizedRegistrationSystem
                                 reader = command2.ExecuteReader();
                             
                                 showTempAccount frmShow = new showTempAccount();
-
+                                Close();
                                 while (reader.Read())
                                 {
-                                    frmShow.usernameText =  "applicant_"+(reader["applicant_id"].ToString()); //set the lblUsername's text of showTempAccount form
-                                    frmShow.passwordText = reader["last_name"].ToString(); //set the lblPassword's text of showTempAccount form
+                                    id = reader["applicant_id"].ToString();
+                                    last_name = reader["last_name"].ToString(); //to be used in the INSERT statement below
                                 }
-                            
-                                frmShow.Show();
-                                //show the showTempAccount form
-                                // command.Parameters.AddWithValue("username_temp", OleDbType.VarChar).Value = 
-                                // command.Parameters.AddWithValue("password_temp", OleDbType.VarChar).Value = 
+                                frmShow.usernameText = "applicant_" + id; //set the lblUsername's text of showTempAccount form
+                                frmShow.passwordText = last_name.ToLower(); //set the lblPassword's text of showTempAccount form
+
+                                string username_temp = "applicant_" + id; //to be used in the INSERT statement below
+                                string password_temp = last_name.ToLower();
+
+                                //new query
+                                OleDbCommand command3 = new OleDbCommand();//create command for inserting the temporary account credentials made
+                                command3.Connection = Program.connection;
+                                command3.CommandText = "UPDATE applicantsTable SET username_temp = '"+ username_temp+"', password_temp='"+ password_temp + "' WHERE applicant_id=" +id;
+
+                                command3.ExecuteNonQuery(); //execute the insert statement
+                                frmShow.Show();//show the showTempAccount form
+                                
                                 Program.connection.Close();
                             }
                         }

@@ -12,6 +12,7 @@ namespace computerizedRegistrationSystem
 {
     public partial class frmLanding : Form
     {
+  
         public frmLanding()
         {
             InitializeComponent();
