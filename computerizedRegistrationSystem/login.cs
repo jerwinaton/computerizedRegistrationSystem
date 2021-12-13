@@ -172,7 +172,7 @@ namespace computerizedRegistrationSystem
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             string message = "Are you sure you want to exit the application?";
-            string title = "Error";
+            string title = "Exit the program";
             SendKeys.Send("{Tab}");
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
 

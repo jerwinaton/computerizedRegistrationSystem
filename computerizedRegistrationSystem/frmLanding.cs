@@ -41,5 +41,26 @@ namespace computerizedRegistrationSystem
             //open admission form
             formAdmission.Show();
         }
+
+        //form closing confirm first thru messagebox
+        private void frmLanding_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string message = "Are you sure you want to exit the application?";
+            string title = "Exit the program";
+            SendKeys.Send("{Tab}");
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            //if No is selected cancel form closing event
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else if (result == DialogResult.Yes)
+            {
+                Application.ExitThread();
+            }
+
+        }
     }
 }
