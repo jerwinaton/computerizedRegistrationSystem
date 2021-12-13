@@ -78,13 +78,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblUploadTOR = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBoxHonors = new System.Windows.Forms.TextBox();
-            this.labelUploadTOR = new System.Windows.Forms.Label();
             this.btnUploadTOR = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
+            this.textBoxHonors = new System.Windows.Forms.TextBox();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
             this.SuspendLayout();
@@ -500,7 +499,7 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.labelTitle.Location = new System.Drawing.Point(62, 14);
+            this.labelTitle.Location = new System.Drawing.Point(56, 14);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(318, 39);
             this.labelTitle.TabIndex = 58;
@@ -525,6 +524,7 @@
             this.textBoxFatherNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFatherNo.Font = new System.Drawing.Font("Arial", 12F);
             this.textBoxFatherNo.Location = new System.Drawing.Point(515, 352);
+            this.textBoxFatherNo.MaxLength = 11;
             this.textBoxFatherNo.Name = "textBoxFatherNo";
             this.textBoxFatherNo.Size = new System.Drawing.Size(164, 26);
             this.textBoxFatherNo.TabIndex = 16;
@@ -548,6 +548,7 @@
             this.textBoxMotherNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMotherNo.Font = new System.Drawing.Font("Arial", 12F);
             this.textBoxMotherNo.Location = new System.Drawing.Point(515, 397);
+            this.textBoxMotherNo.MaxLength = 11;
             this.textBoxMotherNo.Name = "textBoxMotherNo";
             this.textBoxMotherNo.Size = new System.Drawing.Size(164, 26);
             this.textBoxMotherNo.TabIndex = 19;
@@ -689,7 +690,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.labelUploadTOR);
+            this.panel4.Controls.Add(this.lblUploadTOR);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.btnUploadTOR);
             this.panel4.Controls.Add(this.pictureBox1x1Image);
@@ -699,44 +700,17 @@
             this.panel4.Size = new System.Drawing.Size(701, 185);
             this.panel4.TabIndex = 73;
             // 
-            // pictureBox1x1Image
+            // lblUploadTOR
             // 
-            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(303, 74);
-            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
-            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 101);
-            this.pictureBox1x1Image.TabIndex = 0;
-            this.pictureBox1x1Image.TabStop = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.White;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 15;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.iconButton3.Location = new System.Drawing.Point(1, 2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(55, 24);
-            this.iconButton3.TabIndex = 24;
-            this.iconButton3.Text = "Back";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(52, 696);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(376, 26);
-            this.comboBox1.TabIndex = 74;
+            this.lblUploadTOR.AutoSize = true;
+            this.lblUploadTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.lblUploadTOR.ForeColor = System.Drawing.Color.Red;
+            this.lblUploadTOR.Location = new System.Drawing.Point(471, 127);
+            this.lblUploadTOR.Name = "lblUploadTOR";
+            this.lblUploadTOR.Size = new System.Drawing.Size(128, 13);
+            this.lblUploadTOR.TabIndex = 76;
+            this.lblUploadTOR.Text = "No file selected (.pdf)";
+            this.lblUploadTOR.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label17
             // 
@@ -749,27 +723,6 @@
             this.label17.TabIndex = 76;
             this.label17.Text = "Honors/Awards (Optional)";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBoxHonors
-            // 
-            this.textBoxHonors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxHonors.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBoxHonors.Location = new System.Drawing.Point(10, 85);
-            this.textBoxHonors.Name = "textBoxHonors";
-            this.textBoxHonors.Size = new System.Drawing.Size(268, 26);
-            this.textBoxHonors.TabIndex = 21;
-            // 
-            // labelUploadTOR
-            // 
-            this.labelUploadTOR.AutoSize = true;
-            this.labelUploadTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.labelUploadTOR.ForeColor = System.Drawing.Color.Red;
-            this.labelUploadTOR.Location = new System.Drawing.Point(471, 127);
-            this.labelUploadTOR.Name = "labelUploadTOR";
-            this.labelUploadTOR.Size = new System.Drawing.Size(128, 13);
-            this.labelUploadTOR.TabIndex = 76;
-            this.labelUploadTOR.Text = "No file selected (.pdf)";
-            this.labelUploadTOR.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnUploadTOR
             // 
@@ -791,14 +744,51 @@
             this.btnUploadTOR.UseVisualStyleBackColor = false;
             this.btnUploadTOR.Click += new System.EventHandler(this.btnUploadTOR_Click);
             // 
+            // pictureBox1x1Image
+            // 
+            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(303, 74);
+            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
+            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 101);
+            this.pictureBox1x1Image.TabIndex = 0;
+            this.pictureBox1x1Image.TabStop = false;
+            // 
+            // textBoxHonors
+            // 
+            this.textBoxHonors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxHonors.Font = new System.Drawing.Font("Arial", 12F);
+            this.textBoxHonors.Location = new System.Drawing.Point(10, 85);
+            this.textBoxHonors.Name = "textBoxHonors";
+            this.textBoxHonors.Size = new System.Drawing.Size(268, 26);
+            this.textBoxHonors.TabIndex = 21;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.White;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 15;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.iconButton3.Location = new System.Drawing.Point(1, 2);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(55, 24);
+            this.iconButton3.TabIndex = 24;
+            this.iconButton3.Text = "Back";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
             // frmAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(836, 483);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(853, 541);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblUploadDiploma);
@@ -916,10 +906,9 @@
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.PictureBox pictureBox1x1Image;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxHonors;
-        private System.Windows.Forms.Label labelUploadTOR;
+        private System.Windows.Forms.Label lblUploadTOR;
         private FontAwesome.Sharp.IconButton btnUploadTOR;
     }
 }
