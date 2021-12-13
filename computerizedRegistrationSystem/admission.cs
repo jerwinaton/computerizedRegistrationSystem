@@ -160,5 +160,43 @@ namespace computerizedRegistrationSystem
                
             }
         }
+
+        private void btnUploadImage_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pictureBox1x1Image.BackgroundImage = Image.FromFile(open.FileName);
+                // image full file path  
+                string filePath = open.FileName;
+                //get the filename only
+                string fileName = System.IO.Path.GetFileName(filePath);
+                lblUploadImage.Text = fileName;
+                btnUploadImage.Text = "Change Image";
+            }
+        }
+
+        private void btnUploadDiploma_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "PDF Files(*.pdf)|*.pdf";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                // pictureBox1.Image = new Bitmap(open.FileName);
+                // pdf full file path  
+                string filePath = open.FileName;
+                //get the filename only
+                string fileName = System.IO.Path.GetFileName(filePath);
+                lblUploadDiploma.Text = fileName;
+                btnUploadDiploma.Text = "Change File";
+            }
+        }
     }
 }
