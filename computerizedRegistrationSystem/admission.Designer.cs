@@ -49,7 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxCity = new System.Windows.Forms.ComboBox();
+            this.comboBoxTown = new System.Windows.Forms.ComboBox();
             this.comboBoxDistrict = new System.Windows.Forms.ComboBox();
             this.comboBoxBrgy = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -78,8 +78,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxHonors = new System.Windows.Forms.TextBox();
+            this.labelUploadTOR = new System.Windows.Forms.Label();
+            this.btnUploadTOR = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +136,7 @@
             this.textBoxMName.Name = "textBoxMName";
             this.textBoxMName.Size = new System.Drawing.Size(138, 26);
             this.textBoxMName.TabIndex = 2;
+            this.textBoxMName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMName_KeyPress);
             // 
             // textBoxFName
             // 
@@ -140,6 +146,7 @@
             this.textBoxFName.Name = "textBoxFName";
             this.textBoxFName.Size = new System.Drawing.Size(138, 26);
             this.textBoxFName.TabIndex = 1;
+            this.textBoxFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFName_KeyPress);
             // 
             // comboBoxGender
             // 
@@ -175,6 +182,7 @@
             this.textBoxLName.Name = "textBoxLName";
             this.textBoxLName.Size = new System.Drawing.Size(138, 26);
             this.textBoxLName.TabIndex = 3;
+            this.textBoxLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLName_KeyPress);
             // 
             // dateTimePickerBirthDate
             // 
@@ -209,9 +217,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
             this.label7.Location = new System.Drawing.Point(65, 129);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.Size = new System.Drawing.Size(130, 13);
             this.label7.TabIndex = 32;
-            this.label7.Text = "Email Address";
+            this.label7.Text = "Email Address (*Important)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
@@ -221,7 +229,7 @@
             this.textBoxEmail.Font = new System.Drawing.Font("Arial", 12F);
             this.textBoxEmail.Location = new System.Drawing.Point(68, 144);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(158, 26);
+            this.textBoxEmail.Size = new System.Drawing.Size(203, 26);
             this.textBoxEmail.TabIndex = 6;
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -231,7 +239,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label8.Location = new System.Drawing.Point(232, 129);
+            this.label8.Location = new System.Drawing.Point(274, 129);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 13);
             this.label8.TabIndex = 34;
@@ -242,7 +250,7 @@
             // 
             this.textBoxStudentContactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxStudentContactNo.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBoxStudentContactNo.Location = new System.Drawing.Point(235, 144);
+            this.textBoxStudentContactNo.Location = new System.Drawing.Point(277, 144);
             this.textBoxStudentContactNo.MaxLength = 11;
             this.textBoxStudentContactNo.Name = "textBoxStudentContactNo";
             this.textBoxStudentContactNo.Size = new System.Drawing.Size(158, 26);
@@ -291,7 +299,7 @@
             this.textBoxStreet.Font = new System.Drawing.Font("Arial", 12F);
             this.textBoxStreet.Location = new System.Drawing.Point(175, 270);
             this.textBoxStreet.Name = "textBoxStreet";
-            this.textBoxStreet.Size = new System.Drawing.Size(158, 26);
+            this.textBoxStreet.Size = new System.Drawing.Size(205, 26);
             this.textBoxStreet.TabIndex = 11;
             // 
             // label9
@@ -326,22 +334,22 @@
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label11.Location = new System.Drawing.Point(336, 255);
+            this.label11.Location = new System.Drawing.Point(379, 255);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 44;
             this.label11.Text = "Barangay";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // comboBoxCity
+            // comboBoxTown
             // 
-            this.comboBoxCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCity.Font = new System.Drawing.Font("Arial", 12F);
-            this.comboBoxCity.FormattingEnabled = true;
-            this.comboBoxCity.Location = new System.Drawing.Point(183, 219);
-            this.comboBoxCity.Name = "comboBoxCity";
-            this.comboBoxCity.Size = new System.Drawing.Size(139, 26);
-            this.comboBoxCity.TabIndex = 9;
+            this.comboBoxTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTown.Font = new System.Drawing.Font("Arial", 12F);
+            this.comboBoxTown.FormattingEnabled = true;
+            this.comboBoxTown.Location = new System.Drawing.Point(183, 219);
+            this.comboBoxTown.Name = "comboBoxTown";
+            this.comboBoxTown.Size = new System.Drawing.Size(188, 26);
+            this.comboBoxTown.TabIndex = 9;
             // 
             // comboBoxDistrict
             // 
@@ -367,7 +375,7 @@
             this.comboBoxBrgy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBrgy.Font = new System.Drawing.Font("Arial", 12F);
             this.comboBoxBrgy.FormattingEnabled = true;
-            this.comboBoxBrgy.Location = new System.Drawing.Point(340, 270);
+            this.comboBoxBrgy.Location = new System.Drawing.Point(384, 270);
             this.comboBoxBrgy.Name = "comboBoxBrgy";
             this.comboBoxBrgy.Size = new System.Drawing.Size(108, 26);
             this.comboBoxBrgy.TabIndex = 12;
@@ -378,7 +386,7 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label12.Location = new System.Drawing.Point(451, 255);
+            this.label12.Location = new System.Drawing.Point(494, 255);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 13);
             this.label12.TabIndex = 49;
@@ -389,7 +397,7 @@
             // 
             this.textBoxZipCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxZipCode.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBoxZipCode.Location = new System.Drawing.Point(454, 270);
+            this.textBoxZipCode.Location = new System.Drawing.Point(498, 270);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(98, 26);
             this.textBoxZipCode.TabIndex = 13;
@@ -416,6 +424,7 @@
             this.textBoxFatherName.Name = "textBoxFatherName";
             this.textBoxFatherName.Size = new System.Drawing.Size(217, 26);
             this.textBoxFatherName.TabIndex = 14;
+            this.textBoxFatherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFatherName_KeyPress);
             // 
             // label14
             // 
@@ -438,6 +447,7 @@
             this.textBoxFatherWork.Name = "textBoxFatherWork";
             this.textBoxFatherWork.Size = new System.Drawing.Size(217, 26);
             this.textBoxFatherWork.TabIndex = 15;
+            this.textBoxFatherWork.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFatherWork_KeyPress);
             // 
             // label15
             // 
@@ -460,6 +470,7 @@
             this.textBoxMotherWork.Name = "textBoxMotherWork";
             this.textBoxMotherWork.Size = new System.Drawing.Size(217, 26);
             this.textBoxMotherWork.TabIndex = 18;
+            this.textBoxMotherWork.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMotherWork_KeyPress);
             // 
             // label16
             // 
@@ -482,6 +493,7 @@
             this.textBoxMotherName.Name = "textBoxMotherName";
             this.textBoxMotherName.Size = new System.Drawing.Size(217, 26);
             this.textBoxMotherName.TabIndex = 17;
+            this.textBoxMotherName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMotherName_KeyPress);
             // 
             // labelTitle
             // 
@@ -516,6 +528,7 @@
             this.textBoxFatherNo.Name = "textBoxFatherNo";
             this.textBoxFatherNo.Size = new System.Drawing.Size(164, 26);
             this.textBoxFatherNo.TabIndex = 16;
+            this.textBoxFatherNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFatherNo_KeyPress);
             // 
             // label19
             // 
@@ -538,6 +551,7 @@
             this.textBoxMotherNo.Name = "textBoxMotherNo";
             this.textBoxMotherNo.Size = new System.Drawing.Size(164, 26);
             this.textBoxMotherNo.TabIndex = 19;
+            this.textBoxMotherNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMotherNo_KeyPress);
             // 
             // label20
             // 
@@ -557,7 +571,7 @@
             this.textBoxLastSchool.Font = new System.Drawing.Font("Arial", 12F);
             this.textBoxLastSchool.Location = new System.Drawing.Point(69, 482);
             this.textBoxLastSchool.Name = "textBoxLastSchool";
-            this.textBoxLastSchool.Size = new System.Drawing.Size(311, 26);
+            this.textBoxLastSchool.Size = new System.Drawing.Size(268, 26);
             this.textBoxLastSchool.TabIndex = 20;
             // 
             // btnUploadImage
@@ -571,10 +585,10 @@
             this.btnUploadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadImage.IconSize = 20;
             this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadImage.Location = new System.Drawing.Point(388, 474);
+            this.btnUploadImage.Location = new System.Drawing.Point(359, 474);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(137, 32);
-            this.btnUploadImage.TabIndex = 21;
+            this.btnUploadImage.TabIndex = 22;
             this.btnUploadImage.Text = "Upload 1x1 Image";
             this.btnUploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUploadImage.UseVisualStyleBackColor = false;
@@ -591,10 +605,10 @@
             this.btnUploadDiploma.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadDiploma.IconSize = 20;
             this.btnUploadDiploma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadDiploma.Location = new System.Drawing.Point(579, 473);
+            this.btnUploadDiploma.Location = new System.Drawing.Point(532, 473);
             this.btnUploadDiploma.Name = "btnUploadDiploma";
             this.btnUploadDiploma.Size = new System.Drawing.Size(126, 32);
-            this.btnUploadDiploma.TabIndex = 21;
+            this.btnUploadDiploma.TabIndex = 23;
             this.btnUploadDiploma.Text = "Upload Diploma";
             this.btnUploadDiploma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUploadDiploma.UseVisualStyleBackColor = false;
@@ -603,42 +617,42 @@
             // lblUploadImage
             // 
             this.lblUploadImage.AutoSize = true;
-            this.lblUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUploadImage.ForeColor = System.Drawing.Color.Green;
-            this.lblUploadImage.Location = new System.Drawing.Point(387, 510);
+            this.lblUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.lblUploadImage.ForeColor = System.Drawing.Color.Red;
+            this.lblUploadImage.Location = new System.Drawing.Point(358, 510);
             this.lblUploadImage.Name = "lblUploadImage";
-            this.lblUploadImage.Size = new System.Drawing.Size(96, 13);
+            this.lblUploadImage.Size = new System.Drawing.Size(160, 13);
             this.lblUploadImage.TabIndex = 67;
-            this.lblUploadImage.Text = "No file selected";
+            this.lblUploadImage.Text = "No file selected (.jpg, .png)";
             this.lblUploadImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblUploadDiploma
             // 
             this.lblUploadDiploma.AutoSize = true;
-            this.lblUploadDiploma.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUploadDiploma.ForeColor = System.Drawing.Color.Green;
-            this.lblUploadDiploma.Location = new System.Drawing.Point(576, 509);
+            this.lblUploadDiploma.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.lblUploadDiploma.ForeColor = System.Drawing.Color.Red;
+            this.lblUploadDiploma.Location = new System.Drawing.Point(529, 509);
             this.lblUploadDiploma.Name = "lblUploadDiploma";
-            this.lblUploadDiploma.Size = new System.Drawing.Size(96, 13);
+            this.lblUploadDiploma.Size = new System.Drawing.Size(128, 13);
             this.lblUploadDiploma.TabIndex = 68;
-            this.lblUploadDiploma.Text = "No file selected";
+            this.lblUploadDiploma.Text = "No file selected (.pdf)";
             this.lblUploadDiploma.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
             this.btnSubmit.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnSubmit.IconColor = System.Drawing.Color.White;
             this.btnSubmit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSubmit.IconSize = 20;
             this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubmit.Location = new System.Drawing.Point(356, 636);
+            this.btnSubmit.Location = new System.Drawing.Point(353, 643);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(106, 33);
-            this.btnSubmit.TabIndex = 23;
+            this.btnSubmit.Size = new System.Drawing.Size(124, 40);
+            this.btnSubmit.TabIndex = 25;
             this.btnSubmit.Text = "Submit form";
             this.btnSubmit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -675,11 +689,24 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.labelUploadTOR);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.btnUploadTOR);
             this.panel4.Controls.Add(this.pictureBox1x1Image);
+            this.panel4.Controls.Add(this.textBoxHonors);
             this.panel4.Location = new System.Drawing.Point(58, 452);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(701, 178);
+            this.panel4.Size = new System.Drawing.Size(701, 185);
             this.panel4.TabIndex = 73;
+            // 
+            // pictureBox1x1Image
+            // 
+            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(303, 74);
+            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
+            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 101);
+            this.pictureBox1x1Image.TabIndex = 0;
+            this.pictureBox1x1Image.TabStop = false;
             // 
             // iconButton3
             // 
@@ -701,21 +728,77 @@
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // pictureBox1x1Image
+            // comboBox1
             // 
-            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(332, 74);
-            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
-            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 101);
-            this.pictureBox1x1Image.TabIndex = 0;
-            this.pictureBox1x1Image.TabStop = false;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(52, 696);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(376, 26);
+            this.comboBox1.TabIndex = 74;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label17.Location = new System.Drawing.Point(7, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(129, 13);
+            this.label17.TabIndex = 76;
+            this.label17.Text = "Honors/Awards (Optional)";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBoxHonors
+            // 
+            this.textBoxHonors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxHonors.Font = new System.Drawing.Font("Arial", 12F);
+            this.textBoxHonors.Location = new System.Drawing.Point(10, 85);
+            this.textBoxHonors.Name = "textBoxHonors";
+            this.textBoxHonors.Size = new System.Drawing.Size(268, 26);
+            this.textBoxHonors.TabIndex = 21;
+            // 
+            // labelUploadTOR
+            // 
+            this.labelUploadTOR.AutoSize = true;
+            this.labelUploadTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.labelUploadTOR.ForeColor = System.Drawing.Color.Red;
+            this.labelUploadTOR.Location = new System.Drawing.Point(471, 127);
+            this.labelUploadTOR.Name = "labelUploadTOR";
+            this.labelUploadTOR.Size = new System.Drawing.Size(128, 13);
+            this.labelUploadTOR.TabIndex = 76;
+            this.labelUploadTOR.Text = "No file selected (.pdf)";
+            this.labelUploadTOR.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnUploadTOR
+            // 
+            this.btnUploadTOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
+            this.btnUploadTOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadTOR.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUploadTOR.ForeColor = System.Drawing.Color.White;
+            this.btnUploadTOR.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnUploadTOR.IconColor = System.Drawing.Color.White;
+            this.btnUploadTOR.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUploadTOR.IconSize = 20;
+            this.btnUploadTOR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadTOR.Location = new System.Drawing.Point(473, 91);
+            this.btnUploadTOR.Name = "btnUploadTOR";
+            this.btnUploadTOR.Size = new System.Drawing.Size(151, 33);
+            this.btnUploadTOR.TabIndex = 24;
+            this.btnUploadTOR.Text = "Transcript of Records";
+            this.btnUploadTOR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUploadTOR.UseVisualStyleBackColor = false;
+            this.btnUploadTOR.Click += new System.EventHandler(this.btnUploadTOR_Click);
             // 
             // frmAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(836, 693);
+            this.ClientSize = new System.Drawing.Size(836, 483);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblUploadDiploma);
@@ -741,7 +824,7 @@
             this.Controls.Add(this.textBoxZipCode);
             this.Controls.Add(this.comboBoxBrgy);
             this.Controls.Add(this.comboBoxDistrict);
-            this.Controls.Add(this.comboBoxCity);
+            this.Controls.Add(this.comboBoxTown);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -773,6 +856,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdmission_FormClosing);
             this.Load += new System.EventHandler(this.frmAdmission_Load);
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -801,7 +885,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBoxCity;
+        private System.Windows.Forms.ComboBox comboBoxTown;
         private System.Windows.Forms.ComboBox comboBoxDistrict;
         private System.Windows.Forms.ComboBox comboBoxBrgy;
         private System.Windows.Forms.Label label12;
@@ -832,5 +916,10 @@
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.PictureBox pictureBox1x1Image;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBoxHonors;
+        private System.Windows.Forms.Label labelUploadTOR;
+        private FontAwesome.Sharp.IconButton btnUploadTOR;
     }
 }
