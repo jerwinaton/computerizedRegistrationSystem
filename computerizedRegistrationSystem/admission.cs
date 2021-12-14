@@ -594,6 +594,40 @@ namespace computerizedRegistrationSystem
             }
         }
 
+        private void comboBoxCourse1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCourse1.SelectedIndex == 0)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 1)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 2)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 3)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 4)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+        }
+
         private void textBoxFatherName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))

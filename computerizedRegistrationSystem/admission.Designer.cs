@@ -854,6 +854,7 @@
             this.comboBoxCourse1.Name = "comboBoxCourse1";
             this.comboBoxCourse1.Size = new System.Drawing.Size(450, 22);
             this.comboBoxCourse1.TabIndex = 135;
+            this.comboBoxCourse1.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse1_SelectedIndexChanged);
             // 
             // comboBoxCollege
             // 
@@ -939,12 +940,6 @@
             this.comboBoxCourse2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCourse2.Font = new System.Drawing.Font("Arial", 8F);
             this.comboBoxCourse2.FormattingEnabled = true;
-            this.comboBoxCourse2.Items.AddRange(new object[] {
-            "Bachelor of Science in Information Technology",
-            "Bachelor of Science in Computer Engineering",
-            "Bachelor in Electronics Engineering",
-            "Bachelor in Information Technology with Specialization in Cybersecurity",
-            "Bachelor in Information Technology with Specialization in Data Science"});
             this.comboBoxCourse2.Location = new System.Drawing.Point(101, 81);
             this.comboBoxCourse2.Name = "comboBoxCourse2";
             this.comboBoxCourse2.Size = new System.Drawing.Size(450, 22);
