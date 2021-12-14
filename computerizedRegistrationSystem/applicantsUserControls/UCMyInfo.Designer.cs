@@ -75,26 +75,28 @@
             this.textBoxMName = new System.Windows.Forms.TextBox();
             this.textBoxFName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxCourse2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCourse1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCollege = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
-            this.btnUploadImage = new FontAwesome.Sharp.IconButton();
+            this.comboBoxStrand = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.lblUploadImage = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnUploadImage = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxTrack = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.textBoxHonors = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +115,13 @@
             this.lblUploadDiploma.AutoSize = true;
             this.lblUploadDiploma.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadDiploma.ForeColor = System.Drawing.Color.Red;
-            this.lblUploadDiploma.Location = new System.Drawing.Point(485, 593);
+            this.lblUploadDiploma.Location = new System.Drawing.Point(531, 105);
             this.lblUploadDiploma.Name = "lblUploadDiploma";
             this.lblUploadDiploma.Size = new System.Drawing.Size(128, 13);
             this.lblUploadDiploma.TabIndex = 117;
             this.lblUploadDiploma.Text = "No file selected (.pdf)";
             this.lblUploadDiploma.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUploadDiploma.Click += new System.EventHandler(this.lblUploadDiploma_Click);
             // 
             // btnUploadDiploma
             // 
@@ -132,13 +135,14 @@
             this.btnUploadDiploma.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadDiploma.IconSize = 20;
             this.btnUploadDiploma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadDiploma.Location = new System.Drawing.Point(488, 557);
+            this.btnUploadDiploma.Location = new System.Drawing.Point(534, 72);
             this.btnUploadDiploma.Name = "btnUploadDiploma";
             this.btnUploadDiploma.Size = new System.Drawing.Size(126, 32);
             this.btnUploadDiploma.TabIndex = 98;
             this.btnUploadDiploma.Text = "Change Diploma";
             this.btnUploadDiploma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUploadDiploma.UseVisualStyleBackColor = false;
+            this.btnUploadDiploma.Click += new System.EventHandler(this.btnUploadDiploma_Click);
             // 
             // label20
             // 
@@ -159,7 +163,7 @@
             this.textBoxLastSchool.Font = new System.Drawing.Font("Arial", 12F);
             this.textBoxLastSchool.Location = new System.Drawing.Point(25, 566);
             this.textBoxLastSchool.Name = "textBoxLastSchool";
-            this.textBoxLastSchool.Size = new System.Drawing.Size(268, 26);
+            this.textBoxLastSchool.Size = new System.Drawing.Size(302, 26);
             this.textBoxLastSchool.TabIndex = 94;
             // 
             // label19
@@ -192,7 +196,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label17.Location = new System.Drawing.Point(7, 70);
+            this.label17.Location = new System.Drawing.Point(7, 113);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(93, 13);
             this.label17.TabIndex = 76;
@@ -224,13 +228,14 @@
             this.btnUploadTOR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadTOR.IconSize = 20;
             this.btnUploadTOR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadTOR.Location = new System.Drawing.Point(473, 91);
+            this.btnUploadTOR.Location = new System.Drawing.Point(533, 134);
             this.btnUploadTOR.Name = "btnUploadTOR";
             this.btnUploadTOR.Size = new System.Drawing.Size(106, 33);
             this.btnUploadTOR.TabIndex = 24;
             this.btnUploadTOR.Text = "Change TOR";
             this.btnUploadTOR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUploadTOR.UseVisualStyleBackColor = false;
+            this.btnUploadTOR.Click += new System.EventHandler(this.btnUploadTOR_Click);
             // 
             // label18
             // 
@@ -321,12 +326,13 @@
             this.lblUploadTOR.AutoSize = true;
             this.lblUploadTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadTOR.ForeColor = System.Drawing.Color.Red;
-            this.lblUploadTOR.Location = new System.Drawing.Point(471, 127);
+            this.lblUploadTOR.Location = new System.Drawing.Point(531, 167);
             this.lblUploadTOR.Name = "lblUploadTOR";
             this.lblUploadTOR.Size = new System.Drawing.Size(128, 13);
             this.lblUploadTOR.TabIndex = 76;
             this.lblUploadTOR.Text = "No file selected (.pdf)";
             this.lblUploadTOR.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUploadTOR.Click += new System.EventHandler(this.lblUploadTOR_Click);
             // 
             // label13
             // 
@@ -479,7 +485,6 @@
             this.textBoxStreet.Name = "textBoxStreet";
             this.textBoxStreet.Size = new System.Drawing.Size(205, 26);
             this.textBoxStreet.TabIndex = 84;
-            
             // 
             // label3
             // 
@@ -684,9 +689,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBoxCourse2);
+            this.panel1.Controls.Add(this.comboBoxCourse1);
+            this.panel1.Controls.Add(this.comboBoxCollege);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label23);
@@ -711,6 +716,109 @@
             this.panel1.Size = new System.Drawing.Size(701, 225);
             this.panel1.TabIndex = 118;
             // 
+            // comboBoxCourse2
+            // 
+            this.comboBoxCourse2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCourse2.Enabled = false;
+            this.comboBoxCourse2.Font = new System.Drawing.Font("Arial", 8F);
+            this.comboBoxCourse2.FormattingEnabled = true;
+            this.comboBoxCourse2.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBoxCourse2.Location = new System.Drawing.Point(246, 78);
+            this.comboBoxCourse2.Name = "comboBoxCourse2";
+            this.comboBoxCourse2.Size = new System.Drawing.Size(445, 22);
+            this.comboBoxCourse2.TabIndex = 129;
+            // 
+            // comboBoxCourse1
+            // 
+            this.comboBoxCourse1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCourse1.Enabled = false;
+            this.comboBoxCourse1.Font = new System.Drawing.Font("Arial", 8F);
+            this.comboBoxCourse1.FormattingEnabled = true;
+            this.comboBoxCourse1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBoxCourse1.Location = new System.Drawing.Point(246, 52);
+            this.comboBoxCourse1.Name = "comboBoxCourse1";
+            this.comboBoxCourse1.Size = new System.Drawing.Size(445, 22);
+            this.comboBoxCourse1.TabIndex = 128;
+            // 
+            // comboBoxCollege
+            // 
+            this.comboBoxCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCollege.Enabled = false;
+            this.comboBoxCollege.Font = new System.Drawing.Font("Arial", 8F);
+            this.comboBoxCollege.FormattingEnabled = true;
+            this.comboBoxCollege.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBoxCollege.Location = new System.Drawing.Point(246, 26);
+            this.comboBoxCollege.Name = "comboBoxCollege";
+            this.comboBoxCollege.Size = new System.Drawing.Size(445, 22);
+            this.comboBoxCollege.TabIndex = 127;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.White;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label25.Location = new System.Drawing.Point(184, 81);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 13);
+            this.label25.TabIndex = 126;
+            this.label25.Text = "2nd Choice:";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.White;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label24.Location = new System.Drawing.Point(187, 56);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(60, 13);
+            this.label24.TabIndex = 125;
+            this.label24.Text = "1st Choice:";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.White;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label23.Location = new System.Drawing.Point(201, 31);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(45, 13);
+            this.label23.TabIndex = 124;
+            this.label23.Text = "College:";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label22.Location = new System.Drawing.Point(153, 15);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(83, 13);
+            this.label22.TabIndex = 123;
+            this.label22.Text = "Courses Applied";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pictureBox1x1Image
+            // 
+            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
+            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
+            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
+            this.pictureBox1x1Image.TabIndex = 122;
+            this.pictureBox1x1Image.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -733,8 +841,14 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.comboBoxStrand);
+            this.panel4.Controls.Add(this.label27);
+            this.panel4.Controls.Add(this.lblUploadImage);
+            this.panel4.Controls.Add(this.lblUploadDiploma);
+            this.panel4.Controls.Add(this.btnUploadImage);
             this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.comboBox4);
+            this.panel4.Controls.Add(this.comboBoxTrack);
+            this.panel4.Controls.Add(this.btnUploadDiploma);
             this.panel4.Controls.Add(this.label26);
             this.panel4.Controls.Add(this.textBoxHonors);
             this.panel4.Controls.Add(this.lblUploadTOR);
@@ -742,17 +856,44 @@
             this.panel4.Controls.Add(this.btnUploadTOR);
             this.panel4.Location = new System.Drawing.Point(14, 536);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(701, 185);
+            this.panel4.Size = new System.Drawing.Size(701, 261);
             this.panel4.TabIndex = 121;
             // 
-            // pictureBox1x1Image
+            // comboBoxStrand
             // 
-            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
-            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
-            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
-            this.pictureBox1x1Image.TabIndex = 122;
-            this.pictureBox1x1Image.TabStop = false;
+            this.comboBoxStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStrand.Enabled = false;
+            this.comboBoxStrand.Font = new System.Drawing.Font("Arial", 12F);
+            this.comboBoxStrand.FormattingEnabled = true;
+            this.comboBoxStrand.Location = new System.Drawing.Point(10, 182);
+            this.comboBoxStrand.Name = "comboBoxStrand";
+            this.comboBoxStrand.Size = new System.Drawing.Size(423, 26);
+            this.comboBoxStrand.TabIndex = 132;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label27.Location = new System.Drawing.Point(7, 166);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.TabIndex = 131;
+            this.label27.Text = "Strand";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblUploadImage
+            // 
+            this.lblUploadImage.AutoSize = true;
+            this.lblUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.lblUploadImage.ForeColor = System.Drawing.Color.Red;
+            this.lblUploadImage.Location = new System.Drawing.Point(531, 46);
+            this.lblUploadImage.Name = "lblUploadImage";
+            this.lblUploadImage.Size = new System.Drawing.Size(160, 13);
+            this.lblUploadImage.TabIndex = 116;
+            this.lblUploadImage.Text = "No file selected (.jpg, .png)";
+            this.lblUploadImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUploadImage.Click += new System.EventHandler(this.lblUploadImage_Click);
             // 
             // btnUploadImage
             // 
@@ -766,126 +907,42 @@
             this.btnUploadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadImage.IconSize = 20;
             this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadImage.Location = new System.Drawing.Point(315, 558);
+            this.btnUploadImage.Location = new System.Drawing.Point(533, 13);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(137, 32);
             this.btnUploadImage.TabIndex = 97;
             this.btnUploadImage.Text = "Change 1x1 Image";
             this.btnUploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUploadImage.UseVisualStyleBackColor = false;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
             // 
-            // lblUploadImage
+            // pictureBox1
             // 
-            this.lblUploadImage.AutoSize = true;
-            this.lblUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
-            this.lblUploadImage.ForeColor = System.Drawing.Color.Red;
-            this.lblUploadImage.Location = new System.Drawing.Point(314, 594);
-            this.lblUploadImage.Name = "lblUploadImage";
-            this.lblUploadImage.Size = new System.Drawing.Size(160, 13);
-            this.lblUploadImage.TabIndex = 116;
-            this.lblUploadImage.Text = "No file selected (.jpg, .png)";
-            this.lblUploadImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(328, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 153);
+            this.pictureBox1.TabIndex = 130;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label22
+            // comboBoxTrack
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.White;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label22.Location = new System.Drawing.Point(153, 6);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(83, 13);
-            this.label22.TabIndex = 123;
-            this.label22.Text = "Courses Applied";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.White;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label23.Location = new System.Drawing.Point(201, 22);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(45, 13);
-            this.label23.TabIndex = 124;
-            this.label23.Text = "College:";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.White;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label24.Location = new System.Drawing.Point(187, 47);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(60, 13);
-            this.label24.TabIndex = 125;
-            this.label24.Text = "1st Choice:";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.White;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label25.Location = new System.Drawing.Point(184, 72);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(64, 13);
-            this.label25.TabIndex = 126;
-            this.label25.Text = "2nd Choice:";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 8F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(246, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(450, 22);
-            this.comboBox1.TabIndex = 127;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Enabled = false;
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 8F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(246, 43);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(450, 22);
-            this.comboBox2.TabIndex = 128;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Enabled = false;
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 8F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox3.Location = new System.Drawing.Point(246, 69);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(450, 22);
-            this.comboBox3.TabIndex = 129;
+            this.comboBoxTrack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTrack.Enabled = false;
+            this.comboBoxTrack.Font = new System.Drawing.Font("Arial", 12F);
+            this.comboBoxTrack.FormattingEnabled = true;
+            this.comboBoxTrack.Location = new System.Drawing.Point(10, 129);
+            this.comboBoxTrack.Name = "comboBoxTrack";
+            this.comboBoxTrack.Size = new System.Drawing.Size(302, 26);
+            this.comboBoxTrack.TabIndex = 122;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label26.Location = new System.Drawing.Point(7, 123);
+            this.label26.Location = new System.Drawing.Point(7, 64);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(129, 13);
             this.label26.TabIndex = 78;
@@ -897,31 +954,10 @@
             this.textBoxHonors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxHonors.Enabled = false;
             this.textBoxHonors.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBoxHonors.Location = new System.Drawing.Point(10, 138);
+            this.textBoxHonors.Location = new System.Drawing.Point(10, 79);
             this.textBoxHonors.Name = "textBoxHonors";
-            this.textBoxHonors.Size = new System.Drawing.Size(268, 26);
+            this.textBoxHonors.Size = new System.Drawing.Size(302, 26);
             this.textBoxHonors.TabIndex = 77;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Enabled = false;
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 12F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(10, 86);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(268, 26);
-            this.comboBox4.TabIndex = 122;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(314, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 91);
-            this.pictureBox1.TabIndex = 130;
-            this.pictureBox1.TabStop = false;
-          
             // 
             // UCMyInfo
             // 
@@ -929,10 +965,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lblUploadDiploma);
-            this.Controls.Add(this.lblUploadImage);
-            this.Controls.Add(this.btnUploadDiploma);
-            this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.textBoxLastSchool);
             this.Controls.Add(this.label19);
@@ -969,9 +1001,9 @@
             this.Load += new System.EventHandler(this.UCMyInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1036,13 +1068,15 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCourse2;
+        private System.Windows.Forms.ComboBox comboBoxCourse1;
+        private System.Windows.Forms.ComboBox comboBoxCollege;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBoxHonors;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxTrack;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBoxStrand;
+        private System.Windows.Forms.Label label27;
     }
 }

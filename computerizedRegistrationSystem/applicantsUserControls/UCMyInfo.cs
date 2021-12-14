@@ -88,6 +88,13 @@ namespace computerizedRegistrationSystem.applicantsUserControls
                     lblUploadDiploma.Text = reader["diploma_filename"].ToString();
                     lblUploadTOR.Text = reader["tor_filename"].ToString();
                     pictureBox1.BackgroundImage = byteArrayToImage((byte[])reader["1x1_picture"]);//converted byte to image
+
+                    comboBoxCollege.SelectedItem = reader["college_applied"].ToString();
+                    comboBoxCourse1.SelectedItem = reader["course_choice1"].ToString();
+                    comboBoxCourse2.SelectedItem = reader["course_choice2"].ToString();
+
+                    comboBoxTrack.SelectedItem = reader["track"].ToString();
+                    comboBoxStrand.SelectedItem = reader["strand"].ToString();
                 }
 
             }
@@ -193,6 +200,41 @@ namespace computerizedRegistrationSystem.applicantsUserControls
         private void textBoxFatherWork_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void btnUploadDiploma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUploadDiploma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUploadTOR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUploadTOR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUploadImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUploadImage_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void textBoxMotherName_KeyPress(object sender, KeyPressEventArgs e)
