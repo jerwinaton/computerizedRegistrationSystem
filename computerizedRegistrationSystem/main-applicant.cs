@@ -26,6 +26,7 @@ namespace computerizedRegistrationSystem
 
         private void main_applicant_Load(object sender, EventArgs e)
         {
+            //get basic info, fullname, id, and image
             OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
             connection.Open();
             try

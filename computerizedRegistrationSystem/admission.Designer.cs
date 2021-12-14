@@ -650,7 +650,7 @@
             this.btnSubmit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSubmit.IconSize = 20;
             this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubmit.Location = new System.Drawing.Point(353, 643);
+            this.btnSubmit.Location = new System.Drawing.Point(344, 706);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(124, 40);
             this.btnSubmit.TabIndex = 25;
@@ -788,7 +788,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(853, 541);
+            this.ClientSize = new System.Drawing.Size(853, 749);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblUploadDiploma);

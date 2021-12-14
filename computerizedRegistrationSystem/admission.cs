@@ -134,11 +134,8 @@ namespace computerizedRegistrationSystem
         private void frmAdmission_FormClosing(object sender, FormClosingEventArgs e)
         {
         
-          
             frmLanding.Show();
            
-           
-
         }
         //validate the form
         private bool canProceed()
@@ -351,9 +348,9 @@ namespace computerizedRegistrationSystem
                         OleDbCommand command = new OleDbCommand();//create command
                         command.Connection = Program.connection;//give command the connection string
                         command.CommandText = "INSERT INTO applicantsTable (first_name,middle_name,last_name,gender,birthdate,email,contact_no,house_no,street,district," +
-                            "barangay,town,zip_code,mothers_name,mothers_contact_no,mothers_occupation,fathers_name,fathers_contact_no,fathers_occupation,last_school_attended," +
+                            "barangay,town,zip_code,mothers_name,mothers_contact_no,mothers_occupation,fathers_name,fathers_contact_no,fathers_occupation,last_school_attended,honors_awards," +
                             "1x1_picture_filename,1x1_picture,diploma_filename,diploma,tor_filename,tor,status,date_applied) " +
-                            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //values will be added later, not here!
+                            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //values will be added later, not here!
 
                         command.Parameters.AddWithValue("first_name",OleDbType.VarChar).Value = textBoxFName.Text.ToUpper();
                         command.Parameters.AddWithValue("middle_name", OleDbType.VarChar).Value = textBoxMName.Text.ToUpper();
@@ -375,6 +372,7 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("fathers_contact_no", OleDbType.Integer).Value = textBoxFatherNo.Text;
                         command.Parameters.AddWithValue("fathers_occupation", OleDbType.VarChar).Value = textBoxFatherWork.Text.ToUpper();
                         command.Parameters.AddWithValue("last_school_attended", OleDbType.VarChar).Value = textBoxLastSchool.Text.ToUpper();
+                        command.Parameters.AddWithValue("honors_awards", OleDbType.VarChar).Value = textBoxHonors.Text.ToUpper();
                         command.Parameters.AddWithValue("1x1_picture_filename", OleDbType.VarChar).Value = lblUploadImage.Text;
                         //21 commands above
 
@@ -390,7 +388,7 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("tor", OleDbType.Binary).Value = TORContent;  //insert to database as byte
                         command.Parameters.AddWithValue("status", OleDbType.VarChar).Value = "PENDING"; //PENDING, ACCEPTED, REJECTED
                         command.Parameters.AddWithValue("date_applied", OleDbType.Date).Value = DateTime.Today;
-                        //28 commands/columns
+                        //29 commands/columns
                       
                         int dataInserted = command.ExecuteNonQuery();
                         if (dataInserted > 0)
