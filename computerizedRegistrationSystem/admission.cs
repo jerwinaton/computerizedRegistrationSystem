@@ -315,6 +315,46 @@ namespace computerizedRegistrationSystem
                 MessageBox.Show(msgbx_message, msgbx_title);
                 return false;
             }
+            else if (comboBoxTrack.Text == "")//check if empty
+            {
+                string msgbx_message = "Choose the Track that you took.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+
+                return false;
+            }
+            else if (comboBoxStrand.Text == "")//check if empty
+            {
+                string msgbx_message = "Choose the Strand that you took.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+
+                return false;
+            }
+            else if (comboBoxCollege.Text == "")//check if empty
+            {
+                string msgbx_message = "Choose a college.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+
+                return false;
+            }
+            else if (comboBoxCourse1.Text == "")//check if empty
+            {
+                string msgbx_message = "Choose your 1st choice course.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+
+                return false;
+            }
+            else if (comboBoxCourse2.Text == "")//check if empty
+            {
+                string msgbx_message = "Choose your 2nd choice course.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+
+                return false;
+            }
             else
             {
                 return true;
@@ -626,6 +666,11 @@ namespace computerizedRegistrationSystem
                 string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity" };
                 comboBoxCourse2.Items.AddRange(COURSES);
             }
+        }
+
+        private void textBoxHonors_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //
         }
 
         private void textBoxFatherName_KeyPress(object sender, KeyPressEventArgs e)

@@ -818,6 +818,7 @@
             this.textBoxHonors.Name = "textBoxHonors";
             this.textBoxHonors.Size = new System.Drawing.Size(268, 26);
             this.textBoxHonors.TabIndex = 21;
+            this.textBoxHonors.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHonors_KeyPress);
             // 
             // iconButton3
             // 
