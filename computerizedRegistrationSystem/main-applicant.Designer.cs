@@ -106,6 +106,7 @@
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblUsername
             // 
@@ -162,6 +163,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmApplicant";
             this.Text = "UDM Student Portal | Applicant";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmApplicant_FormClosing);
             this.Load += new System.EventHandler(this.main_applicant_Load);
             this.panelContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

@@ -352,8 +352,8 @@ namespace computerizedRegistrationSystem
                         command.Connection = Program.connection;//give command the connection string
                         command.CommandText = "INSERT INTO applicantsTable (first_name,middle_name,last_name,gender,birthdate,email,contact_no,house_no,street,district," +
                             "barangay,town,zip_code,mothers_name,mothers_contact_no,mothers_occupation,fathers_name,fathers_contact_no,fathers_occupation,last_school_attended," +
-                            "1x1_picture_filename,1x1_picture,diploma_filename,diploma,tor_filename,tor,date_applied) " +
-                            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //values will be added later, not here!
+                            "1x1_picture_filename,1x1_picture,diploma_filename,diploma,tor_filename,tor,status,date_applied) " +
+                            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //values will be added later, not here!
 
                         command.Parameters.AddWithValue("first_name",OleDbType.VarChar).Value = textBoxFName.Text.ToUpper();
                         command.Parameters.AddWithValue("middle_name", OleDbType.VarChar).Value = textBoxMName.Text.ToUpper();
@@ -388,9 +388,9 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("diploma", OleDbType.Binary).Value = diplomaContent;  //insert to database as byte
                         command.Parameters.AddWithValue("tor_filename", OleDbType.VarChar).Value = lblUploadTOR.Text;
                         command.Parameters.AddWithValue("tor", OleDbType.Binary).Value = TORContent;  //insert to database as byte
-                     
+                        command.Parameters.AddWithValue("status", OleDbType.VarChar).Value = "PENDING"; //PENDING, ACCEPTED, REJECTED
                         command.Parameters.AddWithValue("date_applied", OleDbType.Date).Value = DateTime.Today;
-                        //27 commands
+                        //28 commands/columns
                       
                         int dataInserted = command.ExecuteNonQuery();
                         if (dataInserted > 0)

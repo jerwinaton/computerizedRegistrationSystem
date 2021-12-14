@@ -14,7 +14,7 @@ namespace computerizedRegistrationSystem
 {
     public partial class frmLogin : Form
     {
-       
+        public static string id; // this id of the user thath is logging in, which will be retrieved in the database will be used by other forms
         public frmLogin()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace computerizedRegistrationSystem
                     if (enteredUsername.Contains("admin"))
                     {
                         who = "admin";
-                      command.CommandText = "select * from adminAccounts where username='" + enteredUsername + "' and password='" + enteredPassword + "' ";
+                      command.CommandText = "select * from adminTable where username='" + enteredUsername + "' and password='" + enteredPassword + "' ";
                     }
                     //if it is a teacher, search in the teacherAccounts table
                     else if (enteredUsername.Contains("teacher"))
@@ -100,6 +100,24 @@ namespace computerizedRegistrationSystem
 
                     while (reader.Read())//continue reading until finished reading all of the data
                     {
+                        //get id
+                        if (who == "admin")
+                        {
+                             id = reader["admin_id"].ToString();
+                        }
+                        else if (who == "teacher")
+                        {
+                             id = reader["teacher_id"].ToString();
+                        }
+                        else if (who == "applicant")
+                        {
+                             id = reader["applicant_id"].ToString();
+                        }
+                        else
+                        {
+                             id = reader["student_id"].ToString();
+                        }
+                      
                         count = count + 1; //if found increment count
                                            //count++
                     }
@@ -133,7 +151,7 @@ namespace computerizedRegistrationSystem
                             formStudent.Show();
                         }
                      
-                        Program.connection.Close(); //close the connection
+                  
                     }
                     else
                     {
@@ -149,13 +167,20 @@ namespace computerizedRegistrationSystem
                             textBoxPassword.Text = "";
                             textBoxUserName.Select();
                         }
-                        Program.connection.Close(); //close the connection
+                        
                     }
-                    Program.connection.Close(); //close the connection
+                    
                 }
                 catch (Exception error) //show error 
                 {
                     MessageBox.Show("Error " + error);
+                }
+                finally
+                {
+                    if (Program.connection.State == ConnectionState.Open)
+                    {
+                        Program.connection.Close();
+                    }
                 }
 
             }//end of else (if username and password is not empty then proceed)

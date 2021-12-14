@@ -46,5 +46,33 @@ namespace computerizedRegistrationSystem
             applicantsUserControls.UCMyInfo uc = new applicantsUserControls.UCMyInfo();
             addUserControl(uc);
         }
+
+        private void frmApplicant_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string message = "Are you sure you want to exit this page?";
+            string title = "Close this page";
+            SendKeys.Send("{Tab}");
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            //if No is selected cancel form closing event
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else if (result == DialogResult.Yes)
+            {
+             
+                frmLogin login = new frmLogin();
+                login.Show();
+            }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Close();
+            frmLogin login = new frmLogin();
+            login.Show();
+        }
     }
 }
