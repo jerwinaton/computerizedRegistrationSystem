@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.OleDb;
+using System.Configuration;
+using System.IO;
 namespace computerizedRegistrationSystem
 {
     public partial class frmApplicant : Form
     {
+        private string fullName, id;
+
         public frmApplicant()
         {
             InitializeComponent();
@@ -22,7 +26,46 @@ namespace computerizedRegistrationSystem
 
         private void main_applicant_Load(object sender, EventArgs e)
         {
+            OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
+            connection.Open();
+            try
+            {
 
+                OleDbCommand command = new OleDbCommand();//create command
+                command.Connection = connection;//give command the connection string
+                command.CommandText = "SELECT * FROM applicantsTable WHERE applicant_id=" + frmLogin.id; // where the applicant_id = to the id the user that logged in (in the login.cs)
+                OleDbDataReader reader = command.ExecuteReader(); // execute
+
+                while (reader.Read())//read 
+                {
+                    fullName = reader["first_name"].ToString()+" "+ reader["middle_name"].ToString()+" "+ reader["last_name"].ToString();
+                    id = reader["applicant_id"].ToString();
+                    pictureBoxUserImage.BackgroundImage = byteArrayToImage((byte [])reader["1x1_picture"]);
+                }
+                
+                lblUsername.Text = "applicant_"+id; //set name
+                lblName.Text = fullName; //set id
+                //pictureBoxUserImage
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+         
+        }
+        //method to convert byte to image
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            Image retval = null;
+            using (MemoryStream stream = new MemoryStream(byteArrayIn))
+            {
+                retval = (Image)new Bitmap(stream);
+            }
+            return retval;
         }
         //method to dynamically load user controls pages
         private void addUserControl(UserControl userControl)

@@ -112,7 +112,7 @@
             // 
             this.lblUsername.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
-            this.lblUsername.Location = new System.Drawing.Point(8, 124);
+            this.lblUsername.Location = new System.Drawing.Point(8, 126);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(185, 23);
             this.lblUsername.TabIndex = 2;
@@ -123,7 +123,7 @@
             // 
             this.lblName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(8, 143);
+            this.lblName.Location = new System.Drawing.Point(8, 153);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(185, 23);
             this.lblName.TabIndex = 1;
