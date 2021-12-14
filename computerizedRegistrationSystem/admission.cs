@@ -558,6 +558,42 @@ namespace computerizedRegistrationSystem
             }
         }
 
+        private void lblUploadDiploma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUploadImage_Click(object sender, EventArgs e)
+        {
+
+        }
+        //POPULATE STRAND COMBOBOX BASED ON THE VALUE OF TRACK COMBOBOX
+        private void comboBoxTrack_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxTrack.Text == "Academic")
+            {
+                comboBoxStrand.Items.Clear();
+                string[] STRANDS = { "General Academic (GA)", "Humanities and Social Sciences (HUMMS)", "Science, Technology, Engineering and Mathematics (STEM)", "Accountancy, Business and Management (ABM)" };
+                comboBoxStrand.Items.AddRange(STRANDS);
+            }
+            else if (comboBoxTrack.Text == "Technical-Vocational and Livelihood (TVL)")
+            {
+                comboBoxStrand.Items.Clear();
+                string[] STRANDS = { "Agri-Fishery Arts", "Home Economics", "SAN Industrial Arts", "Information and Communications Technology (ICT)" };
+                comboBoxStrand.Items.AddRange(STRANDS);
+            }
+            else if (comboBoxTrack.Text == "Sports")
+            {
+                comboBoxStrand.Items.Clear();
+                comboBoxStrand.Items.Add("NONE");
+            }
+            else if (comboBoxTrack.Text == "Arts and Design")
+            {
+                comboBoxStrand.Items.Clear();
+                comboBoxStrand.Items.Add("NONE");
+            }
+        }
+
         private void textBoxFatherName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))

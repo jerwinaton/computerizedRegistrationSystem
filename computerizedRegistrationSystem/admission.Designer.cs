@@ -78,14 +78,27 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBoxTrack = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.lblUploadTOR = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.btnUploadTOR = new FontAwesome.Sharp.IconButton();
             this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
             this.textBoxHonors = new System.Windows.Forms.TextBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.comboBoxCourse1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCollege = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBoxCourse2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxStrand = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -586,7 +599,7 @@
             this.btnUploadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadImage.IconSize = 20;
             this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadImage.Location = new System.Drawing.Point(359, 474);
+            this.btnUploadImage.Location = new System.Drawing.Point(327, 29);
             this.btnUploadImage.Name = "btnUploadImage";
             this.btnUploadImage.Size = new System.Drawing.Size(137, 32);
             this.btnUploadImage.TabIndex = 22;
@@ -606,7 +619,7 @@
             this.btnUploadDiploma.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadDiploma.IconSize = 20;
             this.btnUploadDiploma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadDiploma.Location = new System.Drawing.Point(532, 473);
+            this.btnUploadDiploma.Location = new System.Drawing.Point(500, 28);
             this.btnUploadDiploma.Name = "btnUploadDiploma";
             this.btnUploadDiploma.Size = new System.Drawing.Size(126, 32);
             this.btnUploadDiploma.TabIndex = 23;
@@ -620,24 +633,26 @@
             this.lblUploadImage.AutoSize = true;
             this.lblUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadImage.ForeColor = System.Drawing.Color.Red;
-            this.lblUploadImage.Location = new System.Drawing.Point(358, 510);
+            this.lblUploadImage.Location = new System.Drawing.Point(326, 65);
             this.lblUploadImage.Name = "lblUploadImage";
             this.lblUploadImage.Size = new System.Drawing.Size(160, 13);
             this.lblUploadImage.TabIndex = 67;
             this.lblUploadImage.Text = "No file selected (.jpg, .png)";
             this.lblUploadImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUploadImage.Click += new System.EventHandler(this.lblUploadImage_Click);
             // 
             // lblUploadDiploma
             // 
             this.lblUploadDiploma.AutoSize = true;
             this.lblUploadDiploma.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadDiploma.ForeColor = System.Drawing.Color.Red;
-            this.lblUploadDiploma.Location = new System.Drawing.Point(529, 509);
+            this.lblUploadDiploma.Location = new System.Drawing.Point(497, 64);
             this.lblUploadDiploma.Name = "lblUploadDiploma";
             this.lblUploadDiploma.Size = new System.Drawing.Size(128, 13);
             this.lblUploadDiploma.TabIndex = 68;
             this.lblUploadDiploma.Text = "No file selected (.pdf)";
             this.lblUploadDiploma.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblUploadDiploma.Click += new System.EventHandler(this.lblUploadDiploma_Click);
             // 
             // btnSubmit
             // 
@@ -650,7 +665,8 @@
             this.btnSubmit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSubmit.IconSize = 20;
             this.btnSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubmit.Location = new System.Drawing.Point(344, 706);
+            this.btnSubmit.Location = new System.Drawing.Point(359, 802);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(124, 40);
             this.btnSubmit.TabIndex = 25;
@@ -690,22 +706,63 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.comboBoxStrand);
+            this.panel4.Controls.Add(this.lblUploadDiploma);
+            this.panel4.Controls.Add(this.comboBoxTrack);
+            this.panel4.Controls.Add(this.lblUploadImage);
+            this.panel4.Controls.Add(this.label30);
+            this.panel4.Controls.Add(this.btnUploadDiploma);
             this.panel4.Controls.Add(this.lblUploadTOR);
+            this.panel4.Controls.Add(this.btnUploadImage);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.btnUploadTOR);
             this.panel4.Controls.Add(this.pictureBox1x1Image);
             this.panel4.Controls.Add(this.textBoxHonors);
             this.panel4.Location = new System.Drawing.Point(58, 452);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(701, 185);
+            this.panel4.Size = new System.Drawing.Size(701, 217);
             this.panel4.TabIndex = 73;
+            // 
+            // comboBoxTrack
+            // 
+            this.comboBoxTrack.AutoCompleteCustomSource.AddRange(new string[] {
+            "Academic",
+            "Technical-Vocational Livelihood",
+            "Sports",
+            "Arts and Design"});
+            this.comboBoxTrack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTrack.Font = new System.Drawing.Font("Arial", 12F);
+            this.comboBoxTrack.FormattingEnabled = true;
+            this.comboBoxTrack.Items.AddRange(new object[] {
+            "Academic",
+            "Technical-Vocational and Livelihood (TVL)",
+            "Sports",
+            "Arts and Design"});
+            this.comboBoxTrack.Location = new System.Drawing.Point(10, 123);
+            this.comboBoxTrack.Name = "comboBoxTrack";
+            this.comboBoxTrack.Size = new System.Drawing.Size(268, 26);
+            this.comboBoxTrack.TabIndex = 81;
+            this.comboBoxTrack.SelectedIndexChanged += new System.EventHandler(this.comboBoxTrack_SelectedIndexChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label30.Location = new System.Drawing.Point(7, 109);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(93, 13);
+            this.label30.TabIndex = 82;
+            this.label30.Text = "Senior High Track";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblUploadTOR
             // 
             this.lblUploadTOR.AutoSize = true;
             this.lblUploadTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadTOR.ForeColor = System.Drawing.Color.Red;
-            this.lblUploadTOR.Location = new System.Drawing.Point(471, 127);
+            this.lblUploadTOR.Location = new System.Drawing.Point(495, 145);
             this.lblUploadTOR.Name = "lblUploadTOR";
             this.lblUploadTOR.Size = new System.Drawing.Size(128, 13);
             this.lblUploadTOR.TabIndex = 76;
@@ -717,7 +774,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label17.Location = new System.Drawing.Point(7, 70);
+            this.label17.Location = new System.Drawing.Point(7, 61);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(129, 13);
             this.label17.TabIndex = 76;
@@ -735,7 +792,7 @@
             this.btnUploadTOR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUploadTOR.IconSize = 20;
             this.btnUploadTOR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadTOR.Location = new System.Drawing.Point(473, 91);
+            this.btnUploadTOR.Location = new System.Drawing.Point(497, 109);
             this.btnUploadTOR.Name = "btnUploadTOR";
             this.btnUploadTOR.Size = new System.Drawing.Size(151, 33);
             this.btnUploadTOR.TabIndex = 24;
@@ -747,7 +804,7 @@
             // pictureBox1x1Image
             // 
             this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(303, 74);
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(327, 92);
             this.pictureBox1x1Image.Name = "pictureBox1x1Image";
             this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 101);
             this.pictureBox1x1Image.TabIndex = 0;
@@ -757,7 +814,7 @@
             // 
             this.textBoxHonors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxHonors.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBoxHonors.Location = new System.Drawing.Point(10, 85);
+            this.textBoxHonors.Location = new System.Drawing.Point(10, 76);
             this.textBoxHonors.Name = "textBoxHonors";
             this.textBoxHonors.Size = new System.Drawing.Size(268, 26);
             this.textBoxHonors.TabIndex = 21;
@@ -782,19 +839,153 @@
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
+            // comboBoxCourse1
+            // 
+            this.comboBoxCourse1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCourse1.Font = new System.Drawing.Font("Arial", 8F);
+            this.comboBoxCourse1.FormattingEnabled = true;
+            this.comboBoxCourse1.Items.AddRange(new object[] {
+            "Bachelor of Science in Information Technology",
+            "Bachelor of Science in Computer Engineering",
+            "Bachelor in Electronics Engineering",
+            "Bachelor in Information Technology with Specialization in Cybersecurity",
+            "Bachelor in Information Technology with Specialization in Data Science"});
+            this.comboBoxCourse1.Location = new System.Drawing.Point(101, 55);
+            this.comboBoxCourse1.Name = "comboBoxCourse1";
+            this.comboBoxCourse1.Size = new System.Drawing.Size(450, 22);
+            this.comboBoxCourse1.TabIndex = 135;
+            // 
+            // comboBoxCollege
+            // 
+            this.comboBoxCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCollege.Font = new System.Drawing.Font("Arial", 8F);
+            this.comboBoxCollege.FormattingEnabled = true;
+            this.comboBoxCollege.Items.AddRange(new object[] {
+            "College of Engineering and Technology"});
+            this.comboBoxCollege.Location = new System.Drawing.Point(101, 29);
+            this.comboBoxCollege.Name = "comboBoxCollege";
+            this.comboBoxCollege.Size = new System.Drawing.Size(450, 22);
+            this.comboBoxCollege.TabIndex = 134;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.White;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label25.Location = new System.Drawing.Point(39, 84);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(64, 13);
+            this.label25.TabIndex = 133;
+            this.label25.Text = "2nd Choice:";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.White;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label24.Location = new System.Drawing.Point(42, 59);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(60, 13);
+            this.label24.TabIndex = 132;
+            this.label24.Text = "1st Choice:";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.White;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label23.Location = new System.Drawing.Point(56, 34);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(45, 13);
+            this.label23.TabIndex = 131;
+            this.label23.Text = "College:";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label22.Location = new System.Drawing.Point(8, 18);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(86, 13);
+            this.label22.TabIndex = 130;
+            this.label22.Text = "Courses to Apply";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.comboBoxCourse2);
+            this.panel7.Controls.Add(this.comboBoxCollege);
+            this.panel7.Controls.Add(this.comboBoxCourse1);
+            this.panel7.Controls.Add(this.label22);
+            this.panel7.Controls.Add(this.label23);
+            this.panel7.Controls.Add(this.label25);
+            this.panel7.Controls.Add(this.label24);
+            this.panel7.Location = new System.Drawing.Point(58, 675);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(701, 118);
+            this.panel7.TabIndex = 77;
+            // 
+            // comboBoxCourse2
+            // 
+            this.comboBoxCourse2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCourse2.Font = new System.Drawing.Font("Arial", 8F);
+            this.comboBoxCourse2.FormattingEnabled = true;
+            this.comboBoxCourse2.Items.AddRange(new object[] {
+            "Bachelor of Science in Information Technology",
+            "Bachelor of Science in Computer Engineering",
+            "Bachelor in Electronics Engineering",
+            "Bachelor in Information Technology with Specialization in Cybersecurity",
+            "Bachelor in Information Technology with Specialization in Data Science"});
+            this.comboBoxCourse2.Location = new System.Drawing.Point(101, 81);
+            this.comboBoxCourse2.Name = "comboBoxCourse2";
+            this.comboBoxCourse2.Size = new System.Drawing.Size(450, 22);
+            this.comboBoxCourse2.TabIndex = 136;
+            // 
+            // comboBoxStrand
+            // 
+            this.comboBoxStrand.AutoCompleteCustomSource.AddRange(new string[] {
+            "Academic",
+            "Technical-Vocational Livelihood",
+            "Sports",
+            "Arts and Design"});
+            this.comboBoxStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStrand.Font = new System.Drawing.Font("Arial", 12F);
+            this.comboBoxStrand.FormattingEnabled = true;
+            this.comboBoxStrand.Location = new System.Drawing.Point(10, 174);
+            this.comboBoxStrand.Name = "comboBoxStrand";
+            this.comboBoxStrand.Size = new System.Drawing.Size(268, 26);
+            this.comboBoxStrand.TabIndex = 83;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label21.Location = new System.Drawing.Point(8, 158);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(38, 13);
+            this.label21.TabIndex = 84;
+            this.label21.Text = "Strand";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frmAdmission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(853, 749);
+            this.ClientSize = new System.Drawing.Size(853, 531);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lblUploadDiploma);
-            this.Controls.Add(this.lblUploadImage);
-            this.Controls.Add(this.btnUploadDiploma);
-            this.Controls.Add(this.btnUploadImage);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.textBoxLastSchool);
             this.Controls.Add(this.label19);
@@ -840,6 +1031,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel7);
             this.Name = "frmAdmission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UDM Student Portal | Admission";
@@ -848,6 +1040,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -910,5 +1104,17 @@
         private System.Windows.Forms.TextBox textBoxHonors;
         private System.Windows.Forms.Label lblUploadTOR;
         private FontAwesome.Sharp.IconButton btnUploadTOR;
+        private System.Windows.Forms.ComboBox comboBoxCourse1;
+        private System.Windows.Forms.ComboBox comboBoxCollege;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ComboBox comboBoxCourse2;
+        private System.Windows.Forms.ComboBox comboBoxTrack;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBoxStrand;
     }
 }
