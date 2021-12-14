@@ -61,7 +61,7 @@ namespace computerizedRegistrationSystem
 
                     string who; //variable which will be used to identify which user is loggin in
 
-                    //to know if the user is an admin, or a teacher, or a student
+                    //to know if the user is an admin, or a teacher, or a student, or an applicant
                     //based on their username
 
                     //if it is an admin, search in the adminAccounts table
@@ -76,7 +76,12 @@ namespace computerizedRegistrationSystem
                         who = "teacher";
                         //code
                     }
-                    //else search in the studentsAccounts table
+                    //else search in the applicantsAccounts table
+                    else if (enteredUsername.Contains("applicant"))
+                    {
+                        who = "applicant";
+                        command.CommandText = "select * from applicantsTable where username_temp='" + enteredUsername + "' and password_temp='" + enteredPassword + "' ";
+                    }
                     else
                     {
                         who = "student";
@@ -105,6 +110,7 @@ namespace computerizedRegistrationSystem
                         frmLogin formLogin = new frmLogin();
                         frmMainAdmin formAdmin = new frmMainAdmin();
                         frmMainStudent formStudent = new frmMainStudent();
+                        frmApplicant formApplicant = new frmApplicant();
                         //frmMainTeacher formTeacher = new frmMainTeacher();
 
                         Hide();//hide this form
@@ -117,6 +123,10 @@ namespace computerizedRegistrationSystem
                         else if (who == "teacher")
                         {
                            // frmMainTeacher.Show();
+                        }
+                        else if(who == "applicant")
+                        {
+                            formApplicant.Show();
                         }
                         else
                         {

@@ -29,7 +29,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -131,6 +131,18 @@
     <Compile Include="admission.Designer.cs">
       <DependentUpon>admission.cs</DependentUpon>
     </Compile>
+    <Compile Include="applicantsUserControls\UCMyInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="applicantsUserControls\UCMyInfo.Designer.cs">
+      <DependentUpon>UCMyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="applicantsUserControls\UCRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="applicantsUserControls\UCRegistration.Designer.cs">
+      <DependentUpon>UCRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLanding.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
     </Compile>
     <Compile Include="main-admin.Designer.cs">
       <DependentUpon>main-admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main-applicant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main-applicant.Designer.cs">
+      <DependentUpon>main-applicant.cs</DependentUpon>
     </Compile>
     <Compile Include="showTempAccount.cs">
       <SubType>Form</SubType>
@@ -205,11 +223,20 @@
     <EmbeddedResource Include="admission.resx">
       <DependentUpon>admission.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="applicantsUserControls\UCMyInfo.resx">
+      <DependentUpon>UCMyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applicantsUserControls\UCRegistration.resx">
+      <DependentUpon>UCRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLanding.resx">
       <DependentUpon>frmLanding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main-admin.resx">
       <DependentUpon>main-admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main-applicant.resx">
+      <DependentUpon>main-applicant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="showTempAccount.resx">
       <DependentUpon>showTempAccount.cs</DependentUpon>
