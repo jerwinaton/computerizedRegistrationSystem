@@ -182,6 +182,30 @@ namespace computerizedRegistrationSystem
                 textBoxEmail.Select();
                 return false;
             }
+            else if ((!textBoxEmail.Text.Contains("@")) && (!textBoxEmail.Text.Contains("."))) //check if valid email address
+            {
+                string msgbx_message = "Please enter a valid email address.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+                textBoxEmail.Select();
+                return false;
+            }
+            else if (textBoxStudentContactNo.Text == "")//check if empty or default
+            {
+                string msgbx_message = "Enter your contact number.";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+                textBoxStudentContactNo.Select();
+                return false;
+            }
+            else if (textBoxStudentContactNo.Text.Length != 11)
+            {
+                string msgbx_message = "Contact no is not valid";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+                textBoxStudentContactNo.Select();
+                return false;
+            }
             else if (comboBoxDistrict.Text == "")//check if empty
             {
                 string msgbx_message = "Choose your District.";
@@ -206,14 +230,7 @@ namespace computerizedRegistrationSystem
                
                 return false;
             }
-            else if (textBoxStudentContactNo.Text == "" || textBoxStudentContactNo.Text=="09***")//check if empty or default
-            {
-                string msgbx_message = "Enter your contact number.";
-                string msgbx_title = "Submit Failed";
-                MessageBox.Show(msgbx_message, msgbx_title);
-                textBoxStudentContactNo.Select();
-                return false;
-            }
+          
             else if (textBoxHouseNo.Text == "")//check if empty
             {
                 string msgbx_message = "Enter your house #.";
@@ -262,6 +279,14 @@ namespace computerizedRegistrationSystem
                 textBoxFatherNo.Select();
                 return false;
             }
+            else if (textBoxFatherNo.Text.Length != 11)
+            {
+                string msgbx_message = "Contact no is not valid";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+                textBoxStudentContactNo.Select();
+                return false;
+            }
             else if (textBoxMotherName.Text == "")//check if empty
             {
                 string msgbx_message = "Enter your mother's name.";
@@ -284,6 +309,14 @@ namespace computerizedRegistrationSystem
                 string msgbx_title = "Submit Failed";
                 MessageBox.Show(msgbx_message, msgbx_title);
                 textBoxMotherNo.Select();
+                return false;
+            }
+            else if (textBoxMotherNo.Text.Length != 11)
+            {
+                string msgbx_message = "Contact no is not valid";
+                string msgbx_title = "Submit Failed";
+                MessageBox.Show(msgbx_message, msgbx_title);
+                textBoxStudentContactNo.Select();
                 return false;
             }
             else if (textBoxLastSchool.Text == "")//check if empty

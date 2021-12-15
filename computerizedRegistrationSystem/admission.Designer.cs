@@ -267,7 +267,7 @@
             this.textBoxStudentContactNo.Name = "textBoxStudentContactNo";
             this.textBoxStudentContactNo.Size = new System.Drawing.Size(158, 26);
             this.textBoxStudentContactNo.TabIndex = 7;
-            this.textBoxStudentContactNo.Text = "09***";
+            this.textBoxStudentContactNo.Text = "09";
             this.textBoxStudentContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStudentContactNo_KeyPress);
             // 
             // label3
@@ -541,6 +541,7 @@
             this.textBoxFatherNo.Name = "textBoxFatherNo";
             this.textBoxFatherNo.Size = new System.Drawing.Size(164, 26);
             this.textBoxFatherNo.TabIndex = 16;
+            this.textBoxFatherNo.Text = "09";
             this.textBoxFatherNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFatherNo_KeyPress);
             // 
             // label19
@@ -565,6 +566,7 @@
             this.textBoxMotherNo.Name = "textBoxMotherNo";
             this.textBoxMotherNo.Size = new System.Drawing.Size(164, 26);
             this.textBoxMotherNo.TabIndex = 19;
+            this.textBoxMotherNo.Text = "09";
             this.textBoxMotherNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMotherNo_KeyPress);
             // 
             // label20
@@ -981,7 +983,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(870, 531);
+            this.ClientSize = new System.Drawing.Size(887, 531);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label20);
