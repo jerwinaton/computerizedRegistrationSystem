@@ -76,11 +76,7 @@ namespace computerizedRegistrationSystem.adminUserControls
 
             adminOtherForms.admin_viewInfo viewInfo = new adminOtherForms.admin_viewInfo();
             viewInfo.Show();
-
-          
-              
-           
-          
+   
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -93,5 +89,17 @@ namespace computerizedRegistrationSystem.adminUserControls
             viewTOR.Show();
             
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //check if the form is already open, close if a form is already open
+            if (Application.OpenForms.OfType<adminOtherForms.admin_viewDiploma>().Count() == 1)
+                Application.OpenForms.OfType<adminOtherForms.admin_viewDiploma>().First().Close();
+
+            adminOtherForms.admin_viewDiploma viewDiploma = new adminOtherForms.admin_viewDiploma();
+            viewDiploma.Show();
+
+        }
+    }
     }
 }
