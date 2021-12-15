@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegistration = new System.Windows.Forms.Button();
             this.btnEditProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnGrades = new System.Windows.Forms.Button();
             this.btnSchedule = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStudentID = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.pictureBoxUserImage = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnRegistration = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.panelContainer.SuspendLayout();
@@ -56,14 +56,27 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.btnGrades);
             this.panel1.Controls.Add(this.btnSchedule);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblStudentID);
+            this.panel1.Controls.Add(this.lblFullName);
             this.panel1.Controls.Add(this.pictureBoxUserImage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 555);
             this.panel1.TabIndex = 0;
+            // 
+            // btnRegistration
+            // 
+            this.btnRegistration.FlatAppearance.BorderSize = 0;
+            this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistration.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistration.ForeColor = System.Drawing.Color.White;
+            this.btnRegistration.Location = new System.Drawing.Point(-2, 347);
+            this.btnRegistration.Name = "btnRegistration";
+            this.btnRegistration.Size = new System.Drawing.Size(200, 35);
+            this.btnRegistration.TabIndex = 7;
+            this.btnRegistration.Text = "Registration";
+            this.btnRegistration.UseVisualStyleBackColor = true;
             // 
             // btnEditProfile
             // 
@@ -149,27 +162,27 @@
             this.btnSchedule.UseVisualStyleBackColor = true;
             this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
-            // label2
+            // lblStudentID
             // 
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(8, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "20-22-0859";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStudentID.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
+            this.lblStudentID.Location = new System.Drawing.Point(8, 124);
+            this.lblStudentID.Name = "lblStudentID";
+            this.lblStudentID.Size = new System.Drawing.Size(185, 23);
+            this.lblStudentID.TabIndex = 2;
+            this.lblStudentID.Text = "20-22-0859";
+            this.lblStudentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblFullName
             // 
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Jhone Michael Matias";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFullName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.ForeColor = System.Drawing.Color.White;
+            this.lblFullName.Location = new System.Drawing.Point(8, 143);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(185, 23);
+            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Text = "Jhone Michael Matias";
+            this.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxUserImage
             // 
@@ -204,19 +217,6 @@
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnRegistration
-            // 
-            this.btnRegistration.FlatAppearance.BorderSize = 0;
-            this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistration.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistration.ForeColor = System.Drawing.Color.White;
-            this.btnRegistration.Location = new System.Drawing.Point(-2, 347);
-            this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(200, 35);
-            this.btnRegistration.TabIndex = 7;
-            this.btnRegistration.Text = "Registration";
-            this.btnRegistration.UseVisualStyleBackColor = true;
-            // 
             // frmMainStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,8 +240,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSchedule;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStudentID;
+        private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.PictureBox pictureBoxUserImage;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnGrades;

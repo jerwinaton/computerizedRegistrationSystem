@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using System.Configuration;
+using System.IO;
 
 namespace computerizedRegistrationSystem
 {
@@ -21,15 +24,51 @@ namespace computerizedRegistrationSystem
         }
         private void frmHome_Load(object sender, EventArgs e)
         {
+            //get basic info, fullname, id, and image
+            OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
+            connection.Open();
+            try
+            {
+
+                OleDbCommand command = new OleDbCommand();//create command
+                command.Connection = connection;//give command the connection string
+                command.CommandText = "SELECT * FROM studentsTable WHERE student_id=" + frmLogin.id; // where the student_id = to the id the user that logged in (in the login.cs)
+                OleDbDataReader reader = command.ExecuteReader(); // execute
+
+                while (reader.Read())//read 
+                {
+                    lblFullName.Text = reader["first_name"].ToString() + " " + reader["middle_name"].ToString() + " " + reader["last_name"].ToString();
+                    lblStudentID.Text = "student_" +reader["applicant_id"].ToString();
+                    pictureBoxUserImage.BackgroundImage = byteArrayToImage((byte[])reader["1x1_picture"]);
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
 
 
+        }
+        //method to convert byte to image
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            Image retval = null;
+            using (MemoryStream stream = new MemoryStream(byteArrayIn))
+            {
+                retval = (Image)new Bitmap(stream);
+            }
+            return retval;
         }
         //logout
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Hide();
-            frmLogin formLogin = new frmLogin();
-            formLogin.Show();
+            Close();
+           
         }
         //method to dynamically load user controls pages
         private void addUserControl (UserControl userControl)
@@ -84,7 +123,8 @@ namespace computerizedRegistrationSystem
             if (result == DialogResult.Yes)
             {
                 //exit application and all of the other threads
-                System.Windows.Forms.Application.ExitThread();
+                frmLogin formLogin = new frmLogin();
+                formLogin.Show();
             }
             else if (result == DialogResult.No)
             {

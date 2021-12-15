@@ -85,7 +85,7 @@ namespace computerizedRegistrationSystem
                     else
                     {
                         who = "student";
-                        //code
+                        command.CommandText = "select * from studentsTable where username='" + enteredUsername + "' and password='" + enteredPassword + "' ";
                     }
 
                     //EXECUTE THE QUERY
