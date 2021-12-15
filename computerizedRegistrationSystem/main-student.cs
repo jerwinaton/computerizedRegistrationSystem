@@ -38,7 +38,7 @@ namespace computerizedRegistrationSystem
                 while (reader.Read())//read 
                 {
                     lblFullName.Text = reader["first_name"].ToString() + " " + reader["middle_name"].ToString() + " " + reader["last_name"].ToString();
-                    lblStudentID.Text = "student_" +reader["applicant_id"].ToString();
+                    lblStudentID.Text = "student_" +reader["student_id"].ToString();
                     pictureBoxUserImage.BackgroundImage = byteArrayToImage((byte[])reader["1x1_picture"]);
                 }
 
@@ -52,9 +52,7 @@ namespace computerizedRegistrationSystem
                 connection.Close();
             }
             //get updated announcements
-            
-          
-
+         
         }
         //method to convert byte to image
         public Image byteArrayToImage(byte[] byteArrayIn)

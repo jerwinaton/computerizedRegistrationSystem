@@ -119,8 +119,14 @@ namespace computerizedRegistrationSystem.adminOtherForms
                                 command3.CommandText = "UPDATE studentsTable SET [username]='" + username + "', [password]='" + password + "' WHERE application_id=" + id;
                                // MessageBox.Show(command3.CommandText);
                                command3.ExecuteNonQuery(); //execute the insert statement
-                                
-                               
+
+                                //update remarks to to student's accounts details
+                                OleDbCommand updateRemarks = new OleDbCommand();//create command
+                                updateRemarks.Connection = connection;
+                                updateRemarks.CommandText = "UPDATE applicantsTable SET remarks=@remarks WHERE applicant_id=" + id;
+                                updateRemarks.Parameters.AddWithValue("remarks", OleDbType.VarChar).Value = "You can now login with your student account" + Environment.NewLine + "username: " + username + Environment.NewLine + "password: " + password;
+                                updateRemarks.ExecuteNonQuery();
+
                                 Close();
                             }
                             catch(Exception error)
@@ -131,6 +137,8 @@ namespace computerizedRegistrationSystem.adminOtherForms
                             {
                                 connection.Close();
                             }
+
+                          
                         }
                     }
                     else

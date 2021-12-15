@@ -186,7 +186,6 @@
             // 
             // pictureBoxUserImage
             // 
-            this.pictureBoxUserImage.BackgroundImage = global::computerizedRegistrationSystem.Properties.Resources.udm_logo1;
             this.pictureBoxUserImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBoxUserImage.Location = new System.Drawing.Point(38, 9);
             this.pictureBoxUserImage.Name = "pictureBoxUserImage";
@@ -203,7 +202,6 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(729, 555);
             this.panelContainer.TabIndex = 1;
-           
             // 
             // button1
             // 
