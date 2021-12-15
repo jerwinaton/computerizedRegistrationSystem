@@ -21,6 +21,7 @@ namespace computerizedRegistrationSystem
             InitializeComponent();
             applicantsUserControls.UCRegistration uc = new applicantsUserControls.UCRegistration();
             addUserControl(uc);
+            btnRegistration.BackColor = Color.FromArgb(215, 170, 47);
             //set as default page
         }
 
@@ -79,6 +80,8 @@ namespace computerizedRegistrationSystem
 
         private void btnRegistration_Click(object sender, EventArgs e)
         {
+            btnRegistration.BackColor = Color.FromArgb(215, 170, 47);
+            btnEditInfo.BackColor = Color.FromArgb(12, 55, 27); // remove active bg color
             //click events on the side nav and then call the method to change the user
             // controls page on the right
             applicantsUserControls.UCRegistration uc = new applicantsUserControls.UCRegistration();
@@ -87,6 +90,9 @@ namespace computerizedRegistrationSystem
 
         private void btnEditInfo_Click(object sender, EventArgs e)
         {
+            btnEditInfo.BackColor = Color.FromArgb(215, 170, 47); // add active bg color
+            btnRegistration.BackColor = Color.FromArgb(12, 55, 27); // remove active bg color
+            
             applicantsUserControls.UCMyInfo uc = new applicantsUserControls.UCMyInfo();
             addUserControl(uc);
         }

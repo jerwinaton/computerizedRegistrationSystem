@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegistration = new System.Windows.Forms.Button();
             this.btnEditInfo = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnRegistration = new System.Windows.Forms.Button();
             this.pictureBoxUserImage = new System.Windows.Forms.PictureBox();
-            this.panelContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.SuspendLayout();
@@ -45,25 +43,11 @@
             // panelContainer
             // 
             this.panelContainer.AutoScroll = true;
-            this.panelContainer.Controls.Add(this.button1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(200, 0);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(729, 555);
             this.panelContainer.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(265, 664);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 138);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -79,6 +63,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 555);
             this.panel1.TabIndex = 2;
+            // 
+            // btnRegistration
+            // 
+            this.btnRegistration.FlatAppearance.BorderSize = 0;
+            this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistration.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistration.ForeColor = System.Drawing.Color.White;
+            this.btnRegistration.Location = new System.Drawing.Point(0, 195);
+            this.btnRegistration.Name = "btnRegistration";
+            this.btnRegistration.Size = new System.Drawing.Size(200, 35);
+            this.btnRegistration.TabIndex = 8;
+            this.btnRegistration.Text = "Registration";
+            this.btnRegistration.UseVisualStyleBackColor = true;
+            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
             // 
             // btnEditInfo
             // 
@@ -130,20 +128,6 @@
             this.lblName.Text = "Jhone Michael Matias";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnRegistration
-            // 
-            this.btnRegistration.FlatAppearance.BorderSize = 0;
-            this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistration.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistration.ForeColor = System.Drawing.Color.White;
-            this.btnRegistration.Location = new System.Drawing.Point(0, 195);
-            this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(200, 35);
-            this.btnRegistration.TabIndex = 8;
-            this.btnRegistration.Text = "Registration";
-            this.btnRegistration.UseVisualStyleBackColor = true;
-            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
-            // 
             // pictureBoxUserImage
             // 
             this.pictureBoxUserImage.BackgroundImage = global::computerizedRegistrationSystem.Properties.Resources.udm_logo1;
@@ -161,11 +145,11 @@
             this.ClientSize = new System.Drawing.Size(929, 555);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(945, 594);
             this.Name = "frmApplicant";
             this.Text = "UDM Student Portal | Applicant";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmApplicant_FormClosing);
             this.Load += new System.EventHandler(this.main_applicant_Load);
-            this.panelContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).EndInit();
             this.ResumeLayout(false);
@@ -175,7 +159,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelContainer;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnEditInfo;
         private System.Windows.Forms.Button btnLogout;
