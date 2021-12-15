@@ -119,11 +119,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminOtherForms\admin-viewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin-viewInfo.Designer.cs">
+      <DependentUpon>admin-viewInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminUserControls\UCaccounts.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="adminUserControls\UCaccounts.Designer.cs">
       <DependentUpon>UCaccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserControls\UCadmissions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UCadmissions.Designer.cs">
+      <DependentUpon>UCadmissions.cs</DependentUpon>
     </Compile>
     <Compile Include="admission.cs">
       <SubType>Form</SubType>
@@ -217,8 +229,14 @@
     <Compile Include="studentsUserControls\schedule.Designer.cs">
       <DependentUpon>schedule.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminOtherForms\admin-viewInfo.resx">
+      <DependentUpon>admin-viewInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminUserControls\UCaccounts.resx">
       <DependentUpon>UCaccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserControls\UCadmissions.resx">
+      <DependentUpon>UCadmissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admission.resx">
       <DependentUpon>admission.cs</DependentUpon>

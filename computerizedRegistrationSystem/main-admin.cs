@@ -16,6 +16,14 @@ namespace computerizedRegistrationSystem
         {
             InitializeComponent();
         }
+        //method to dynamically load user controls pages
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
 
         //close the app but confirm first thru messageBox
         private void frmMainAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -36,6 +44,21 @@ namespace computerizedRegistrationSystem
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            btnEditProfile.BackColor = Color.FromArgb(215, 170, 47);
+            //btnEditInfo.BackColor = Color.FromArgb(12, 55, 27); // remove active bg color
+            //click events on the side nav and then call the method to change the user
+            // controls page on the right
+            adminUserControls.UCadmissions uc = new adminUserControls.UCadmissions();
+            addUserControl(uc);
+        }
+
+        private void frmMainAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
