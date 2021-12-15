@@ -132,6 +132,9 @@ namespace computerizedRegistrationSystem
             }
         }
 
-       
+        private void btnRegistration_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

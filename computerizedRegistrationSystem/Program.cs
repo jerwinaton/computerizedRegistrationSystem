@@ -26,7 +26,7 @@ namespace computerizedRegistrationSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLanding());
+           Application.Run(new frmLanding());
         }
        
     }
