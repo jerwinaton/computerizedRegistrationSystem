@@ -722,9 +722,6 @@
             this.comboBoxCourse2.Enabled = false;
             this.comboBoxCourse2.Font = new System.Drawing.Font("Arial", 8F);
             this.comboBoxCourse2.FormattingEnabled = true;
-            this.comboBoxCourse2.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
             this.comboBoxCourse2.Location = new System.Drawing.Point(246, 78);
             this.comboBoxCourse2.Name = "comboBoxCourse2";
             this.comboBoxCourse2.Size = new System.Drawing.Size(445, 22);
@@ -737,12 +734,16 @@
             this.comboBoxCourse1.Font = new System.Drawing.Font("Arial", 8F);
             this.comboBoxCourse1.FormattingEnabled = true;
             this.comboBoxCourse1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Bachelor of Science in Information Technology",
+            "Bachelor of Science in Computer Engineering",
+            "Bachelor in Electronics Engineering",
+            "Bachelor in Information Technology with Specialization in Cybersecurity",
+            "Bachelor in Information Technology with Specialization in Data Science"});
             this.comboBoxCourse1.Location = new System.Drawing.Point(246, 52);
             this.comboBoxCourse1.Name = "comboBoxCourse1";
             this.comboBoxCourse1.Size = new System.Drawing.Size(445, 22);
             this.comboBoxCourse1.TabIndex = 128;
+            this.comboBoxCourse1.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse1_SelectedIndexChanged);
             // 
             // comboBoxCollege
             // 
@@ -751,12 +752,12 @@
             this.comboBoxCollege.Font = new System.Drawing.Font("Arial", 8F);
             this.comboBoxCollege.FormattingEnabled = true;
             this.comboBoxCollege.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "College of Engineering and Technology"});
             this.comboBoxCollege.Location = new System.Drawing.Point(246, 26);
             this.comboBoxCollege.Name = "comboBoxCollege";
             this.comboBoxCollege.Size = new System.Drawing.Size(445, 22);
             this.comboBoxCollege.TabIndex = 127;
+            this.comboBoxCollege.SelectedIndexChanged += new System.EventHandler(this.comboBoxCollege_SelectedIndexChanged);
             // 
             // label25
             // 
@@ -932,10 +933,16 @@
             this.comboBoxTrack.Enabled = false;
             this.comboBoxTrack.Font = new System.Drawing.Font("Arial", 12F);
             this.comboBoxTrack.FormattingEnabled = true;
+            this.comboBoxTrack.Items.AddRange(new object[] {
+            "Academic",
+            "Technical-Vocational Livelihood (TVL)",
+            "Sports",
+            "Arts and Design"});
             this.comboBoxTrack.Location = new System.Drawing.Point(10, 129);
             this.comboBoxTrack.Name = "comboBoxTrack";
             this.comboBoxTrack.Size = new System.Drawing.Size(302, 26);
             this.comboBoxTrack.TabIndex = 122;
+            this.comboBoxTrack.SelectedIndexChanged += new System.EventHandler(this.comboBoxTrack_SelectedIndexChanged);
             // 
             // label26
             // 
