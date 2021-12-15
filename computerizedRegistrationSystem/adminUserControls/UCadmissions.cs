@@ -100,6 +100,6 @@ namespace computerizedRegistrationSystem.adminUserControls
             viewDiploma.Show();
 
         }
-    }
+    
     }
 }

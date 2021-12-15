@@ -35,7 +35,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
                 while (reader.Read())//read/get data
                 {
                     label1.Text = reader["diploma_filename"].ToString();
-                    pictureBox1.BackgroundImage = byteArrayToImage((byte[])reader["tor"]);
+                    pictureBox1.BackgroundImage = byteArrayToImage((byte[])reader["diploma"]);
                 }
             }
             catch (Exception error)
