@@ -29,11 +29,12 @@ namespace computerizedRegistrationSystem.adminOtherForms
             {
                 OleDbCommand command = new OleDbCommand();//create command
                 command.Connection = connection;//give command the connection string
-                command.CommandText = "SELECT tor FROM applicantsTable WHERE applicant_id=" + adminUserControls.UCadmissions.selectedApplicantID; // where the applicant_id = to the id the selectedApplicant in datagridview in adminUserControls/UCadmissions
+                command.CommandText = "SELECT tor_filename, tor FROM applicantsTable WHERE applicant_id=" + adminUserControls.UCadmissions.selectedApplicantID; // where the applicant_id = to the id the selectedApplicant in datagridview in adminUserControls/UCadmissions
                 OleDbDataReader reader = command.ExecuteReader(); // execute
 
                 while (reader.Read())//read/get data
                 {
+                    label1.Text = reader["tor_filename"].ToString();
                     pictureBox1.BackgroundImage = byteArrayToImage((byte[])reader["tor"]);
                 }
             }
