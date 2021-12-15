@@ -16,7 +16,7 @@ namespace computerizedRegistrationSystem.applicantsUserControls
     public partial class UCMyInfo : UserControl
     {
         private bool TOR = false, diploma = false, picture = false; //declared in the class scope so other methods can use it
-        private byte[] diplomaContent, TORContent;
+       // private byte[] diplomaContent, TORContent;
         public UCMyInfo()
         {
             InitializeComponent();

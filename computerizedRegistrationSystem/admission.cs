@@ -576,8 +576,8 @@ namespace computerizedRegistrationSystem
             OpenFileDialog open = new OpenFileDialog();
             //'SET THIS FOR ONE FILE SELECTION ONLY.
             open.Multiselect = false;
-            // pdf filters  
-            open.Filter = "PDF Files(*.pdf)|*.pdf";
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // pdf full file path  
@@ -600,8 +600,8 @@ namespace computerizedRegistrationSystem
             OpenFileDialog open = new OpenFileDialog();
             //'SET THIS FOR ONE FILE SELECTION ONLY.
             open.Multiselect = false;
-            // pdf filters  
-            open.Filter = "PDF Files(*.pdf)|*.pdf";
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // pdf full file path  

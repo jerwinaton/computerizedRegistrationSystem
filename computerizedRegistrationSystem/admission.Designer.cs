@@ -650,9 +650,9 @@
             this.lblUploadDiploma.ForeColor = System.Drawing.Color.Red;
             this.lblUploadDiploma.Location = new System.Drawing.Point(515, 110);
             this.lblUploadDiploma.Name = "lblUploadDiploma";
-            this.lblUploadDiploma.Size = new System.Drawing.Size(128, 13);
+            this.lblUploadDiploma.Size = new System.Drawing.Size(160, 13);
             this.lblUploadDiploma.TabIndex = 68;
-            this.lblUploadDiploma.Text = "No file selected (.pdf)";
+            this.lblUploadDiploma.Text = "No file selected (.jpg, .png)";
             this.lblUploadDiploma.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblUploadDiploma.Click += new System.EventHandler(this.lblUploadDiploma_Click);
             // 
@@ -793,9 +793,9 @@
             this.lblUploadTOR.ForeColor = System.Drawing.Color.Red;
             this.lblUploadTOR.Location = new System.Drawing.Point(515, 173);
             this.lblUploadTOR.Name = "lblUploadTOR";
-            this.lblUploadTOR.Size = new System.Drawing.Size(128, 13);
+            this.lblUploadTOR.Size = new System.Drawing.Size(160, 13);
             this.lblUploadTOR.TabIndex = 76;
-            this.lblUploadTOR.Text = "No file selected (.pdf)";
+            this.lblUploadTOR.Text = "No file selected (.jpg, .png)";
             this.lblUploadTOR.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblUploadTOR.Click += new System.EventHandler(this.lblUploadTOR_Click);
             // 
@@ -983,7 +983,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(255)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(870, 531);
+            this.ClientSize = new System.Drawing.Size(887, 531);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label20);

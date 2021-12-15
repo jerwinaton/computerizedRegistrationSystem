@@ -83,5 +83,15 @@ namespace computerizedRegistrationSystem.adminUserControls
           
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //check if the form is already open, close if a form is already open
+            if (Application.OpenForms.OfType<adminOtherForms.admin_viewTOR>().Count() == 1)
+                Application.OpenForms.OfType<adminOtherForms.admin_viewTOR>().First().Close();
+
+            adminOtherForms.admin_viewTOR viewTOR = new adminOtherForms.admin_viewTOR();
+            viewTOR.Show();
+            
+        }
     }
 }

@@ -119,11 +119,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminOtherForms\admin-viewDiploma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin-viewDiploma.Designer.cs">
+      <DependentUpon>admin-viewDiploma.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminOtherForms\admin-viewInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="adminOtherForms\admin-viewInfo.Designer.cs">
       <DependentUpon>admin-viewInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminOtherForms\admin-viewTOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin-viewTOR.Designer.cs">
+      <DependentUpon>admin-viewTOR.cs</DependentUpon>
     </Compile>
     <Compile Include="adminUserControls\UCaccounts.cs">
       <SubType>UserControl</SubType>
@@ -229,8 +241,14 @@
     <Compile Include="studentsUserControls\schedule.Designer.cs">
       <DependentUpon>schedule.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminOtherForms\admin-viewDiploma.resx">
+      <DependentUpon>admin-viewDiploma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminOtherForms\admin-viewInfo.resx">
       <DependentUpon>admin-viewInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminOtherForms\admin-viewTOR.resx">
+      <DependentUpon>admin-viewTOR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminUserControls\UCaccounts.resx">
       <DependentUpon>UCaccounts.cs</DependentUpon>
@@ -341,6 +359,24 @@
   <ItemGroup>
     <None Include="Resources\UUDMB2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
