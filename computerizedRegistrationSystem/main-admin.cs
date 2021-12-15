@@ -37,7 +37,8 @@ namespace computerizedRegistrationSystem
             //if No is selected cancel form closing event
             if (result == DialogResult.Yes)
             {
-                Close();
+                frmLogin login = new frmLogin();
+                login.Show();
             }
             else if (result == DialogResult.No)
             {

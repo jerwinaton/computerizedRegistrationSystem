@@ -40,6 +40,7 @@ namespace computerizedRegistrationSystem.adminUserControls
         private void UCadmissions_Load(object sender, EventArgs e)
         {
 
+         
         }
 
         private void btnLoadTable_Click(object sender, EventArgs e)
@@ -55,6 +56,21 @@ namespace computerizedRegistrationSystem.adminUserControls
                 DataTable dt = new DataTable(); //fill this with the values from adapter
                 adapter.Fill(dt);
                 dataGridViewApplications.DataSource = dt;
+                //reaname datagridview headers
+                dataGridViewApplications.Columns[0].HeaderText = "Status";
+                dataGridViewApplications.Columns[1].HeaderText = "Remarks";
+                dataGridViewApplications.Columns[2].HeaderText = "Applicant ID";
+                dataGridViewApplications.Columns[3].HeaderText = "Email";
+                dataGridViewApplications.Columns[4].HeaderText = "First Name";
+                dataGridViewApplications.Columns[5].HeaderText = "Middle Name";
+                dataGridViewApplications.Columns[6].HeaderText = "Last Name";
+                dataGridViewApplications.Columns[7].HeaderText = "Gender";
+                dataGridViewApplications.Columns[8].HeaderText = "Contact #";
+                dataGridViewApplications.Columns[9].HeaderText = "Town";
+                dataGridViewApplications.Columns[10].HeaderText = "College Applied";
+                dataGridViewApplications.Columns[11].HeaderText = "Course 1st Choice";
+                dataGridViewApplications.Columns[12].HeaderText = "Course 2nd Choice";
+                dataGridViewApplications.Columns[13].HeaderText = "Date Applied";
 
             }
             catch (Exception error)
