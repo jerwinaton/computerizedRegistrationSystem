@@ -15,8 +15,9 @@ namespace computerizedRegistrationSystem.applicantsUserControls
 {
     public partial class UCMyInfo : UserControl
     {
-        private bool TOR = false, diploma = false, picture = false; //declared in the class scope so other methods can use it
-       // private byte[] diplomaContent, TORContent;
+        private byte[] diplomaContent, TORContent, imageContent;
+       public string status, remarks;
+
         public UCMyInfo()
         {
             InitializeComponent();
@@ -84,10 +85,17 @@ namespace computerizedRegistrationSystem.applicantsUserControls
                     textBoxLastSchool.Text = reader["last_school_attended"].ToString();
                     textBoxHonors.Text = reader["honors_awards"].ToString();
                     pictureBox1x1Image.BackgroundImage = byteArrayToImage((byte[])reader["1x1_picture"]);//converted byte to image
+
+
                     lblUploadImage.Text = reader["1X1_picture_filename"].ToString();
                     lblUploadDiploma.Text = reader["diploma_filename"].ToString();
+                    pictureBox1x1Image.BackgroundImage = byteArrayToImage((byte[])reader["1x1_picture"]);//converted byte to image
+
                     lblUploadTOR.Text = reader["tor_filename"].ToString();
-                    pictureBox1.BackgroundImage = byteArrayToImage((byte[])reader["1x1_picture"]);//converted byte to image
+
+                    pictureBox2.BackgroundImage = byteArrayToImage((byte[])reader["diploma"]);//converted byte to image
+
+                    pictureBox3.BackgroundImage = byteArrayToImage((byte[])reader["tor"]);//converted byte to image
 
                     comboBoxCollege.SelectedItem = reader["college_applied"].ToString();
                     comboBoxCourse1.SelectedItem = reader["course_choice1"].ToString();
@@ -95,6 +103,9 @@ namespace computerizedRegistrationSystem.applicantsUserControls
 
                     comboBoxTrack.SelectedItem = reader["track"].ToString();
                     comboBoxStrand.SelectedItem = reader["strand"].ToString();
+
+                    status = reader["status"].ToString(); //get status for later programs
+                    remarks = reader["remarks"].ToString(); ////get remarks for later programs
                 }
 
             }
@@ -109,6 +120,48 @@ namespace computerizedRegistrationSystem.applicantsUserControls
 
             //for the age
             labelAge.Text = CalculateAge(dateTimePickerBirthDate.Value).ToString();
+
+            if (status == "RETURNED")
+            {
+                textBoxFName.Enabled = true;
+                textBoxMName.Enabled = true;
+                textBoxLName.Enabled = true;
+                comboBoxGender.Enabled = true;
+                dateTimePickerBirthDate.Enabled = true;
+                textBoxEmail.Enabled = true;
+                textBoxStudentContactNo.Enabled = true;
+                textBoxHouseNo.Enabled = true;
+                textBoxStreet.Enabled = true;
+
+                comboBoxDistrict.Enabled = true;
+                comboBoxBrgy.Enabled = true;
+                comboBoxTown.Enabled = true;
+                textBoxZipCode.Enabled = true;
+                textBoxMotherName.Enabled = true;
+                textBoxMotherNo.Enabled = true;
+                textBoxMotherWork.Enabled = true;
+                textBoxFatherName.Enabled = true;
+                textBoxFatherNo.Enabled = true;
+
+                textBoxFatherWork.Enabled = true;
+                textBoxLastSchool.Enabled = true;
+                textBoxHonors.Enabled = true;
+                comboBoxCollege.Enabled = true;
+                comboBoxCourse1.Enabled = true;
+                comboBoxCourse2.Enabled = true;
+
+                comboBoxTrack.Enabled = true;
+                comboBoxStrand.Enabled = true;
+
+                btnUploadImage.Enabled = true;
+                btnUploadDiploma.Enabled = true;
+                btnUploadTOR.Enabled = true;
+
+                btnSubmit.Enabled = true;
+            }
+
+
+
         }
         //calculate age
         private static int CalculateAge(DateTime dateOfBirth)
@@ -167,88 +220,83 @@ namespace computerizedRegistrationSystem.applicantsUserControls
                 comboBoxTown.Items.AddRange(CITIES);
             }
         }
-        //accept only numbers
-        private void textBoxStudentContactNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void textBoxZipCode_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void textBoxFatherNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void textBoxMotherNo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-        //end of accept only numbers
-
-        // accept only letters
-        private void textBoxFName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
-        }
-
-        private void textBoxMName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
-        }
-
-        private void textBoxLName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
-        }
-
-        private void textBoxFatherName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
-        }
-
-        private void textBoxFatherWork_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
-        }
-
+       
         private void btnUploadDiploma_Click(object sender, EventArgs e)
         {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            //'SET THIS FOR ONE FILE SELECTION ONLY.
+            open.Multiselect = false;
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // image full file path  
+                string filePathDiploma = open.FileName;
+                //get the filename only
+                string fileName = Path.GetFileName(filePathDiploma);
+                lblUploadDiploma.Text = fileName;
+                btnUploadDiploma.Text = "Change File";
+                lblUploadDiploma.ForeColor = Color.Green; // change color to green if a file has been chosen
 
+                FileInfo file1 = new FileInfo(filePathDiploma);
+                diplomaContent = File.ReadAllBytes(filePathDiploma); //read the file and store int byte[]
+            }
+        
         }
 
-        private void lblUploadDiploma_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void btnUploadTOR_Click(object sender, EventArgs e)
         {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            //'SET THIS FOR ONE FILE SELECTION ONLY.
+            open.Multiselect = false;
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // image full file path  
+                string filePathTOR = open.FileName;
+                //get the filename only
+                string fileName = Path.GetFileName(filePathTOR);
+                lblUploadTOR.Text = fileName;
+                btnUploadTOR.Text = "Change File";
+                lblUploadTOR.ForeColor = Color.Green; // change color to green if a file has been chosen
 
+                FileInfo file1 = new FileInfo(filePathTOR);
+                TORContent = File.ReadAllBytes(filePathTOR); //read the file and store int byte[]
+            }
         }
 
-        private void lblUploadTOR_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
-
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            //'SET THIS FOR ONE FILE SELECTION ONLY.
+            open.Multiselect = false;
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
+            if (open.ShowDialog() == DialogResult.OK)
+            {  
+                // display image in picture box  
+                pictureBox1.BackgroundImage = Image.FromFile(open.FileName);
+                // image full file path  
+                string filePathImage = open.FileName;
+                //get the filename only
+                string fileName = Path.GetFileName(filePathImage);
+                lblUploadImage.Text = fileName;
+                btnUploadImage.Text = "Change File";
+                lblUploadImage.ForeColor = Color.Green; // change color to green if a file has been chosen
+                            
+               
+                FileInfo file1 = new FileInfo(filePathImage);
+                imageContent = File.ReadAllBytes(filePathImage); //read the file and store int byte[]
+            }
         }
 
-        private void lblUploadImage_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void comboBoxTrack_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -314,17 +362,157 @@ namespace computerizedRegistrationSystem.applicantsUserControls
                 comboBoxCourse2.Items.AddRange(COURSES);
             }
         }
+        //method to convert image to byte, so we can save that byte to the database
+        private byte[] imageToBytes(Image image, System.Drawing.Imaging.ImageFormat format)
+        {
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                image.Save(memoryStream, format);
+                return memoryStream.ToArray();
+            }
+        }
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (canProceed())//call the canProceed method which validates the form and returns true or false
+            {
+                string message = "Before submitting, have you reviewed your information?";
+                string title = "Submit the Form?";
+                SendKeys.Send("{Tab}");
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                //if No stop submitting
+                if (result == DialogResult.No)
+                {
+
+                }
+                //if yes submit the form
+                else if (result == DialogResult.Yes)
+                {
+                   try
+                    {
+                        
+
+                        Program.connection.Open(); //open connection to database
+
+                        OleDbCommand command = new OleDbCommand();//create command
+                        command.Connection = Program.connection;//give command the connection string
+                        command.CommandText = "UPDATE applicantsTable SET first_name='" + textBoxFName.Text.ToUpper() + "',middle_name='" + textBoxMName.Text.ToUpper() + "'," +
+                            "last_name='" + textBoxLName.Text.ToUpper() + "',gender='" + comboBoxGender.Text + "',birthdate='" + dateTimePickerBirthDate.Value.ToShortDateString() + "'," +
+                            "email='" + textBoxEmail.Text.ToLower() + "',contact_no='" + textBoxStudentContactNo.Text + "',house_no='" + textBoxHouseNo.Text.ToUpper() + "'," +
+                            "street='" + textBoxStreet.Text.ToUpper() + "',district='" + comboBoxDistrict.Text + "'," +
+                                         "barangay='" + comboBoxBrgy.Text + "',town='" + comboBoxTown.Text + "',zip_code='" + textBoxZipCode.Text + "'," +
+                                         "mothers_name='" + textBoxMotherName.Text.ToUpper() + "',mothers_contact_no='" + textBoxMotherNo.Text + "'," +
+                                         "mothers_occupation='" + textBoxMotherWork.Text.ToUpper() + "',fathers_name='" + textBoxFatherName.Text.ToUpper() + "'," +
+                                         "fathers_contact_no='" + textBoxFatherNo.Text + "',fathers_occupation='" + textBoxFatherWork.Text.ToUpper() + "'," +
+                                         "last_school_attended='" + textBoxLastSchool.Text.ToUpper() + "',honors_awards='" + textBoxHonors.Text.ToUpper() + "'," +
+                                         "1x1_picture_filename='" + lblUploadImage.Text + "',1x1_picture=@imageContent, diploma_filename='" + lblUploadDiploma.Text + "'," +
+                                         "diploma= @diplomaContent, tor_filename='"+ lblUploadTOR.Text+"',tor=@TORContent," +
+                                         "status='FOLLOW UP',track='"+comboBoxTrack.Text+"',strand='"+ comboBoxStrand.Text+"',college_applied='"+ comboBoxCollege.Text+"'," +
+                                         "course_choice1='"+ comboBoxCourse1.Text+"',course_choice2='"+ comboBoxCourse2.Text+"' WHERE applicant_id=" + frmLogin.id; // where the applicant_id = to the id the user that logged in (in the login.cs);
+
+
+                        //if the images have not been updated then the current images will be sent to this query
+                        //create a bitmap to set the image back to the default image
+                        Bitmap bitmap1 = new Bitmap(pictureBox1.BackgroundImage);
+                        byte[] imageContent = imageToBytes(bitmap1, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
+                        command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = imageContent; //insert to database as byte
+
+                        Bitmap bitmap2 = new Bitmap(pictureBox2.BackgroundImage); //hiddenpicturebox
+                        byte[] diplomaContent = imageToBytes(bitmap2, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
+                        command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = diplomaContent; //insert to database as byte
+
+                        Bitmap bitmap3 = new Bitmap(pictureBox3.BackgroundImage); //hidden picturebox
+                        byte[] TORContent = imageToBytes(bitmap3, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
+                        command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = TORContent; //insert to database as byte
+
+                        command.Parameters.AddWithValue("diplomaContent", OleDbType.Binary).Value = diplomaContent;
+                        command.Parameters.AddWithValue("imageContent", OleDbType.Binary).Value = imageContent;
+                        command.Parameters.AddWithValue("TORContent", OleDbType.Binary).Value = TORContent;
+
+
+                        //STATUS = PENDING, ACCEPTED, RETURNED, FOLLOW UP, REJECTED
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Your form has been updated successfully." + Environment.NewLine + "Please wait for the admin to review your application.");
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Error " + error);
+                    }
+                    finally
+                    {
+                        Program.connection.Close();
+                    }
+                }
+            }
+        }
+    
+
+        //accept only numbers
+        private void textBoxStudentContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBoxZipCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBoxFatherNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBoxMotherNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBoxFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void textBoxMName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void textBoxLName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void textBoxFatherName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+        }
+
+        private void textBoxFatherWork_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+        }
 
         private void textBoxMotherName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void textBoxMotherWork_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar);
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
-        //end of accept only letters
+
+      
+        //end of accept letters only
 
         //validate the form
         private bool canProceed()
@@ -483,27 +671,7 @@ namespace computerizedRegistrationSystem.applicantsUserControls
                 textBoxLastSchool.Select();
                 return false;
             }
-            else if (picture == false)//check if empty
-            {
-                string msgbx_message = "Please upload your 1by1 picture.";
-                string msgbx_title = "Submit Failed";
-                MessageBox.Show(msgbx_message, msgbx_title);
-                return false;
-            }
-            else if (diploma == false)//check if empty
-            {
-                string msgbx_message = "Please upload a PDF copy of your diploma.";
-                string msgbx_title = "Submit Failed";
-                MessageBox.Show(msgbx_message, msgbx_title);
-                return false;
-            }
-            else if (TOR == false)//check if empty
-            {
-                string msgbx_message = "Please upload a PDF copy of your Transcript of Records.";
-                string msgbx_title = "Submit Failed";
-                MessageBox.Show(msgbx_message, msgbx_title);
-                return false;
-            }
+          
             else
             {
                 return true;

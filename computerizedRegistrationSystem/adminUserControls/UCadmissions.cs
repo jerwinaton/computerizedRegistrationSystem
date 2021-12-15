@@ -50,7 +50,7 @@ namespace computerizedRegistrationSystem.adminUserControls
             {
                 OleDbCommand command = new OleDbCommand();//create command
                 command.Connection = connection;//give command the connection string
-                command.CommandText = "SELECT status,applicant_id,email,first_name,middle_name,last_name,gender,contact_no,town,college_applied,course_choice1,course_choice2,date_applied FROM applicantsTable";
+                command.CommandText = "SELECT status,remarks,applicant_id,email,first_name,middle_name,last_name,gender,contact_no,town,college_applied,course_choice1,course_choice2,date_applied FROM applicantsTable";
                 OleDbDataAdapter adapter = new OleDbDataAdapter(command); // will help to fill the data
                 DataTable dt = new DataTable(); //fill this with the values from adapter
                 adapter.Fill(dt);
@@ -69,46 +69,77 @@ namespace computerizedRegistrationSystem.adminUserControls
         //view info button clicked
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            //check if the form is already open, close if a form is already open
-            if (Application.OpenForms.OfType<adminOtherForms.admin_viewInfo>().Count() == 1)
-                Application.OpenForms.OfType<adminOtherForms.admin_viewInfo>().First().Close();
+            //check first if an applicant is selected
+            if (selectedApplicantID == "")
+            {
+                MessageBox.Show("Choose an applicant first. (Reload the table)");
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_viewInfo>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_viewInfo>().First().Close();
 
-            adminOtherForms.admin_viewInfo viewInfo = new adminOtherForms.admin_viewInfo();
-            viewInfo.Show();
+                adminOtherForms.admin_viewInfo viewInfo = new adminOtherForms.admin_viewInfo();
+                viewInfo.Show();
+            }
+            
    
         }
-
+        //view TOR
         private void button6_Click(object sender, EventArgs e)
         {
-            //check if the form is already open, close if a form is already open
-            if (Application.OpenForms.OfType<adminOtherForms.admin_viewTOR>().Count() == 1)
-                Application.OpenForms.OfType<adminOtherForms.admin_viewTOR>().First().Close();
+            //check first if an applicant is selected
+            if (selectedApplicantID == "")
+            {
+                MessageBox.Show("Choose an applicant first. (Reload the table)");
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_viewTOR>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_viewTOR>().First().Close();
 
-            adminOtherForms.admin_viewTOR viewTOR = new adminOtherForms.admin_viewTOR();
-            viewTOR.Show();
+                adminOtherForms.admin_viewTOR viewTOR = new adminOtherForms.admin_viewTOR();
+                viewTOR.Show();
+            }
             
         }
-
+        //view Diploma
         private void button5_Click(object sender, EventArgs e)
         {
-            //check if the form is already open, close if a form is already open
-            if (Application.OpenForms.OfType<adminOtherForms.admin_viewDiploma>().Count() == 1)
-                Application.OpenForms.OfType<adminOtherForms.admin_viewDiploma>().First().Close();
+            //check first if an applicant is selected
+            if (selectedApplicantID == "")
+            {
+                MessageBox.Show("Choose an applicant first. (Reload the table)");
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_viewDiploma>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_viewDiploma>().First().Close();
 
-            adminOtherForms.admin_viewDiploma viewDiploma = new adminOtherForms.admin_viewDiploma();
-            viewDiploma.Show();
-
+                adminOtherForms.admin_viewDiploma viewDiploma = new adminOtherForms.admin_viewDiploma();
+                viewDiploma.Show();
+            }
         }
-
+        //return the form
         private void button2_Click(object sender, EventArgs e)
         {
-            //check if the form is already open, close if a form is already open
-            if (Application.OpenForms.OfType<adminOtherForms.admin_return>().Count() == 1)
-                Application.OpenForms.OfType<adminOtherForms.admin_return>().First().Close();
+            //check first if an applicant is selected
+            if (selectedApplicantID == "")
+            {
+                MessageBox.Show("Choose an applicant first. (Reload the table)");
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_return>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_return>().First().Close();
 
-            adminOtherForms.admin_return adminReturn = new adminOtherForms.admin_return();
-            adminReturn.Show();
+                adminOtherForms.admin_return adminReturn = new adminOtherForms.admin_return();
+                adminReturn.Show();
+            }
         }
     }
 }

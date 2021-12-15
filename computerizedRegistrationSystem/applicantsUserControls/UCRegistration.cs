@@ -36,23 +36,38 @@ namespace computerizedRegistrationSystem.applicantsUserControls
                 while (reader.Read())//read 
                 {
                      status = reader["status"].ToString();
+                    labelRemarks.Text = reader["remarks"].ToString();
                 }
                 lblStatus.Text = status;
                 //change status color dependes on the status
                 if (status == "PENDING")
                 {
                     lblStatus.ForeColor = Color.Orange;
-                  
+                    labelRemarks.ForeColor = Color.Orange;
                 }
                 else if(status == "ACCEPTED")
                 {
+                    lblTitle.Text = "Your Application has been accepted";
                     lblStatus.ForeColor = Color.Green;
-                 
+                    labelRemarks.ForeColor = Color.Green;
                 }
-                else // if rejected
+                else if(status == "RETURNED")// if returned
                 {
+                    lblTitle.Text = "Your Application has been returned";
+                    lblStatus.ForeColor = Color.Orange;
+                    labelRemarks.ForeColor = Color.Orange;
+                }
+                else if(status == "REJECTED") // if rejected
+                {
+                    lblTitle.Text = "We're very sorry to inform you that your application has been rejected.";
                     lblStatus.ForeColor = Color.Red;
-
+                    labelRemarks.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblTitle.Text = "We've received your follow up, your application is now being processed.";
+                    lblStatus.ForeColor = Color.Orange;
+                    labelRemarks.ForeColor = Color.Orange;
                 }
                 
             }

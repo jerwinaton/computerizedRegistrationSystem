@@ -46,10 +46,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
                     {
                         MessageBox.Show("The form was returned to the user 'applicant_" + adminUserControls.UCadmissions.selectedApplicantID + "' successfully");
                     }
-                    else
-                    {
-                        MessageBox.Show("An error occured, the form was not returned");
-                    }
+                  
 
                 }
                 catch (Exception error)

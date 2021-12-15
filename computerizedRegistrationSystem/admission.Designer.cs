@@ -641,7 +641,6 @@
             this.lblUploadImage.TabIndex = 67;
             this.lblUploadImage.Text = "No file selected (.jpg, .png)";
             this.lblUploadImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblUploadImage.Click += new System.EventHandler(this.lblUploadImage_Click);
             // 
             // lblUploadDiploma
             // 
@@ -654,7 +653,6 @@
             this.lblUploadDiploma.TabIndex = 68;
             this.lblUploadDiploma.Text = "No file selected (.jpg, .png)";
             this.lblUploadDiploma.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblUploadDiploma.Click += new System.EventHandler(this.lblUploadDiploma_Click);
             // 
             // btnSubmit
             // 

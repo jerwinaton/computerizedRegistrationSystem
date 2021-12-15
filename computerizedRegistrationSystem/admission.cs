@@ -15,7 +15,7 @@ namespace computerizedRegistrationSystem
     public partial class frmAdmission : Form
     {
         private bool TOR = false, diploma = false, picture=false; //declared in the class scope so other methods can use it
-        private byte[] diplomaContent,TORContent;
+        private byte[] diplomaContent,TORContent, imageContent;
         private frmLanding frmLanding = new frmLanding();
         private string id,last_name; // to be used below in inserting temporary username and password
 
@@ -455,11 +455,8 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("1x1_picture_filename", OleDbType.VarChar).Value = lblUploadImage.Text;
                         //22 commands above
 
-                        //for the image
-                        //create a bitmap
-                        Bitmap bitmap = new Bitmap(pictureBox1x1Image.BackgroundImage);
-                        byte[] pic = imageToBytes(bitmap, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
-                        command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = pic; //insert to database as byte
+                      
+                        command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = imageContent; //insert to database as byte
 
                         command.Parameters.AddWithValue("diploma_filename", OleDbType.VarChar).Value = lblUploadDiploma.Text;
                         command.Parameters.AddWithValue("diploma", OleDbType.Binary).Value = diplomaContent;  //insert to database as byte
@@ -539,7 +536,8 @@ namespace computerizedRegistrationSystem
                 }
             }
         }
-        //method to convert image to byte, so we can save that byte to the database
+        //not used anymore
+        /*//method to convert image to byte, so we can save that byte to the database
         private byte[] imageToBytes(Image image, System.Drawing.Imaging.ImageFormat format)
         {
             using(MemoryStream memoryStream = new MemoryStream())
@@ -547,27 +545,28 @@ namespace computerizedRegistrationSystem
                 image.Save(memoryStream, format);
                 return memoryStream.ToArray();
             }
-        }
+        }*/
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
             // open file dialog   
             OpenFileDialog open = new OpenFileDialog();
-            // image filters  
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
             //'SET THIS FOR ONE FILE SELECTION ONLY.
             open.Multiselect = false;
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
             if (open.ShowDialog() == DialogResult.OK)
             {
-                // display image in picture box  
-                pictureBox1x1Image.BackgroundImage = Image.FromFile(open.FileName);
                 // image full file path  
-                 string filePathImage = open.FileName;
+                string filePathImage = open.FileName;
                 //get the filename only
                 string fileName = Path.GetFileName(filePathImage);
                 lblUploadImage.Text = fileName;
-                btnUploadImage.Text = "Change Image";
+                btnUploadImage.Text = "Change File";
                 lblUploadImage.ForeColor = Color.Green; // change color to green if a file has been chosen
-                picture = true;// is declared in the class scope so it can be used in btnSubmit_Click method
+                picture = true; // is declared in the class scope so it can be used in btnSubmit_Click method
+
+                FileInfo file1 = new FileInfo(filePathImage);
+                imageContent = File.ReadAllBytes(filePathImage); //read the file and store int byte[]
             }
         }
 
@@ -618,40 +617,9 @@ namespace computerizedRegistrationSystem
                 TORContent = File.ReadAllBytes(filePathTOR); //read the file and store int byte[]
             }
         }
-        //accept only letters
-        private void textBoxFName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
+       
 
-        private void textBoxMName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void textBoxLName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void lblUploadDiploma_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblUploadImage_Click(object sender, EventArgs e)
-        {
-
-        }
+    
         //POPULATE STRAND COMBOBOX BASED ON THE VALUE OF TRACK COMBOBOX
         private void comboBoxTrack_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -727,7 +695,7 @@ namespace computerizedRegistrationSystem
         {
 
         }
-
+        //accept letters only
         private void textBoxFatherName_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
@@ -759,5 +727,30 @@ namespace computerizedRegistrationSystem
                 e.Handled = true;
             }
         }
+      
+        private void textBoxFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxMName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxLName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        //end of accept letters only
     }
 }
