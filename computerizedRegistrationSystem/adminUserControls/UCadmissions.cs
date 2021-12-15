@@ -39,22 +39,22 @@ namespace computerizedRegistrationSystem.adminUserControls
 
         private void UCadmissions_Load(object sender, EventArgs e)
         {
-
-         
+            LoadTable();//reload
         }
-
-        private void btnLoadTable_Click(object sender, EventArgs e)
+        //reload table
+        private void LoadTable()
         {
             OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
-            connection.Open();
+        connection.Open();
             try
             {
                 OleDbCommand command = new OleDbCommand();//create command
-                command.Connection = connection;//give command the connection string
-                command.CommandText = "SELECT status,remarks,applicant_id,email,first_name,middle_name,last_name,gender,contact_no,town,college_applied,course_choice1,course_choice2,date_applied FROM applicantsTable";
+        command.Connection = connection;//give command the connection string
+                command.CommandText = "SELECT status,remarks,applicant_id,email,first_name,middle_name,last_name,gender,contact_no,town,college_applied,course_choice1,course_choice2,date_applied FROM applicantsTable " +
+                    "WHERE status= 'PENDING' OR status = 'FOLLOW UP'";
                 OleDbDataAdapter adapter = new OleDbDataAdapter(command); // will help to fill the data
-                DataTable dt = new DataTable(); //fill this with the values from adapter
-                adapter.Fill(dt);
+        DataTable dt = new DataTable(); //fill this with the values from adapter
+        adapter.Fill(dt);
                 dataGridViewApplications.DataSource = dt;
                 //reaname datagridview headers
                 dataGridViewApplications.Columns[0].HeaderText = "Status";
@@ -81,6 +81,10 @@ namespace computerizedRegistrationSystem.adminUserControls
             {
                 connection.Close();
             }
+        }
+        public void btnLoadTable_Click(object sender, EventArgs e)
+        {
+            LoadTable();//reload
         }
         //view info button clicked
         private void button1_Click(object sender, EventArgs e)

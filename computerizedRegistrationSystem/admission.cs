@@ -501,7 +501,7 @@ namespace computerizedRegistrationSystem
                                 frmShow.usernameText = "applicant_" + id; //set the lblUsername's text of showTempAccount form
                                 frmShow.passwordText = last_name.ToLower(); //set the lblPassword's text of showTempAccount form
 
-                                string username_temp = "applicant_" + id; //to be used in the INSERT statement below
+                                string username_temp = "applicant_" + id; //to be used in the UPDATE statement below
                                 string password_temp = last_name.ToLower();
 
                                 //new query
