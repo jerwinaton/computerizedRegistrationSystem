@@ -121,8 +121,7 @@ namespace computerizedRegistrationSystem
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Close();
-            frmLogin login = new frmLogin();
-            login.Show();
+           
         }
     }
 }

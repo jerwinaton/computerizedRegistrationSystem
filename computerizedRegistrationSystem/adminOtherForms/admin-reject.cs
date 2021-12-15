@@ -12,18 +12,13 @@ using System.Data.OleDb;
 
 namespace computerizedRegistrationSystem.adminOtherForms
 {
-    public partial class admin_return : Form
+    public partial class adminReject : Form
     {
-        public admin_return()
+        public adminReject()
         {
             InitializeComponent();
         }
-
-        private void admin_return_Load(object sender, EventArgs e)
-        {
-            labelApplicantID.Text = "applicant_" + adminUserControls.UCadmissions.selectedApplicantID;
-        }
-
+        //click reject button
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBoxRemarks.Text == "")
@@ -39,15 +34,14 @@ namespace computerizedRegistrationSystem.adminOtherForms
                 {
                     OleDbCommand command = new OleDbCommand();//create command
                     command.Connection = connection;//give command the connection string
-                    command.CommandText = "UPDATE applicantsTable SET status='RETURNED',remarks='" + textBoxRemarks.Text + "' WHERE applicant_id=" + adminUserControls.UCadmissions.selectedApplicantID;
+                    command.CommandText = "UPDATE applicantsTable SET status='REJECTED',remarks='" + textBoxRemarks.Text + "' WHERE applicant_id=" + adminUserControls.UCadmissions.selectedApplicantID;
                     int execute = command.ExecuteNonQuery(); //execute
 
                     if (execute > 0)//success
                     {
-                        MessageBox.Show("The form was returned to the user 'applicant_" + adminUserControls.UCadmissions.selectedApplicantID + "' successfully");
+                        MessageBox.Show("The application ha been rejected. The 'applicant_" + adminUserControls.UCadmissions.selectedApplicantID + "' will be informed.");
                         Close();
                     }
-                  
 
                 }
                 catch (Exception error)
@@ -59,7 +53,11 @@ namespace computerizedRegistrationSystem.adminOtherForms
                     connection.Close();
                 }
             }
+        }
 
+        private void adminReject_Load(object sender, EventArgs e)
+        {
+            labelApplicantID.Text="applicant_"+adminUserControls.UCadmissions.selectedApplicantID;
         }
     }
 }

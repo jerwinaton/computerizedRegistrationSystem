@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewApplications = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,16 +45,16 @@
             // 
             this.dataGridViewApplications.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewApplications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewApplications.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewApplications.Location = new System.Drawing.Point(203, 3);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewApplications.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewApplications.Location = new System.Drawing.Point(203, 10);
             this.dataGridViewApplications.MultiSelect = false;
             this.dataGridViewApplications.Name = "dataGridViewApplications";
             this.dataGridViewApplications.ReadOnly = true;
@@ -125,7 +125,7 @@
             this.btnLoadTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadTable.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLoadTable.ForeColor = System.Drawing.Color.White;
-            this.btnLoadTable.Location = new System.Drawing.Point(39, 3);
+            this.btnLoadTable.Location = new System.Drawing.Point(39, 9);
             this.btnLoadTable.Name = "btnLoadTable";
             this.btnLoadTable.Size = new System.Drawing.Size(128, 37);
             this.btnLoadTable.TabIndex = 5;
@@ -163,16 +163,17 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(39, 417);
+            this.button7.Location = new System.Drawing.Point(39, 437);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(128, 37);
+            this.button7.Size = new System.Drawing.Size(128, 50);
             this.button7.TabIndex = 8;
-            this.button7.Text = "Reject";
+            this.button7.Text = "View Rejected Applications";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // UCadmissions
             // 

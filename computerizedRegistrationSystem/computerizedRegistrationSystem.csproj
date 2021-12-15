@@ -125,6 +125,12 @@
     <Compile Include="adminOtherForms\admin-admit.Designer.cs">
       <DependentUpon>admin-admit.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminOtherForms\admin-reject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin-reject.Designer.cs">
+      <DependentUpon>admin-reject.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminOtherForms\admin-return.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </Compile>
     <EmbeddedResource Include="adminOtherForms\admin-admit.resx">
       <DependentUpon>admin-admit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminOtherForms\admin-reject.resx">
+      <DependentUpon>admin-reject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminOtherForms\admin-return.resx">
       <DependentUpon>admin-return.cs</DependentUpon>
