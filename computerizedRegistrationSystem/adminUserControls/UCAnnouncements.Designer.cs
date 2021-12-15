@@ -419,6 +419,7 @@
             this.Controls.Add(this.panelAnnouncement);
             this.Name = "UCAnnouncements";
             this.Size = new System.Drawing.Size(968, 688);
+            this.Load += new System.EventHandler(this.UCAnnouncements_Load);
             this.panelAnnouncement.ResumeLayout(false);
             this.panelAnnouncement.PerformLayout();
             this.ResumeLayout(false);

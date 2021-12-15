@@ -203,6 +203,7 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(729, 555);
             this.panelContainer.TabIndex = 1;
+           
             // 
             // button1
             // 

@@ -51,7 +51,9 @@ namespace computerizedRegistrationSystem
             {
                 connection.Close();
             }
-
+            //get updated announcements
+            
+          
 
         }
         //method to convert byte to image
@@ -131,5 +133,7 @@ namespace computerizedRegistrationSystem
                 e.Cancel = true; 
             }
         }
+
+       
     }
 }
