@@ -63,9 +63,9 @@ namespace computerizedRegistrationSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
+           
             Close();
-            login.Show();
+           
         }
     }
 }

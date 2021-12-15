@@ -64,8 +64,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
                         "track, strand " +
                         "FROM applicantsTable WHERE applicant_id=" + id + ") as st";
 
-
-
+                    //updated values/data of the student
                     command.Parameters.AddWithValue("@application_id", OleDbType.Integer).Value = Convert.ToInt32(id);
                     command.Parameters.AddWithValue("@college", OleDbType.VarChar).Value = college;
                     command.Parameters.AddWithValue("@course", OleDbType.VarChar).Value = course;
