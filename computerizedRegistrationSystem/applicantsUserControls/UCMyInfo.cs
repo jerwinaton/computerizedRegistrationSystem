@@ -106,6 +106,19 @@ namespace computerizedRegistrationSystem.applicantsUserControls
             {
                 connection.Close();
             }
+
+            //for the age
+            labelAge.Text = CalculateAge(dateTimePickerBirthDate.Value).ToString();
+        }
+        //calculate age
+        private static int CalculateAge(DateTime dateOfBirth)
+        {
+            int age = 0;
+            age = DateTime.Now.Year - dateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+                age = age - 1;
+
+            return age;
         }
         //method to convert byte to image
         public Image byteArrayToImage(byte[] byteArrayIn)

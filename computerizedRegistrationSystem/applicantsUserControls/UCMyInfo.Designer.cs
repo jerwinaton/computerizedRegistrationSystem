@@ -30,14 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lblUploadDiploma = new System.Windows.Forms.Label();
-            this.btnUploadDiploma = new FontAwesome.Sharp.IconButton();
             this.label20 = new System.Windows.Forms.Label();
             this.textBoxLastSchool = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.textBoxMotherNo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnUploadTOR = new FontAwesome.Sharp.IconButton();
             this.label18 = new System.Windows.Forms.Label();
             this.textBoxFatherNo = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -82,21 +80,25 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBoxStrand = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.lblUploadImage = new System.Windows.Forms.Label();
-            this.btnUploadImage = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxTrack = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.textBoxHonors = new System.Windows.Forms.TextBox();
+            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
+            this.btnUploadImage = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUploadDiploma = new FontAwesome.Sharp.IconButton();
+            this.btnUploadTOR = new FontAwesome.Sharp.IconButton();
+            this.labelAge = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,27 +124,6 @@
             this.lblUploadDiploma.Text = "No file selected (.pdf)";
             this.lblUploadDiploma.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblUploadDiploma.Click += new System.EventHandler(this.lblUploadDiploma_Click);
-            // 
-            // btnUploadDiploma
-            // 
-            this.btnUploadDiploma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
-            this.btnUploadDiploma.Enabled = false;
-            this.btnUploadDiploma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadDiploma.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUploadDiploma.ForeColor = System.Drawing.Color.White;
-            this.btnUploadDiploma.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnUploadDiploma.IconColor = System.Drawing.Color.White;
-            this.btnUploadDiploma.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUploadDiploma.IconSize = 20;
-            this.btnUploadDiploma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadDiploma.Location = new System.Drawing.Point(534, 72);
-            this.btnUploadDiploma.Name = "btnUploadDiploma";
-            this.btnUploadDiploma.Size = new System.Drawing.Size(126, 32);
-            this.btnUploadDiploma.TabIndex = 98;
-            this.btnUploadDiploma.Text = "Change Diploma";
-            this.btnUploadDiploma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUploadDiploma.UseVisualStyleBackColor = false;
-            this.btnUploadDiploma.Click += new System.EventHandler(this.btnUploadDiploma_Click);
             // 
             // label20
             // 
@@ -215,27 +196,6 @@
             this.label14.TabIndex = 110;
             this.label14.Text = "Father\'s Occupation";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnUploadTOR
-            // 
-            this.btnUploadTOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
-            this.btnUploadTOR.Enabled = false;
-            this.btnUploadTOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadTOR.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnUploadTOR.ForeColor = System.Drawing.Color.White;
-            this.btnUploadTOR.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnUploadTOR.IconColor = System.Drawing.Color.White;
-            this.btnUploadTOR.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUploadTOR.IconSize = 20;
-            this.btnUploadTOR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadTOR.Location = new System.Drawing.Point(533, 134);
-            this.btnUploadTOR.Name = "btnUploadTOR";
-            this.btnUploadTOR.Size = new System.Drawing.Size(106, 33);
-            this.btnUploadTOR.TabIndex = 24;
-            this.btnUploadTOR.Text = "Change TOR";
-            this.btnUploadTOR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUploadTOR.UseVisualStyleBackColor = false;
-            this.btnUploadTOR.Click += new System.EventHandler(this.btnUploadTOR_Click);
             // 
             // label18
             // 
@@ -689,6 +649,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.labelAge);
+            this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.comboBoxCourse2);
             this.panel1.Controls.Add(this.comboBoxCourse1);
             this.panel1.Controls.Add(this.comboBoxCollege);
@@ -811,15 +773,6 @@
             this.label22.Text = "Courses Applied";
             this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1x1Image
-            // 
-            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
-            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
-            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
-            this.pictureBox1x1Image.TabIndex = 122;
-            this.pictureBox1x1Image.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -896,37 +849,6 @@
             this.lblUploadImage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblUploadImage.Click += new System.EventHandler(this.lblUploadImage_Click);
             // 
-            // btnUploadImage
-            // 
-            this.btnUploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
-            this.btnUploadImage.Enabled = false;
-            this.btnUploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUploadImage.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUploadImage.ForeColor = System.Drawing.Color.White;
-            this.btnUploadImage.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnUploadImage.IconColor = System.Drawing.Color.White;
-            this.btnUploadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUploadImage.IconSize = 20;
-            this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUploadImage.Location = new System.Drawing.Point(533, 13);
-            this.btnUploadImage.Name = "btnUploadImage";
-            this.btnUploadImage.Size = new System.Drawing.Size(137, 32);
-            this.btnUploadImage.TabIndex = 97;
-            this.btnUploadImage.Text = "Change 1x1 Image";
-            this.btnUploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUploadImage.UseVisualStyleBackColor = false;
-            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(328, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 153);
-            this.pictureBox1.TabIndex = 130;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // comboBoxTrack
             // 
             this.comboBoxTrack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -965,6 +887,114 @@
             this.textBoxHonors.Name = "textBoxHonors";
             this.textBoxHonors.Size = new System.Drawing.Size(302, 26);
             this.textBoxHonors.TabIndex = 77;
+            // 
+            // pictureBox1x1Image
+            // 
+            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
+            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
+            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
+            this.pictureBox1x1Image.TabIndex = 122;
+            this.pictureBox1x1Image.TabStop = false;
+            // 
+            // btnUploadImage
+            // 
+            this.btnUploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
+            this.btnUploadImage.Enabled = false;
+            this.btnUploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadImage.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUploadImage.ForeColor = System.Drawing.Color.White;
+            this.btnUploadImage.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnUploadImage.IconColor = System.Drawing.Color.White;
+            this.btnUploadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUploadImage.IconSize = 20;
+            this.btnUploadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadImage.Location = new System.Drawing.Point(533, 13);
+            this.btnUploadImage.Name = "btnUploadImage";
+            this.btnUploadImage.Size = new System.Drawing.Size(137, 32);
+            this.btnUploadImage.TabIndex = 97;
+            this.btnUploadImage.Text = "Change 1x1 Image";
+            this.btnUploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUploadImage.UseVisualStyleBackColor = false;
+            this.btnUploadImage.Click += new System.EventHandler(this.btnUploadImage_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(328, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 153);
+            this.pictureBox1.TabIndex = 130;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnUploadDiploma
+            // 
+            this.btnUploadDiploma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
+            this.btnUploadDiploma.Enabled = false;
+            this.btnUploadDiploma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadDiploma.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUploadDiploma.ForeColor = System.Drawing.Color.White;
+            this.btnUploadDiploma.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnUploadDiploma.IconColor = System.Drawing.Color.White;
+            this.btnUploadDiploma.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUploadDiploma.IconSize = 20;
+            this.btnUploadDiploma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadDiploma.Location = new System.Drawing.Point(534, 72);
+            this.btnUploadDiploma.Name = "btnUploadDiploma";
+            this.btnUploadDiploma.Size = new System.Drawing.Size(126, 32);
+            this.btnUploadDiploma.TabIndex = 98;
+            this.btnUploadDiploma.Text = "Change Diploma";
+            this.btnUploadDiploma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUploadDiploma.UseVisualStyleBackColor = false;
+            this.btnUploadDiploma.Click += new System.EventHandler(this.btnUploadDiploma_Click);
+            // 
+            // btnUploadTOR
+            // 
+            this.btnUploadTOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
+            this.btnUploadTOR.Enabled = false;
+            this.btnUploadTOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUploadTOR.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnUploadTOR.ForeColor = System.Drawing.Color.White;
+            this.btnUploadTOR.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnUploadTOR.IconColor = System.Drawing.Color.White;
+            this.btnUploadTOR.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUploadTOR.IconSize = 20;
+            this.btnUploadTOR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadTOR.Location = new System.Drawing.Point(533, 134);
+            this.btnUploadTOR.Name = "btnUploadTOR";
+            this.btnUploadTOR.Size = new System.Drawing.Size(106, 33);
+            this.btnUploadTOR.TabIndex = 24;
+            this.btnUploadTOR.Text = "Change TOR";
+            this.btnUploadTOR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUploadTOR.UseVisualStyleBackColor = false;
+            this.btnUploadTOR.Click += new System.EventHandler(this.btnUploadTOR_Click);
+            // 
+            // labelAge
+            // 
+            this.labelAge.AutoSize = true;
+            this.labelAge.BackColor = System.Drawing.Color.White;
+            this.labelAge.Font = new System.Drawing.Font("Arial", 14F);
+            this.labelAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.labelAge.Location = new System.Drawing.Point(575, 188);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(45, 22);
+            this.labelAge.TabIndex = 136;
+            this.labelAge.Text = "Age";
+            this.labelAge.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.White;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label28.Location = new System.Drawing.Point(552, 173);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(26, 13);
+            this.label28.TabIndex = 135;
+            this.label28.Text = "Age";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // UCMyInfo
             // 
@@ -1008,9 +1038,9 @@
             this.Load += new System.EventHandler(this.UCMyInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1085,5 +1115,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBoxStrand;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label labelAge;
+        private System.Windows.Forms.Label label28;
     }
 }
