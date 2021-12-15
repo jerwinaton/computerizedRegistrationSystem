@@ -14,6 +14,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
 {
     public partial class admin_admit : Form
     {
+        private string student_last_name, student_id; //to be used below in creating an account for students
         public admin_admit()
         {
             InitializeComponent();
@@ -72,10 +73,55 @@ namespace computerizedRegistrationSystem.adminOtherForms
                     command.Parameters.AddWithValue("@date_admitted", OleDbType.Date).Value = DateTime.Today;
 
 
-                    command.ExecuteNonQuery();
+                    //if success create an account for that student
+                    int dataInserted = command.ExecuteNonQuery();
+                    if (dataInserted > 0)
+                    {
+                        DialogResult okay = MessageBox.Show("The applicant was admitted successfully!");
 
-                    MessageBox.Show("grape!");
-                  
+                        if (okay == DialogResult.OK)
+                        {
+                           // OleDbConnection connection2 = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
+                         //   connection2.Open();
+                            //we will create a  username and password for the student
+                            //it must be in this format
+                            //username: student_[student_id] or student_21
+                            //password: last_name or dela cruz
+
+                            OleDbCommand command2 = new OleDbCommand();//create command
+                            OleDbDataReader reader = null;
+                            command2.Connection = connection;
+                            command2.CommandText = "SELECT student_id, last_name FROM studentsTable where application_id="+id;
+                            reader = command2.ExecuteReader();
+
+                          
+                         
+                            while (reader.Read())
+                            {
+                                 student_id = reader["student_id"].ToString();
+                                 student_last_name = reader["last_name"].ToString(); //to be used in the INSERT statement below
+                            }
+                           
+
+                            string username = "student_" + student_id; //to be used in the INSERT statement below
+                            string password = student_last_name.ToLower();
+
+                            //new query
+                            OleDbCommand command3 = new OleDbCommand();//create command for inserting the temporary account credentials made
+                            command3.Connection = connection;
+                            command3.CommandText = "UPDATE studentsTable SET username='" + username + "' , password='" + password + "' where application_id="+id;
+                            //MessageBox.Show(command3.CommandText);
+                           command3.ExecuteNonQuery(); //execute the insert statement
+                            MessageBox.Show("An account for student has been created");
+
+                            connection.Close();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("An error occured the form was not submitted.");
+                        connection.Close();
+                    }
 
                 }
                 catch (Exception error)

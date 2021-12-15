@@ -466,7 +466,7 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("date_applied", OleDbType.Date).Value = DateTime.Today;
 
                         command.Parameters.AddWithValue("track", OleDbType.VarChar).Value = comboBoxTrack.Text;
-                         command.Parameters.AddWithValue("strand", OleDbType.VarChar).Value = comboBoxStrand.Text;
+                        command.Parameters.AddWithValue("strand", OleDbType.VarChar).Value = comboBoxStrand.Text;
                         command.Parameters.AddWithValue("college_applied", OleDbType.VarChar).Value = comboBoxCollege.Text;
                         command.Parameters.AddWithValue("course_choice1", OleDbType.VarChar).Value = comboBoxCourse1.Text;
                         command.Parameters.AddWithValue("course_choice2", OleDbType.VarChar).Value = comboBoxCourse2.Text;
@@ -556,6 +556,7 @@ namespace computerizedRegistrationSystem
             open.Filter = "Image Files(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png";
             if (open.ShowDialog() == DialogResult.OK)
             {
+                pictureBox1x1Image.BackgroundImage = Image.FromFile(open.FileName);
                 // image full file path  
                 string filePathImage = open.FileName;
                 //get the filename only
