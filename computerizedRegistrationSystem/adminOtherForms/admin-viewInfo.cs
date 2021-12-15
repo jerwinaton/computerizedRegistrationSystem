@@ -22,7 +22,21 @@ namespace computerizedRegistrationSystem.adminOtherForms
 
         private void admin_viewInfo_Load(object sender, EventArgs e)
         {
-            label1.Text = adminUserControls.UCadmissions.selectedApplicantID;
+
+            //generate barangays automatically for comboboxBrgy
+            string[] barangays = new string[906];
+            barangays[0] = ""; //set first item to blank
+            for (int i = 0; i < 905; i++)
+            {
+                barangays[i + 1] = (i + 1).ToString();
+            }
+            comboBoxBrgy.DataSource = barangays;
+
+            dateTimePickerBirthDate.Format = DateTimePickerFormat.Custom;
+            // Display the date as "12 31 2021".  
+            dateTimePickerBirthDate.CustomFormat = "MM dd yyyy";
+
+
             //MAIN CODE RETRIEVE DATA FROM DATABASE
             OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
             connection.Open();
@@ -71,6 +85,8 @@ namespace computerizedRegistrationSystem.adminOtherForms
 
                     comboBoxTrack.SelectedItem = reader["track"].ToString();
                     comboBoxStrand.SelectedItem = reader["strand"].ToString();
+
+                   
                 }
 
             }
@@ -82,7 +98,19 @@ namespace computerizedRegistrationSystem.adminOtherForms
             {
                 connection.Close();
             }
-         
+            //for the age
+            labelAge.Text = CalculateAge(dateTimePickerBirthDate.Value).ToString() ;
+
+        }
+        //calculate age
+        private static int CalculateAge(DateTime dateOfBirth)
+        {
+            int age = 0;
+            age = DateTime.Now.Year - dateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+                age = age - 1;
+
+            return age;
         }
         //method to convert byte to image
         public Image byteArrayToImage(byte[] byteArrayIn)
@@ -93,6 +121,104 @@ namespace computerizedRegistrationSystem.adminOtherForms
                 retval = (Image)new Bitmap(stream);
             }
             return retval;
+        }
+
+        private void comboBoxCourse1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCourse1.SelectedIndex == 0)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 1)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 2)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 3)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Data Science" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+            else if (comboBoxCourse1.SelectedIndex == 4)
+            {
+                comboBoxCourse2.Items.Clear();
+                string[] COURSES = { "Bachelor of Science in Information Technology", "Bachelor of Science in Computer Engineering", "Bachelor in Electronics Engineering", "Bachelor in Information Technology with Specialization in Cybersecurity" };
+                comboBoxCourse2.Items.AddRange(COURSES);
+            }
+        }
+
+        //populate town combobox based on the values selected in the district combobox
+        private void comboBoxDistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxDistrict.Text == "1")
+            {
+                comboBoxTown.Items.Clear();
+                comboBoxTown.Items.Add("TONDO 1 (WEST)");
+            }
+            else if (comboBoxDistrict.Text == "2")
+            {
+                comboBoxTown.Items.Clear();
+                comboBoxTown.Items.Add("TONDO 2 (EAST)");
+            }
+            else if (comboBoxDistrict.Text == "3")
+            {
+                comboBoxTown.Items.Clear();
+                string[] CITIES = { "BINONDO", "QUIAPO", "SAN NICOLAS", "SANTA CRUZ" };
+                comboBoxTown.Items.AddRange(CITIES);
+            }
+            else if (comboBoxDistrict.Text == "4")
+            {
+                comboBoxTown.Items.Clear();
+                comboBoxTown.Items.Add("SAMPALOC");
+            }
+            else if (comboBoxDistrict.Text == "5")
+            {
+                comboBoxTown.Items.Clear();
+                string[] CITIES = { "ERMITA", "INTRAMUROS", "MALATE", "PORT AREA", "SAN ANDRES", "SOUTH PACO" };
+                comboBoxTown.Items.AddRange(CITIES);
+            }
+            else if (comboBoxDistrict.Text == "6")
+            {
+                comboBoxTown.Items.Clear();
+                string[] CITIES = { "NORTH PACO", "PANDACAN", "SAN MIGUEL", "SANTA ANA", "SANTA MESA" };
+                comboBoxTown.Items.AddRange(CITIES);
+            }
+        }
+        //POPULATE STRAND COMBOBOX BASED ON THE VALUE OF TRACK COMBOBOX
+        private void comboBoxTrack_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxTrack.SelectedIndex == 0)
+            {
+                comboBoxStrand.Items.Clear();
+                string[] STRANDS = { "General Academic (GA)", "Humanities and Social Sciences (HUMMS)", "Science, Technology, Engineering and Mathematics (STEM)", "Accountancy, Business and Management (ABM)" };
+                comboBoxStrand.Items.AddRange(STRANDS);
+            }
+            else if (comboBoxTrack.SelectedIndex == 1)
+            {
+                comboBoxStrand.Items.Clear();
+                string[] STRANDS = { "Agri-Fishery Arts", "Home Economics", "Industrial Arts", "Information and Communications Technology (ICT)" };
+                comboBoxStrand.Items.AddRange(STRANDS);
+            }
+            else if (comboBoxTrack.SelectedIndex == 2)
+            {
+                comboBoxStrand.Items.Clear();
+                comboBoxStrand.Items.Add("NONE");
+            }
+            else if (comboBoxTrack.SelectedIndex == 3)
+            {
+                comboBoxStrand.Items.Clear();
+                comboBoxStrand.Items.Add("NONE");
+            }
         }
     }
 }

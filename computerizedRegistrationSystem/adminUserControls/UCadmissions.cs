@@ -100,6 +100,15 @@ namespace computerizedRegistrationSystem.adminUserControls
             viewDiploma.Show();
 
         }
-    
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //check if the form is already open, close if a form is already open
+            if (Application.OpenForms.OfType<adminOtherForms.admin_return>().Count() == 1)
+                Application.OpenForms.OfType<adminOtherForms.admin_return>().First().Close();
+
+            adminOtherForms.admin_return adminReturn = new adminOtherForms.admin_return();
+            adminReturn.Show();
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.textBoxStudentContactNo = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePickerBirthDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -86,10 +87,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1x1Image = new System.Windows.Forms.PictureBox();
+            this.labelAge = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -154,6 +156,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.labelAge);
+            this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.comboBoxCourse2);
             this.panel1.Controls.Add(this.comboBoxCourse1);
             this.panel1.Controls.Add(this.comboBoxCollege);
@@ -208,6 +212,7 @@
             this.comboBoxCourse1.Name = "comboBoxCourse1";
             this.comboBoxCourse1.Size = new System.Drawing.Size(445, 22);
             this.comboBoxCourse1.TabIndex = 128;
+            this.comboBoxCourse1.SelectedIndexChanged += new System.EventHandler(this.comboBoxCourse1_SelectedIndexChanged);
             // 
             // comboBoxCollege
             // 
@@ -295,6 +300,15 @@
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(203, 26);
             this.textBoxEmail.TabIndex = 79;
+            // 
+            // pictureBox1x1Image
+            // 
+            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
+            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
+            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
+            this.pictureBox1x1Image.TabIndex = 122;
+            this.pictureBox1x1Image.TabStop = false;
             // 
             // label8
             // 
@@ -528,6 +542,7 @@
             this.comboBoxTrack.Name = "comboBoxTrack";
             this.comboBoxTrack.Size = new System.Drawing.Size(302, 26);
             this.comboBoxTrack.TabIndex = 122;
+            this.comboBoxTrack.SelectedIndexChanged += new System.EventHandler(this.comboBoxTrack_SelectedIndexChanged);
             // 
             // textBoxHonors
             // 
@@ -765,6 +780,7 @@
             this.comboBoxDistrict.Name = "comboBoxDistrict";
             this.comboBoxDistrict.Size = new System.Drawing.Size(108, 26);
             this.comboBoxDistrict.TabIndex = 123;
+            this.comboBoxDistrict.SelectedIndexChanged += new System.EventHandler(this.comboBoxDistrict_SelectedIndexChanged);
             // 
             // comboBoxTown
             // 
@@ -813,14 +829,31 @@
             this.label1.TabIndex = 122;
             this.label1.Text = "Applicant Information";
             // 
-            // pictureBox1x1Image
+            // labelAge
             // 
-            this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
-            this.pictureBox1x1Image.Name = "pictureBox1x1Image";
-            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
-            this.pictureBox1x1Image.TabIndex = 122;
-            this.pictureBox1x1Image.TabStop = false;
+            this.labelAge.AutoSize = true;
+            this.labelAge.BackColor = System.Drawing.Color.White;
+            this.labelAge.Font = new System.Drawing.Font("Arial", 14F);
+            this.labelAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.labelAge.Location = new System.Drawing.Point(575, 189);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(45, 22);
+            this.labelAge.TabIndex = 134;
+            this.labelAge.Text = "Age";
+            this.labelAge.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.White;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label28.Location = new System.Drawing.Point(552, 174);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(26, 13);
+            this.label28.TabIndex = 133;
+            this.label28.Text = "Age";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // admin_viewInfo
             // 
@@ -865,9 +898,9 @@
             this.Load += new System.EventHandler(this.admin_viewInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -934,5 +967,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAge;
+        private System.Windows.Forms.Label label28;
     }
 }

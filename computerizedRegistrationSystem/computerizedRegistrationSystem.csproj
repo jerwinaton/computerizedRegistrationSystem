@@ -119,6 +119,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminOtherForms\admin-return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin-return.Designer.cs">
+      <DependentUpon>admin-return.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminOtherForms\admin-viewDiploma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     <Compile Include="studentsUserControls\schedule.Designer.cs">
       <DependentUpon>schedule.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="adminOtherForms\admin-return.resx">
+      <DependentUpon>admin-return.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminOtherForms\admin-viewDiploma.resx">
       <DependentUpon>admin-viewDiploma.cs</DependentUpon>
     </EmbeddedResource>

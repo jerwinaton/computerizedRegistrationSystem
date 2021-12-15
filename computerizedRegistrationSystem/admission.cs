@@ -23,9 +23,10 @@ namespace computerizedRegistrationSystem
         {
             InitializeComponent();
         }
-
+    
         private void frmAdmission_Load(object sender, EventArgs e)
         {
+            
             //generate barangays automatically for comboboxBrgy
             string[] barangays = new string[906];
             barangays[0] = ""; //set first item to blank
