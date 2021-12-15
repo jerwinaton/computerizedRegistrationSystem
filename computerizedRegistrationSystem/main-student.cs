@@ -134,7 +134,8 @@ namespace computerizedRegistrationSystem
 
         private void btnRegistration_Click(object sender, EventArgs e)
         {
-
+            studentsUserControls.registration uc = new studentsUserControls.registration();
+            addUserControl(uc);
         }
     }
 }

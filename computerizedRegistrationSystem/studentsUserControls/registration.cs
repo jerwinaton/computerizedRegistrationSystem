@@ -19,7 +19,8 @@ namespace computerizedRegistrationSystem.studentsUserControls
             InitializeComponent();
         }
 
-        private void registration_Load(object sender, EventArgs e)
+
+        private void registration_Load_1(object sender, EventArgs e)
         {
 
             OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
@@ -30,12 +31,12 @@ namespace computerizedRegistrationSystem.studentsUserControls
 
                 OleDbCommand command = new OleDbCommand();//create command
                 command.Connection = connection;//give command the connection string
-                command.CommandText = "SELECT * FROM studentsTable WHERE student_id="+ frmLogin.id;
+                command.CommandText = "SELECT * FROM studentsTable WHERE student_id=" + frmLogin.id;
                 OleDbDataReader reader = command.ExecuteReader(); // execute
 
                 while (reader.Read())//read 
                 {
-                    
+
                     lblCollege.Text = reader["college"].ToString();
                     lblCourse.Text = reader["course"].ToString();
                 }

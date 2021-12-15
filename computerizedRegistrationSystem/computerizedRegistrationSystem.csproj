@@ -259,6 +259,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="studentsUserControls\registration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="studentsUserControls\registration.Designer.cs">
+      <DependentUpon>registration.cs</DependentUpon>
+    </Compile>
     <Compile Include="studentsUserControls\schedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,6 +344,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentsUserControls\registration.resx">
+      <DependentUpon>registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentsUserControls\schedule.resx">
       <DependentUpon>schedule.cs</DependentUpon>
