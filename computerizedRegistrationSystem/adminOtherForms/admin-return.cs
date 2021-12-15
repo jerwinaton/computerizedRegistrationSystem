@@ -42,9 +42,10 @@ namespace computerizedRegistrationSystem.adminOtherForms
                     command.CommandText = "UPDATE applicantsTable SET status='RETURNED',remarks='" + textBoxRemarks.Text + "' WHERE applicant_id=" + adminUserControls.UCadmissions.selectedApplicantID;
                     int execute = command.ExecuteNonQuery(); //execute
 
-                    if (execute > 1)//success
+                    if (execute > 0)//success
                     {
                         MessageBox.Show("The form was returned to the user 'applicant_" + adminUserControls.UCadmissions.selectedApplicantID + "' successfully");
+                        Close();
                     }
                   
 

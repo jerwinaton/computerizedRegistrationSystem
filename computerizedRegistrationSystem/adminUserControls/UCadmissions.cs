@@ -14,7 +14,7 @@ namespace computerizedRegistrationSystem.adminUserControls
 {
     public partial class UCadmissions : UserControl
     {
-        public static string selectedApplicantID; 
+        public static string selectedApplicantID=""; 
         public UCadmissions()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace computerizedRegistrationSystem.adminUserControls
             if (cell != null)
             {
                 DataGridViewRow row = cell.OwningRow;
-                selectedApplicantID = row.Cells[1].Value.ToString();
+                selectedApplicantID = row.Cells[2].Value.ToString(); //applicant id column
                
             }
         }
@@ -109,7 +109,7 @@ namespace computerizedRegistrationSystem.adminUserControls
         private void button5_Click(object sender, EventArgs e)
         {
             //check first if an applicant is selected
-            if (selectedApplicantID == "")
+            if (selectedApplicantID=="")
             {
                 MessageBox.Show("Choose an applicant first. (Reload the table)");
             }

@@ -41,8 +41,8 @@
             this.btnSchedule = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxUserImage = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBoxUserImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Logout";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -222,6 +223,14 @@
             this.label1.Text = "John Doe";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(200, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(729, 555);
+            this.panelContainer.TabIndex = 2;
+            // 
             // pictureBoxUserImage
             // 
             this.pictureBoxUserImage.BackgroundImage = global::computerizedRegistrationSystem.Properties.Resources.udm_logo1;
@@ -231,14 +240,6 @@
             this.pictureBoxUserImage.Size = new System.Drawing.Size(126, 113);
             this.pictureBoxUserImage.TabIndex = 1;
             this.pictureBoxUserImage.TabStop = false;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(200, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(729, 555);
-            this.panelContainer.TabIndex = 2;
             // 
             // frmMainAdmin
             // 
