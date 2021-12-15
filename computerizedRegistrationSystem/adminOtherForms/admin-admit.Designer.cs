@@ -47,7 +47,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.labelApplicantID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBoxCourse2
@@ -56,7 +59,13 @@
             this.comboBoxCourse2.Enabled = false;
             this.comboBoxCourse2.Font = new System.Drawing.Font("Arial", 8F);
             this.comboBoxCourse2.FormattingEnabled = true;
-            this.comboBoxCourse2.Location = new System.Drawing.Point(254, 96);
+            this.comboBoxCourse2.Items.AddRange(new object[] {
+            "Bachelor of Science in Information Technology",
+            "Bachelor of Science in Computer Engineering",
+            "Bachelor in Electronics Engineering",
+            "Bachelor in Information Technology with Specialization in Cybersecurity",
+            "Bachelor in Information Technology with Specialization in Data Science"});
+            this.comboBoxCourse2.Location = new System.Drawing.Point(251, 82);
             this.comboBoxCourse2.Name = "comboBoxCourse2";
             this.comboBoxCourse2.Size = new System.Drawing.Size(445, 22);
             this.comboBoxCourse2.TabIndex = 136;
@@ -73,7 +82,7 @@
             "Bachelor in Electronics Engineering",
             "Bachelor in Information Technology with Specialization in Cybersecurity",
             "Bachelor in Information Technology with Specialization in Data Science"});
-            this.comboBoxCourse1.Location = new System.Drawing.Point(254, 70);
+            this.comboBoxCourse1.Location = new System.Drawing.Point(251, 56);
             this.comboBoxCourse1.Name = "comboBoxCourse1";
             this.comboBoxCourse1.Size = new System.Drawing.Size(445, 22);
             this.comboBoxCourse1.TabIndex = 135;
@@ -86,7 +95,7 @@
             this.comboBoxCollege.FormattingEnabled = true;
             this.comboBoxCollege.Items.AddRange(new object[] {
             "College of Engineering and Technology"});
-            this.comboBoxCollege.Location = new System.Drawing.Point(254, 44);
+            this.comboBoxCollege.Location = new System.Drawing.Point(251, 30);
             this.comboBoxCollege.Name = "comboBoxCollege";
             this.comboBoxCollege.Size = new System.Drawing.Size(445, 22);
             this.comboBoxCollege.TabIndex = 134;
@@ -97,7 +106,7 @@
             this.label25.BackColor = System.Drawing.Color.White;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label25.Location = new System.Drawing.Point(192, 99);
+            this.label25.Location = new System.Drawing.Point(189, 85);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(64, 13);
             this.label25.TabIndex = 133;
@@ -110,7 +119,7 @@
             this.label24.BackColor = System.Drawing.Color.White;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label24.Location = new System.Drawing.Point(195, 74);
+            this.label24.Location = new System.Drawing.Point(192, 60);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(60, 13);
             this.label24.TabIndex = 132;
@@ -123,7 +132,7 @@
             this.label23.BackColor = System.Drawing.Color.White;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label23.Location = new System.Drawing.Point(209, 49);
+            this.label23.Location = new System.Drawing.Point(206, 35);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(45, 13);
             this.label23.TabIndex = 131;
@@ -136,7 +145,7 @@
             this.label22.BackColor = System.Drawing.Color.White;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label22.Location = new System.Drawing.Point(161, 33);
+            this.label22.Location = new System.Drawing.Point(158, 19);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(83, 13);
             this.label22.TabIndex = 130;
@@ -146,9 +155,9 @@
             // pictureBox1x1Image
             // 
             this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1x1Image.Location = new System.Drawing.Point(20, 23);
+            this.pictureBox1x1Image.Location = new System.Drawing.Point(12, 25);
             this.pictureBox1x1Image.Name = "pictureBox1x1Image";
-            this.pictureBox1x1Image.Size = new System.Drawing.Size(135, 111);
+            this.pictureBox1x1Image.Size = new System.Drawing.Size(143, 130);
             this.pictureBox1x1Image.TabIndex = 137;
             this.pictureBox1x1Image.TabStop = false;
             // 
@@ -169,7 +178,7 @@
             // comboBoxAdmitCourse
             // 
             this.comboBoxAdmitCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAdmitCourse.Font = new System.Drawing.Font("Arial", 15F);
+            this.comboBoxAdmitCourse.Font = new System.Drawing.Font("Arial", 12F);
             this.comboBoxAdmitCourse.FormattingEnabled = true;
             this.comboBoxAdmitCourse.Items.AddRange(new object[] {
             "Bachelor of Science in Information Technology",
@@ -179,19 +188,19 @@
             "Bachelor in Information Technology with Specialization in Data Science"});
             this.comboBoxAdmitCourse.Location = new System.Drawing.Point(98, 265);
             this.comboBoxAdmitCourse.Name = "comboBoxAdmitCourse";
-            this.comboBoxAdmitCourse.Size = new System.Drawing.Size(445, 31);
+            this.comboBoxAdmitCourse.Size = new System.Drawing.Size(507, 26);
             this.comboBoxAdmitCourse.TabIndex = 142;
             // 
             // comboBoxAdmitCollege
             // 
             this.comboBoxAdmitCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAdmitCollege.Font = new System.Drawing.Font("Arial", 15F);
+            this.comboBoxAdmitCollege.Font = new System.Drawing.Font("Arial", 12F);
             this.comboBoxAdmitCollege.FormattingEnabled = true;
             this.comboBoxAdmitCollege.Items.AddRange(new object[] {
             "College of Engineering and Technology"});
             this.comboBoxAdmitCollege.Location = new System.Drawing.Point(98, 216);
             this.comboBoxAdmitCollege.Name = "comboBoxAdmitCollege";
-            this.comboBoxAdmitCollege.Size = new System.Drawing.Size(445, 31);
+            this.comboBoxAdmitCollege.Size = new System.Drawing.Size(507, 26);
             this.comboBoxAdmitCollege.TabIndex = 141;
             // 
             // label1
@@ -223,10 +232,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelApplicantID);
+            this.panel1.Controls.Add(this.labelFullName);
+            this.panel1.Controls.Add(this.comboBoxCourse1);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.comboBoxCollege);
+            this.panel1.Controls.Add(this.comboBoxCourse2);
             this.panel1.Location = new System.Drawing.Point(3, -4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(723, 153);
+            this.panel1.Size = new System.Drawing.Size(723, 174);
             this.panel1.TabIndex = 143;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
@@ -247,7 +266,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.label4.Font = new System.Drawing.Font("Verdana", 8F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label4.Location = new System.Drawing.Point(554, 209);
+            this.label4.Location = new System.Drawing.Point(605, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 145;
@@ -260,7 +279,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.label5.Font = new System.Drawing.Font("Verdana", 8F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label5.Location = new System.Drawing.Point(553, 261);
+            this.label5.Location = new System.Drawing.Point(607, 259);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 13);
             this.label5.TabIndex = 146;
@@ -272,7 +291,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.label6.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label6.Location = new System.Drawing.Point(554, 227);
+            this.label6.Location = new System.Drawing.Point(605, 225);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 20);
             this.label6.TabIndex = 147;
@@ -284,12 +303,38 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.label7.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label7.Location = new System.Drawing.Point(554, 276);
+            this.label7.Location = new System.Drawing.Point(605, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 20);
             this.label7.TabIndex = 148;
             this.label7.Text = "#";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelFullName
+            // 
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.labelFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.labelFullName.Location = new System.Drawing.Point(158, 119);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(16, 17);
+            this.labelFullName.TabIndex = 149;
+            this.labelFullName.Text = "#";
+            this.labelFullName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelApplicantID
+            // 
+            this.labelApplicantID.AutoSize = true;
+            this.labelApplicantID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.labelApplicantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApplicantID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.labelApplicantID.Location = new System.Drawing.Point(158, 142);
+            this.labelApplicantID.Name = "labelApplicantID";
+            this.labelApplicantID.Size = new System.Drawing.Size(16, 17);
+            this.labelApplicantID.TabIndex = 150;
+            this.labelApplicantID.Text = "#";
+            this.labelApplicantID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // admin_admit
             // 
@@ -308,19 +353,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1x1Image);
-            this.Controls.Add(this.comboBoxCourse2);
-            this.Controls.Add(this.comboBoxCourse1);
-            this.Controls.Add(this.comboBoxCollege);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
             this.Controls.Add(this.panel1);
             this.Name = "admin_admit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admit Applicant";
             this.Load += new System.EventHandler(this.admin_admit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +387,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelApplicantID;
+        private System.Windows.Forms.Label labelFullName;
     }
 }

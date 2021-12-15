@@ -61,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "admin_viewDiploma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Diploma";
             this.Load += new System.EventHandler(this.admin_viewDiploma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

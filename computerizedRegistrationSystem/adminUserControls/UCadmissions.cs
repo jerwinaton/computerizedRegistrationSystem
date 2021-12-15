@@ -198,7 +198,12 @@ namespace computerizedRegistrationSystem.adminUserControls
                 //if No is selected cancel form closing event
                 if (result == DialogResult.Yes)
                 {
-                    
+                    //check if the form is already open, close if a form is already open
+                    if (Application.OpenForms.OfType<adminOtherForms.admin_admit>().Count() == 1)
+                        Application.OpenForms.OfType<adminOtherForms.admin_admit>().First().Close();
+
+                    adminOtherForms.admin_admit admit = new adminOtherForms.admin_admit();
+                    admit.Show();
                 }
                
             }
