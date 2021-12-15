@@ -72,7 +72,8 @@ namespace computerizedRegistrationSystem.adminUserControls
             //check first if an applicant is selected
             if (selectedApplicantID == "")
             {
-                MessageBox.Show("Choose an applicant first. (Reload the table)");
+                string title = "View applicant's information";
+                MessageBox.Show("Choose an applicant first. (Reload the table)",title);
             }
             else
             {
@@ -92,7 +93,8 @@ namespace computerizedRegistrationSystem.adminUserControls
             //check first if an applicant is selected
             if (selectedApplicantID == "")
             {
-                MessageBox.Show("Choose an applicant first. (Reload the table)");
+                string title = "View Transcript of Records";
+                MessageBox.Show("Choose an applicant first. (Reload the table)",title);
             }
             else
             {
@@ -111,7 +113,8 @@ namespace computerizedRegistrationSystem.adminUserControls
             //check first if an applicant is selected
             if (selectedApplicantID=="")
             {
-                MessageBox.Show("Choose an applicant first. (Reload the table)");
+                string title = "View Diploma";
+                MessageBox.Show("Choose an applicant first. (Reload the table)",title);
             }
             else
             {
@@ -129,6 +132,25 @@ namespace computerizedRegistrationSystem.adminUserControls
             //check first if an applicant is selected
             if (selectedApplicantID == "")
             {
+                string title = "Return the form";
+                MessageBox.Show("Choose an applicant first. (Reload the table)",title);
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_return>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_return>().First().Close();
+
+                adminOtherForms.admin_return adminReturn = new adminOtherForms.admin_return();
+                adminReturn.Show();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //check first if an applicant is selected
+            if (selectedApplicantID == "")
+            {
                 MessageBox.Show("Choose an applicant first. (Reload the table)");
             }
             else
@@ -139,6 +161,30 @@ namespace computerizedRegistrationSystem.adminUserControls
 
                 adminOtherForms.admin_return adminReturn = new adminOtherForms.admin_return();
                 adminReturn.Show();
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //check first if an applicant is selected
+            if (selectedApplicantID == "")
+            {
+                MessageBox.Show("Choose an applicant first. (Reload the table)");
+            }
+            else
+            {
+                string message = "Are you sure you want admit applicant_"+ selectedApplicantID+"?";
+                string title = "Admit the applicant";
+                SendKeys.Send("{Tab}");
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                //if No is selected cancel form closing event
+                if (result == DialogResult.Yes)
+                {
+                    
+                }
+               
             }
         }
     }
