@@ -364,7 +364,7 @@ namespace computerizedRegistrationSystem
         //SUBMIT BUTTON CLICKED
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-        
+
             if (canProceed()) //call the canProceed method which validates the form and returns true or false
             {
             string message = "Before submitting, have you reviewed your information?";
@@ -389,10 +389,13 @@ namespace computerizedRegistrationSystem
                         OleDbCommand command = new OleDbCommand();//create command
                         command.Connection = Program.connection;//give command the connection string
                         command.CommandText = "INSERT INTO applicantsTable (first_name,middle_name,last_name,gender,birthdate,email,contact_no,house_no,street,district," +
-                            "barangay,town,zip_code,mothers_name,mothers_contact_no,mothers_occupation,fathers_name,fathers_contact_no,fathers_occupation,last_school_attended,honors_awards," +
-                            "1x1_picture_filename,1x1_picture,diploma_filename,diploma,tor_filename,tor," +
-                            "status,date_applied)" +
-                            "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //29 values will be added later, not here!
+                                        "barangay,town,zip_code,mothers_name,mothers_contact_no,mothers_occupation,fathers_name,fathers_contact_no,fathers_occupation,last_school_attended,honors_awards," +
+                                         "1x1_picture_filename,1x1_picture,diploma_filename,diploma,tor_filename,tor," +
+                                         "status,date_applied,track,strand,college_applied,course_choice1,course_choice2)" +
+                                         "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"; //29 values will be added later, not here! 
+                                                                      
+
+                      
 
                         command.Parameters.AddWithValue("first_name",OleDbType.VarChar).Value = textBoxFName.Text.ToUpper();
                         command.Parameters.AddWithValue("middle_name", OleDbType.VarChar).Value = textBoxMName.Text.ToUpper();
@@ -431,19 +434,19 @@ namespace computerizedRegistrationSystem
                         command.Parameters.AddWithValue("status", OleDbType.VarChar).Value = "PENDING"; //PENDING, ACCEPTED, REJECTED
                         command.Parameters.AddWithValue("date_applied", OleDbType.Date).Value = DateTime.Today;
 
-                        //command.Parameters.AddWithValue("track", OleDbType.VarChar).Value = comboBoxTrack.Text;
-                        // command.Parameters.AddWithValue("strand", OleDbType.VarChar).Value = comboBoxStrand.Text;
-                       //  command.Parameters.AddWithValue("college", OleDbType.VarChar).Value = comboBoxCollege.Text;
-                      //  command.Parameters.AddWithValue("course_choice1", OleDbType.VarChar).Value = comboBoxCourse1.Text;
-                       // command.Parameters.AddWithValue("course_choice2", OleDbType.VarChar).Value = comboBoxCourse2.Text;
-                        //29 commands/columns
+                        command.Parameters.AddWithValue("track", OleDbType.VarChar).Value = comboBoxTrack.Text;
+                         command.Parameters.AddWithValue("strand", OleDbType.VarChar).Value = comboBoxStrand.Text;
+                        command.Parameters.AddWithValue("college_applied", OleDbType.VarChar).Value = comboBoxCollege.Text;
+                        command.Parameters.AddWithValue("course_choice1", OleDbType.VarChar).Value = comboBoxCourse1.Text;
+                        command.Parameters.AddWithValue("course_choice2", OleDbType.VarChar).Value = comboBoxCourse2.Text;
+                        //34 commands/columns
 
                         int dataInserted = command.ExecuteNonQuery();
                         if (dataInserted > 0)
                         {
                             DialogResult okay = MessageBox.Show("The form was submitted successfully!");
                        
-                            if (okay==DialogResult.OK)
+                           if (okay==DialogResult.OK)
                             {
                         
                                 //we will create a temporary username and password for the applicant
@@ -618,24 +621,24 @@ namespace computerizedRegistrationSystem
         //POPULATE STRAND COMBOBOX BASED ON THE VALUE OF TRACK COMBOBOX
         private void comboBoxTrack_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxTrack.Text == "Academic")
+            if (comboBoxTrack.SelectedIndex == 0)
             {
                 comboBoxStrand.Items.Clear();
                 string[] STRANDS = { "General Academic (GA)", "Humanities and Social Sciences (HUMMS)", "Science, Technology, Engineering and Mathematics (STEM)", "Accountancy, Business and Management (ABM)" };
                 comboBoxStrand.Items.AddRange(STRANDS);
             }
-            else if (comboBoxTrack.Text == "Technical-Vocational and Livelihood (TVL)")
+            else if (comboBoxTrack.SelectedIndex == 1)
             {
                 comboBoxStrand.Items.Clear();
                 string[] STRANDS = { "Agri-Fishery Arts", "Home Economics", "Industrial Arts", "Information and Communications Technology (ICT)" };
                 comboBoxStrand.Items.AddRange(STRANDS);
             }
-            else if (comboBoxTrack.Text == "Sports")
+            else if (comboBoxTrack.SelectedIndex == 2)
             {
                 comboBoxStrand.Items.Clear();
                 comboBoxStrand.Items.Add("NONE");
             }
-            else if (comboBoxTrack.Text == "Arts and Design")
+            else if (comboBoxTrack.SelectedIndex == 3)
             {
                 comboBoxStrand.Items.Clear();
                 comboBoxStrand.Items.Add("NONE");
