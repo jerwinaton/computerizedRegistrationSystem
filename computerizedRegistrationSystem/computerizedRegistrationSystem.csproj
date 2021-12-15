@@ -167,6 +167,12 @@
     <Compile Include="adminUserControls\UCadmissions.Designer.cs">
       <DependentUpon>UCadmissions.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminUserControls\UCAnnouncements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UCAnnouncements.Designer.cs">
+      <DependentUpon>UCAnnouncements.cs</DependentUpon>
+    </Compile>
     <Compile Include="admission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminUserControls\UCadmissions.resx">
       <DependentUpon>UCadmissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserControls\UCAnnouncements.resx">
+      <DependentUpon>UCAnnouncements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admission.resx">
       <DependentUpon>admission.cs</DependentUpon>

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditProfile = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnEditProfile = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -68,6 +68,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 555);
             this.panel1.TabIndex = 1;
+            // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.FlatAppearance.BorderSize = 0;
+            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProfile.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProfile.ForeColor = System.Drawing.Color.White;
+            this.btnEditProfile.Location = new System.Drawing.Point(0, 302);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(200, 25);
+            this.btnEditProfile.TabIndex = 6;
+            this.btnEditProfile.Text = "Manage Admission";
+            this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // button4
             // 
@@ -122,20 +136,6 @@
             this.button1.Text = "Schedules";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnEditProfile
-            // 
-            this.btnEditProfile.FlatAppearance.BorderSize = 0;
-            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditProfile.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.ForeColor = System.Drawing.Color.White;
-            this.btnEditProfile.Location = new System.Drawing.Point(0, 302);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(200, 25);
-            this.btnEditProfile.TabIndex = 6;
-            this.btnEditProfile.Text = "Manage Admission";
-            this.btnEditProfile.UseVisualStyleBackColor = true;
-            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
-            // 
             // btnLogout
             // 
             this.btnLogout.FlatAppearance.BorderSize = 0;
@@ -148,6 +148,7 @@
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Announcements";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnChangePassword
             // 

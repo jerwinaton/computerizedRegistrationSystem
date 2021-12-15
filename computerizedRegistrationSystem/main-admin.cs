@@ -67,5 +67,11 @@ namespace computerizedRegistrationSystem
             Close();
            
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            adminUserControls.UCAnnouncements uc = new adminUserControls.UCAnnouncements();
+            addUserControl(uc);
+        }
     }
 }
