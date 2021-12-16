@@ -173,6 +173,30 @@
     <Compile Include="adminUserControls\UCAnnouncements.Designer.cs">
       <DependentUpon>UCAnnouncements.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminUserControls\UChome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UChome.Designer.cs">
+      <DependentUpon>UChome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserControls\UCmanage-students.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UCmanage-students.Designer.cs">
+      <DependentUpon>UCmanage-students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserControls\UCschedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UCschedule.Designer.cs">
+      <DependentUpon>UCschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminUserControls\UCsections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminUserControls\UCsections.Designer.cs">
+      <DependentUpon>UCsections.cs</DependentUpon>
+    </Compile>
     <Compile Include="admission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +321,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminUserControls\UCAnnouncements.resx">
       <DependentUpon>UCAnnouncements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserControls\UChome.resx">
+      <DependentUpon>UChome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserControls\UCmanage-students.resx">
+      <DependentUpon>UCmanage-students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserControls\UCschedule.resx">
+      <DependentUpon>UCschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminUserControls\UCsections.resx">
+      <DependentUpon>UCsections.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admission.resx">
       <DependentUpon>admission.cs</DependentUpon>

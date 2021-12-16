@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnEditProfile = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdmission = new System.Windows.Forms.Button();
+            this.btnAccounts = new System.Windows.Forms.Button();
+            this.btnSections = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnSchedules = new System.Windows.Forms.Button();
+            this.btnAnnouncements = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnGrades = new System.Windows.Forms.Button();
-            this.btnSchedule = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelContainer = new System.Windows.Forms.Panel();
+            this.btnStudents = new System.Windows.Forms.Button();
+            this.lblAdminID = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
             this.pictureBoxUserImage = new System.Windows.Forms.PictureBox();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserImage)).BeginInit();
             this.SuspendLayout();
@@ -50,18 +49,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.panel1.Controls.Add(this.btnEditProfile);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnAdmission);
+            this.panel1.Controls.Add(this.btnAccounts);
+            this.panel1.Controls.Add(this.btnSections);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnSchedules);
+            this.panel1.Controls.Add(this.btnAnnouncements);
             this.panel1.Controls.Add(this.btnChangePassword);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.btnGrades);
-            this.panel1.Controls.Add(this.btnSchedule);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnStudents);
+            this.panel1.Controls.Add(this.lblAdminID);
+            this.panel1.Controls.Add(this.lblFullName);
             this.panel1.Controls.Add(this.pictureBoxUserImage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -69,45 +67,47 @@
             this.panel1.Size = new System.Drawing.Size(200, 555);
             this.panel1.TabIndex = 1;
             // 
-            // btnEditProfile
+            // btnAdmission
             // 
-            this.btnEditProfile.FlatAppearance.BorderSize = 0;
-            this.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditProfile.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProfile.ForeColor = System.Drawing.Color.White;
-            this.btnEditProfile.Location = new System.Drawing.Point(0, 302);
-            this.btnEditProfile.Name = "btnEditProfile";
-            this.btnEditProfile.Size = new System.Drawing.Size(200, 25);
-            this.btnEditProfile.TabIndex = 6;
-            this.btnEditProfile.Text = "Manage Admission";
-            this.btnEditProfile.UseVisualStyleBackColor = true;
-            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
+            this.btnAdmission.FlatAppearance.BorderSize = 0;
+            this.btnAdmission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmission.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmission.ForeColor = System.Drawing.Color.White;
+            this.btnAdmission.Location = new System.Drawing.Point(0, 274);
+            this.btnAdmission.Name = "btnAdmission";
+            this.btnAdmission.Size = new System.Drawing.Size(200, 25);
+            this.btnAdmission.TabIndex = 6;
+            this.btnAdmission.Text = "Manage Admission";
+            this.btnAdmission.UseVisualStyleBackColor = true;
+            this.btnAdmission.Click += new System.EventHandler(this.btnAdmission_Click);
             // 
-            // button4
+            // btnAccounts
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 212);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 25);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Accounts";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAccounts.FlatAppearance.BorderSize = 0;
+            this.btnAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccounts.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccounts.ForeColor = System.Drawing.Color.White;
+            this.btnAccounts.Location = new System.Drawing.Point(0, 212);
+            this.btnAccounts.Name = "btnAccounts";
+            this.btnAccounts.Size = new System.Drawing.Size(200, 25);
+            this.btnAccounts.TabIndex = 10;
+            this.btnAccounts.Text = "Accounts";
+            this.btnAccounts.UseVisualStyleBackColor = true;
+            this.btnAccounts.Click += new System.EventHandler(this.btnAccounts_Click);
             // 
-            // button3
+            // btnSections
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(-1, 332);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 25);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Manage Sections";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSections.FlatAppearance.BorderSize = 0;
+            this.btnSections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSections.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSections.ForeColor = System.Drawing.Color.White;
+            this.btnSections.Location = new System.Drawing.Point(-1, 304);
+            this.btnSections.Name = "btnSections";
+            this.btnSections.Size = new System.Drawing.Size(200, 25);
+            this.btnSections.TabIndex = 9;
+            this.btnSections.Text = "Manage Sections";
+            this.btnSections.UseVisualStyleBackColor = true;
+            this.btnSections.Click += new System.EventHandler(this.btnSections_Click);
             // 
             // button2
             // 
@@ -123,32 +123,33 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnSchedules
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 392);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 25);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Schedules";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSchedules.FlatAppearance.BorderSize = 0;
+            this.btnSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedules.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchedules.ForeColor = System.Drawing.Color.White;
+            this.btnSchedules.Location = new System.Drawing.Point(0, 364);
+            this.btnSchedules.Name = "btnSchedules";
+            this.btnSchedules.Size = new System.Drawing.Size(200, 25);
+            this.btnSchedules.TabIndex = 7;
+            this.btnSchedules.Text = "Schedules";
+            this.btnSchedules.UseVisualStyleBackColor = true;
+            this.btnSchedules.Click += new System.EventHandler(this.btnSchedules_Click);
             // 
-            // btnLogout
+            // btnAnnouncements
             // 
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 362);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(200, 25);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "Announcements";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnAnnouncements.FlatAppearance.BorderSize = 0;
+            this.btnAnnouncements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnouncements.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnouncements.ForeColor = System.Drawing.Color.White;
+            this.btnAnnouncements.Location = new System.Drawing.Point(0, 334);
+            this.btnAnnouncements.Name = "btnAnnouncements";
+            this.btnAnnouncements.Size = new System.Drawing.Size(200, 25);
+            this.btnAnnouncements.TabIndex = 4;
+            this.btnAnnouncements.Text = "Announcements";
+            this.btnAnnouncements.UseVisualStyleBackColor = true;
+            this.btnAnnouncements.Click += new System.EventHandler(this.btnAnnouncements_Click);
             // 
             // btnChangePassword
             // 
@@ -175,62 +176,43 @@
             this.btnHome.TabIndex = 3;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnGrades
+            // btnStudents
             // 
-            this.btnGrades.FlatAppearance.BorderSize = 0;
-            this.btnGrades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrades.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrades.ForeColor = System.Drawing.Color.White;
-            this.btnGrades.Location = new System.Drawing.Point(0, 272);
-            this.btnGrades.Name = "btnGrades";
-            this.btnGrades.Size = new System.Drawing.Size(200, 25);
-            this.btnGrades.TabIndex = 1;
-            this.btnGrades.Text = "Manage Teachers";
-            this.btnGrades.UseVisualStyleBackColor = true;
+            this.btnStudents.FlatAppearance.BorderSize = 0;
+            this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudents.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudents.ForeColor = System.Drawing.Color.White;
+            this.btnStudents.Location = new System.Drawing.Point(0, 242);
+            this.btnStudents.Name = "btnStudents";
+            this.btnStudents.Size = new System.Drawing.Size(200, 25);
+            this.btnStudents.TabIndex = 1;
+            this.btnStudents.Text = "Manage Students";
+            this.btnStudents.UseVisualStyleBackColor = true;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
-            // btnSchedule
+            // lblAdminID
             // 
-            this.btnSchedule.FlatAppearance.BorderSize = 0;
-            this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSchedule.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchedule.ForeColor = System.Drawing.Color.White;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 242);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(200, 25);
-            this.btnSchedule.TabIndex = 1;
-            this.btnSchedule.Text = "Manage Students";
-            this.btnSchedule.UseVisualStyleBackColor = true;
+            this.lblAdminID.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
+            this.lblAdminID.Location = new System.Drawing.Point(8, 124);
+            this.lblAdminID.Name = "lblAdminID";
+            this.lblAdminID.Size = new System.Drawing.Size(185, 23);
+            this.lblAdminID.TabIndex = 2;
+            this.lblAdminID.Text = "ADMIN";
+            this.lblAdminID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblFullName
             // 
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(170)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(8, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ADMIN";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "John Doe";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(200, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(729, 555);
-            this.panelContainer.TabIndex = 2;
+            this.lblFullName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.ForeColor = System.Drawing.Color.White;
+            this.lblFullName.Location = new System.Drawing.Point(8, 143);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(185, 23);
+            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Text = "John Doe";
+            this.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxUserImage
             // 
@@ -241,6 +223,14 @@
             this.pictureBoxUserImage.Size = new System.Drawing.Size(126, 113);
             this.pictureBoxUserImage.TabIndex = 1;
             this.pictureBoxUserImage.TabStop = false;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(200, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(729, 555);
+            this.panelContainer.TabIndex = 2;
             // 
             // frmMainAdmin
             // 
@@ -264,19 +254,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnEditProfile;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnAdmission;
+        private System.Windows.Forms.Button btnAnnouncements;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnGrades;
-        private System.Windows.Forms.Button btnSchedule;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnStudents;
+        private System.Windows.Forms.Label lblAdminID;
+        private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.PictureBox pictureBoxUserImage;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSchedules;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSections;
+        private System.Windows.Forms.Button btnAccounts;
         private System.Windows.Forms.Panel panelContainer;
     }
 }
