@@ -262,6 +262,45 @@ namespace computerizedRegistrationSystem.adminUserControls
                 admin_view_student_tor.Show();
             }
         }
+        //view dropped students
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OleDbConnection connection = new OleDbConnection(ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
+            connection.Open();
+            try
+            {
+                OleDbCommand command = new OleDbCommand();//create command
+                command.Connection = connection;//give command the connection string
+                command.CommandText = "SELECT student_id, first_name, middle_name, last_name,college,course,email,contact_no,gender,town,date_admitted,status FROM studentsTable " +
+                    "WHERE status='DROPPED'";
+                OleDbDataAdapter adapter = new OleDbDataAdapter(command); // will help to fill the data
+                DataTable dt = new DataTable(); //fill this with the values from adapter
+                adapter.Fill(dt);
+                dataGridViewApplications.DataSource = dt;
+                //reaname datagridview headers
+                dataGridViewApplications.Columns[0].HeaderText = "Student ID";
+                dataGridViewApplications.Columns[1].HeaderText = "First Name";
+                dataGridViewApplications.Columns[2].HeaderText = "Middle Name";
+                dataGridViewApplications.Columns[3].HeaderText = "Last Name";
+                dataGridViewApplications.Columns[4].HeaderText = "College";
+                dataGridViewApplications.Columns[5].HeaderText = "Course";
+                dataGridViewApplications.Columns[6].HeaderText = "Email";
+                dataGridViewApplications.Columns[7].HeaderText = "Contact #";
+                dataGridViewApplications.Columns[8].HeaderText = "Gender";
+                dataGridViewApplications.Columns[9].HeaderText = "Town";
+                dataGridViewApplications.Columns[10].HeaderText = "Date Admitted";
+                dataGridViewApplications.Columns[11].HeaderText = "Status";
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("An error occured " + error);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
 

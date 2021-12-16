@@ -15,7 +15,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
 {
     public partial class admin_view_students_info : Form
     {
-        private byte[] imageContent;
+   
         public string status, remarks;
         public admin_view_students_info()
         {

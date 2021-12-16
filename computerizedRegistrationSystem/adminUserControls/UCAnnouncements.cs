@@ -43,9 +43,9 @@ namespace computerizedRegistrationSystem.adminUserControls
             command.Connection = Program.connection;//give command the connection string
             try
             {
-                command.CommandText = "INSERT INTO announcementsTable (title1,details1,title2,details2,title3,details3,title4,details4,title5,details5)" +
-                    "VALUES('"+ textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" +
-                    "" + textBox6.Text + "','" + textBox7.Text + "','" + textBox8.Text + "','" + textBox9.Text + "','" + textBox10.Text + "')";
+                command.CommandText = "UPDATE announcementsTable SET title1 = '" + textBox1.Text + "' ,details1='" + textBox2.Text + "',title2='" + textBox3.Text + "',details2='" + textBox4.Text + "',title3='" + textBox5.Text + "'," +
+                    "details3='" + textBox6.Text + "',title4='" + textBox7.Text + "',details4='" + textBox8.Text + "',title5='" + textBox9.Text + "',details5='" + textBox10.Text + "' WHERE id=6"; 
+                   
                  int okay = command.ExecuteNonQuery();
 
                 if (okay > 0)//success
@@ -79,6 +79,19 @@ namespace computerizedRegistrationSystem.adminUserControls
 
                 while (reader.Read())//read 
                 {
+                    //textboxes
+                    textBox1.Text = reader["title1"].ToString();
+                    textBox3.Text = reader["title2"].ToString();
+                    textBox5.Text = reader["title3"].ToString();
+                    textBox7.Text = reader["title4"].ToString();
+                    textBox9.Text = reader["title5"].ToString();
+                    textBox2.Text = reader["details1"].ToString();
+                    textBox4.Text = reader["details2"].ToString();
+                    textBox6.Text = reader["details3"].ToString();
+                    textBox8.Text = reader["details4"].ToString();
+                    textBox10.Text = reader["details5"].ToString();
+
+                    //labels on the right side
                     lblTitle1.Text = reader["title1"].ToString();
                     lblTitle2.Text = reader["title2"].ToString();
                     lblTitle3.Text = reader["title3"].ToString();

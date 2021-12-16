@@ -39,7 +39,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
                 {
                     OleDbCommand command = new OleDbCommand();//create command
                     command.Connection = connection;//give command the connection string
-                    command.CommandText = "UPDATE studentsTable SET status='DROP', remarks='" + textBoxRemarks.Text + "' WHERE student_id=" + adminUserControls.UCmanage_students.selectedStudentID;
+                    command.CommandText = "UPDATE studentsTable SET status='DROPPED', remarks='" + textBoxRemarks.Text + "' WHERE student_id=" + adminUserControls.UCmanage_students.selectedStudentID;
                     int execute = command.ExecuteNonQuery(); //execute
 
                     if (execute > 0)//success

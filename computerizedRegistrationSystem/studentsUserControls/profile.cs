@@ -353,7 +353,8 @@ namespace computerizedRegistrationSystem
                     comboBoxTrack.SelectedItem = reader["track"].ToString();
                     comboBoxStrand.SelectedItem = reader["strand"].ToString();
 
-                  
+                 
+
                 }
 
             }
@@ -369,7 +370,8 @@ namespace computerizedRegistrationSystem
             //for the age
             labelAge.Text = CalculateAge(dateTimePickerBirthDate.Value).ToString();
 
-       
+          
+            
 
 
         }

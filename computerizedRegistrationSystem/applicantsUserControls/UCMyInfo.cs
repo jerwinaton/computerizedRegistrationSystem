@@ -415,16 +415,16 @@ namespace computerizedRegistrationSystem.applicantsUserControls
 
                         //if the images have not been updated then the current images will be sent to this query
                         //create a bitmap to set the image back to the default image
-                        Bitmap bitmap1 = new Bitmap(pictureBox1.BackgroundImage);
-                        byte[] imageContent = imageToBytes(bitmap1, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
+                        Bitmap bitmap1 = new Bitmap(pictureBox1x1Image.BackgroundImage);
+                        imageContent = imageToBytes(bitmap1, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
                         command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = imageContent; //insert to database as byte
 
                         Bitmap bitmap2 = new Bitmap(pictureBox2.BackgroundImage); //hiddenpicturebox
-                        byte[] diplomaContent = imageToBytes(bitmap2, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
+                        diplomaContent = imageToBytes(bitmap2, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
                         command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = diplomaContent; //insert to database as byte
 
                         Bitmap bitmap3 = new Bitmap(pictureBox3.BackgroundImage); //hidden picturebox
-                        byte[] TORContent = imageToBytes(bitmap3, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
+                        TORContent = imageToBytes(bitmap3, System.Drawing.Imaging.ImageFormat.Jpeg); // convert all image to jpeg (small size)
                         command.Parameters.AddWithValue("1x1_picture", OleDbType.Binary).Value = TORContent; //insert to database as byte
 
                         command.Parameters.AddWithValue("diplomaContent", OleDbType.Binary).Value = diplomaContent;

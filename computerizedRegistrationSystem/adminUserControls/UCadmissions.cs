@@ -52,7 +52,7 @@ namespace computerizedRegistrationSystem.adminUserControls
                 OleDbCommand command = new OleDbCommand();//create command
                 command.Connection = connection;//give command the connection string
                 command.CommandText = "SELECT status,remarks,applicant_id,email,first_name,middle_name,last_name,gender,contact_no,town,college_applied,course_choice1,course_choice2,date_applied FROM applicantsTable " +
-                    "WHERE status= 'PENDING' OR status = 'FOLLOW UP'";
+                    "WHERE status= 'PENDING' OR status = 'FOLLOW UP' OR status='RETURNED'";
                 OleDbDataAdapter adapter = new OleDbDataAdapter(command); // will help to fill the data
                 DataTable dt = new DataTable(); //fill this with the values from adapter
                 adapter.Fill(dt);
