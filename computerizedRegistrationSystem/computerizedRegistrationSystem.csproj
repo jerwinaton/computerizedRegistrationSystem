@@ -167,6 +167,18 @@
     <Compile Include="adminOtherForms\admin_view_students_info.Designer.cs">
       <DependentUpon>admin_view_students_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminOtherForms\admin_view_student_diploma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin_view_student_diploma.Designer.cs">
+      <DependentUpon>admin_view_student_diploma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminOtherForms\admin_view_student_tor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminOtherForms\admin_view_student_tor.Designer.cs">
+      <DependentUpon>admin_view_student_tor.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminUserControls\UCaccounts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,6 +342,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminOtherForms\admin_view_students_info.resx">
       <DependentUpon>admin_view_students_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminOtherForms\admin_view_student_diploma.resx">
+      <DependentUpon>admin_view_student_diploma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminOtherForms\admin_view_student_tor.resx">
+      <DependentUpon>admin_view_student_tor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminUserControls\UCaccounts.resx">
       <DependentUpon>UCaccounts.cs</DependentUpon>

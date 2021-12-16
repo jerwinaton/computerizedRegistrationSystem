@@ -16,7 +16,7 @@ namespace computerizedRegistrationSystem.adminUserControls
     {
         private string selectedCourse;
         public static string selectedStudentID = "";
-         public static bool fromManageStudents;
+        public static bool fromManageStudents;
 
         public UCmanage_students()
         {
@@ -81,7 +81,7 @@ namespace computerizedRegistrationSystem.adminUserControls
                 OleDbCommand command = new OleDbCommand();//create command
                 command.Connection = connection;//give command the connection string
                 command.CommandText = "SELECT student_id, first_name, middle_name, last_name,college,course,email,contact_no,gender,town,date_admitted,status FROM studentsTable " +
-                    "WHERE college='"+ comboBoxCollege.SelectedItem + "'";
+                    "WHERE college='" + comboBoxCollege.SelectedItem + "'";
                 OleDbDataAdapter adapter = new OleDbDataAdapter(command); // will help to fill the data
                 DataTable dt = new DataTable(); //fill this with the values from adapter
                 adapter.Fill(dt);
@@ -210,8 +210,8 @@ namespace computerizedRegistrationSystem.adminUserControls
             //check first if an applicant is selected
             if (selectedStudentID == "")
             {
-                string title = "View applicant's information";
-                MessageBox.Show("Choose an applicant first. (Reload the table)", title);
+                string title = "View students's information";
+                MessageBox.Show("Choose a student first. (Reload the table)", title);
             }
             else
             {
@@ -221,9 +221,47 @@ namespace computerizedRegistrationSystem.adminUserControls
 
                 adminOtherForms.admin_view_students_info viewInfo = new adminOtherForms.admin_view_students_info();
                 viewInfo.Show();
-            
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //check first if an applicant is selected
+            if (selectedStudentID == "")
+            {
+                string title = "View Diploma";
+                MessageBox.Show("Choose a student first. (Reload the table)", title);
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_view_student_diploma>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_view_student_diploma>().First().Close();
+
+                adminOtherForms.admin_view_student_diploma admin_view_student_diploma = new adminOtherForms.admin_view_student_diploma();
+                admin_view_student_diploma.Show();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //check first if an applicant is selected
+            if (selectedStudentID == "")
+            {
+                string title = "View Transcript of Records";
+                MessageBox.Show("Choose a student first. (Reload the table)", title);
+            }
+            else
+            {
+                //check if the form is already open, close if a form is already open
+                if (Application.OpenForms.OfType<adminOtherForms.admin_view_student_tor>().Count() == 1)
+                    Application.OpenForms.OfType<adminOtherForms.admin_view_student_tor>().First().Close();
+
+                adminOtherForms.admin_view_student_tor admin_view_student_tor = new adminOtherForms.admin_view_student_tor();
+                admin_view_student_tor.Show();
             }
         }
     }
- }
+}
 
