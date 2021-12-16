@@ -26,7 +26,6 @@ namespace computerizedRegistrationSystem
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnSections.BackColor = Color.FromArgb(12, 55, 27);
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnSchedules.BackColor = Color.FromArgb(12, 55, 27);
         }
         //method to dynamically load user controls pages
@@ -126,7 +125,6 @@ namespace computerizedRegistrationSystem
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnSections.BackColor = Color.FromArgb(12, 55, 27);
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnSchedules.BackColor = Color.FromArgb(12, 55, 27);
         }
 
@@ -141,7 +139,6 @@ namespace computerizedRegistrationSystem
             btnHome.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnSections.BackColor = Color.FromArgb(12, 55, 27);
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnSchedules.BackColor = Color.FromArgb(12, 55, 27);
         }
 
@@ -156,7 +153,6 @@ namespace computerizedRegistrationSystem
             btnHome.BackColor = Color.FromArgb(12, 55, 27);
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnSections.BackColor = Color.FromArgb(12, 55, 27);
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnSchedules.BackColor = Color.FromArgb(12, 55, 27);
         }
 
@@ -168,7 +164,6 @@ namespace computerizedRegistrationSystem
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnSections.BackColor = Color.FromArgb(12, 55, 27);
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnSchedules.BackColor = Color.FromArgb(12, 55, 27);
             //click events on the side nav and then call the method to change the user
             // controls page on the right
@@ -183,7 +178,6 @@ namespace computerizedRegistrationSystem
 
             btnSections.BackColor = Color.FromArgb(215, 170, 47);//add active color
             btnHome.BackColor = Color.FromArgb(12, 55, 27);// remove active bg color
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnAdmission.BackColor = Color.FromArgb(12, 55, 27);
@@ -196,7 +190,6 @@ namespace computerizedRegistrationSystem
         {
             btnSchedules.BackColor = Color.FromArgb(215, 170, 47);//add active color
             btnHome.BackColor = Color.FromArgb(12, 55, 27);// remove active bg color
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnAdmission.BackColor = Color.FromArgb(12, 55, 27);
@@ -215,7 +208,7 @@ namespace computerizedRegistrationSystem
 
             btnAnnouncements.BackColor = Color.FromArgb(215, 170, 47);//add active color
             btnHome.BackColor = Color.FromArgb(12, 55, 27);// remove active bg color
-            btnAnnouncements.BackColor = Color.FromArgb(12, 55, 27);
+           
             btnAccounts.BackColor = Color.FromArgb(12, 55, 27);
             btnStudents.BackColor = Color.FromArgb(12, 55, 27);
             btnAdmission.BackColor = Color.FromArgb(12, 55, 27);
