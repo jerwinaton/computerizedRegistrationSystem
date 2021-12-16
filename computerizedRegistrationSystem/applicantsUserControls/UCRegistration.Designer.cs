@@ -38,6 +38,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20F);
             this.label1.Location = new System.Drawing.Point(30, 20);
@@ -48,6 +49,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.Font = new System.Drawing.Font("Verdana", 12F);
             this.lblTitle.Location = new System.Drawing.Point(3, 181);
             this.lblTitle.Name = "lblTitle";
@@ -58,6 +60,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15F);
             this.label3.Location = new System.Drawing.Point(246, 243);
@@ -69,6 +72,7 @@
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblStatus.Location = new System.Drawing.Point(319, 243);
@@ -81,6 +85,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10F);
             this.label2.Location = new System.Drawing.Point(186, 303);
@@ -91,6 +96,7 @@
             // 
             // labelRemarks
             // 
+            this.labelRemarks.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRemarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRemarks.Font = new System.Drawing.Font("Arial", 10F);
             this.labelRemarks.Location = new System.Drawing.Point(186, 319);

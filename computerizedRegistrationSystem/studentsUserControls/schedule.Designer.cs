@@ -34,6 +34,7 @@
             // 
             // lblSchedule
             // 
+            this.lblSchedule.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSchedule.AutoSize = true;
             this.lblSchedule.Font = new System.Drawing.Font("Verdana", 30.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSchedule.Location = new System.Drawing.Point(30, 20);
@@ -45,6 +46,7 @@
             // 
             // lblComingSoon
             // 
+            this.lblComingSoon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblComingSoon.AutoSize = true;
             this.lblComingSoon.Font = new System.Drawing.Font("Arial", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComingSoon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

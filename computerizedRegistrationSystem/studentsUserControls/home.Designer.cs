@@ -44,6 +44,7 @@
             // 
             // lblDetails5
             // 
+            this.lblDetails5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetails5.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails5.Location = new System.Drawing.Point(85, 478);
             this.lblDetails5.Name = "lblDetails5";
@@ -53,6 +54,7 @@
             // 
             // lblTitle5
             // 
+            this.lblTitle5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle5.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(52)))), ((int)(((byte)(20)))));
             this.lblTitle5.Location = new System.Drawing.Point(85, 446);
@@ -63,6 +65,7 @@
             // 
             // lblDetails4
             // 
+            this.lblDetails4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetails4.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails4.Location = new System.Drawing.Point(85, 379);
             this.lblDetails4.Name = "lblDetails4";
@@ -72,6 +75,7 @@
             // 
             // lblTitle4
             // 
+            this.lblTitle4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(52)))), ((int)(((byte)(20)))));
             this.lblTitle4.Location = new System.Drawing.Point(85, 347);
@@ -82,6 +86,7 @@
             // 
             // lblDetails3
             // 
+            this.lblDetails3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetails3.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails3.Location = new System.Drawing.Point(85, 280);
             this.lblDetails3.Name = "lblDetails3";
@@ -91,6 +96,7 @@
             // 
             // lblTitle3
             // 
+            this.lblTitle3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle3.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(52)))), ((int)(((byte)(20)))));
             this.lblTitle3.Location = new System.Drawing.Point(85, 248);
@@ -101,6 +107,7 @@
             // 
             // lblDetails2
             // 
+            this.lblDetails2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetails2.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails2.Location = new System.Drawing.Point(85, 187);
             this.lblDetails2.Name = "lblDetails2";
@@ -110,6 +117,7 @@
             // 
             // lblTitle2
             // 
+            this.lblTitle2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle2.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(52)))), ((int)(((byte)(20)))));
             this.lblTitle2.Location = new System.Drawing.Point(85, 155);
@@ -120,6 +128,7 @@
             // 
             // lblDetails1
             // 
+            this.lblDetails1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetails1.Font = new System.Drawing.Font("Arial Unicode MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetails1.Location = new System.Drawing.Point(85, 98);
             this.lblDetails1.Name = "lblDetails1";
@@ -129,6 +138,7 @@
             // 
             // lblTitle1
             // 
+            this.lblTitle1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(52)))), ((int)(((byte)(20)))));
             this.lblTitle1.Location = new System.Drawing.Point(85, 66);
@@ -139,6 +149,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(262, 12);

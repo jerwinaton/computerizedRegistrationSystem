@@ -36,6 +36,7 @@
             // 
             // lblCollege
             // 
+            this.lblCollege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCollege.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblCollege.Location = new System.Drawing.Point(29, 235);
             this.lblCollege.Name = "lblCollege";
@@ -46,6 +47,7 @@
             // 
             // lblCourse
             // 
+            this.lblCourse.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCourse.Font = new System.Drawing.Font("Arial", 15F);
             this.lblCourse.Location = new System.Drawing.Point(29, 270);
             this.lblCourse.Name = "lblCourse";
@@ -56,6 +58,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Green;
             this.lblTitle.Location = new System.Drawing.Point(3, 184);
@@ -67,6 +70,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20F);
             this.label1.Location = new System.Drawing.Point(23, 17);

@@ -42,7 +42,7 @@ namespace computerizedRegistrationSystem.adminOtherForms
             connection.Open();
             try
             {
-                 
+                //if called from Manage Users then execute query for studentsTable instead
 
                 OleDbCommand command = new OleDbCommand();//create command
                 command.Connection = connection;//give command the connection string

@@ -14,7 +14,8 @@ namespace computerizedRegistrationSystem.adminUserControls
 {
     public partial class UCadmissions : UserControl
     {
-        public static string selectedApplicantID=""; 
+        public static string selectedApplicantID="";
+       
         public UCadmissions()
         {
             InitializeComponent();
@@ -101,8 +102,9 @@ namespace computerizedRegistrationSystem.adminUserControls
                 if (Application.OpenForms.OfType<adminOtherForms.admin_viewInfo>().Count() == 1)
                     Application.OpenForms.OfType<adminOtherForms.admin_viewInfo>().First().Close();
 
-                adminOtherForms.admin_viewInfo viewInfo = new adminOtherForms.admin_viewInfo();
-                viewInfo.Show();
+                adminOtherForms.admin_viewInfo admin_viewInfo = new adminOtherForms.admin_viewInfo();
+                admin_viewInfo.Show();
+             
             }
             
    

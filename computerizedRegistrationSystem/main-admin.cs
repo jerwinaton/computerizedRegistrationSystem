@@ -105,7 +105,7 @@ namespace computerizedRegistrationSystem
         {
             string title = "Logout";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("Are you sure ypu want to log out?", title);
+            DialogResult result = MessageBox.Show("Are you sure ypu want to log out?", title,buttons);
             if (result == DialogResult.Yes)
             {
                 Close();

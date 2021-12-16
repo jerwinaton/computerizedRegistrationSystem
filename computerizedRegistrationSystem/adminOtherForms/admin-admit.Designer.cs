@@ -42,13 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.labelFullName = new System.Windows.Forms.Label();
             this.labelApplicantID = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1x1Image)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -186,7 +182,7 @@
             "Bachelor in Electronics Engineering",
             "Bachelor in Information Technology with Specialization in Cybersecurity",
             "Bachelor in Information Technology with Specialization in Data Science"});
-            this.comboBoxAdmitCourse.Location = new System.Drawing.Point(98, 265);
+            this.comboBoxAdmitCourse.Location = new System.Drawing.Point(133, 271);
             this.comboBoxAdmitCourse.Name = "comboBoxAdmitCourse";
             this.comboBoxAdmitCourse.Size = new System.Drawing.Size(507, 26);
             this.comboBoxAdmitCourse.TabIndex = 142;
@@ -198,7 +194,7 @@
             this.comboBoxAdmitCollege.FormattingEnabled = true;
             this.comboBoxAdmitCollege.Items.AddRange(new object[] {
             "College of Engineering and Technology"});
-            this.comboBoxAdmitCollege.Location = new System.Drawing.Point(98, 216);
+            this.comboBoxAdmitCollege.Location = new System.Drawing.Point(133, 222);
             this.comboBoxAdmitCollege.Name = "comboBoxAdmitCollege";
             this.comboBoxAdmitCollege.Size = new System.Drawing.Size(507, 26);
             this.comboBoxAdmitCollege.TabIndex = 141;
@@ -209,7 +205,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label1.Location = new System.Drawing.Point(39, 270);
+            this.label1.Location = new System.Drawing.Point(74, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 140;
@@ -222,7 +218,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label2.Location = new System.Drawing.Point(37, 222);
+            this.label2.Location = new System.Drawing.Point(72, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 139;
@@ -247,68 +243,18 @@
             this.panel1.TabIndex = 143;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label3
+            // labelApplicantID
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.label3.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label3.Location = new System.Drawing.Point(306, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 32);
-            this.label3.TabIndex = 144;
-            this.label3.Text = "Admit to";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.label4.Font = new System.Drawing.Font("Verdana", 8F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label4.Location = new System.Drawing.Point(605, 207);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 145;
-            this.label4.Text = "# Of Admitted";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.label5.Font = new System.Drawing.Font("Verdana", 8F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label5.Location = new System.Drawing.Point(607, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
-            this.label5.TabIndex = 146;
-            this.label5.Text = "# Of Admitted";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.label6.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label6.Location = new System.Drawing.Point(605, 225);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 20);
-            this.label6.TabIndex = 147;
-            this.label6.Text = "#";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.label7.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.label7.Location = new System.Drawing.Point(605, 274);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 20);
-            this.label7.TabIndex = 148;
-            this.label7.Text = "#";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelApplicantID.AutoSize = true;
+            this.labelApplicantID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.labelApplicantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApplicantID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.labelApplicantID.Location = new System.Drawing.Point(158, 142);
+            this.labelApplicantID.Name = "labelApplicantID";
+            this.labelApplicantID.Size = new System.Drawing.Size(16, 17);
+            this.labelApplicantID.TabIndex = 150;
+            this.labelApplicantID.Text = "#";
+            this.labelApplicantID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelFullName
             // 
@@ -323,18 +269,18 @@
             this.labelFullName.Text = "#";
             this.labelFullName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // labelApplicantID
+            // label3
             // 
-            this.labelApplicantID.AutoSize = true;
-            this.labelApplicantID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
-            this.labelApplicantID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApplicantID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
-            this.labelApplicantID.Location = new System.Drawing.Point(158, 142);
-            this.labelApplicantID.Name = "labelApplicantID";
-            this.labelApplicantID.Size = new System.Drawing.Size(16, 17);
-            this.labelApplicantID.TabIndex = 150;
-            this.labelApplicantID.Text = "#";
-            this.labelApplicantID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.label3.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
+            this.label3.Location = new System.Drawing.Point(306, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 32);
+            this.label3.TabIndex = 144;
+            this.label3.Text = "Admit to";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // admin_admit
             // 
@@ -342,10 +288,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(726, 392);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxAdmitCourse);
             this.Controls.Add(this.comboBoxAdmitCollege);
@@ -383,10 +325,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelApplicantID;
         private System.Windows.Forms.Label labelFullName;
     }

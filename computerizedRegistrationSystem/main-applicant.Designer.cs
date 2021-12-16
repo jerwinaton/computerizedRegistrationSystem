@@ -42,7 +42,7 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.AutoScroll = true;
+            this.panelContainer.AutoScrollMinSize = new System.Drawing.Size(729, 555);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(200, 0);
             this.panelContainer.Name = "panelContainer";
@@ -145,7 +145,6 @@
             this.ClientSize = new System.Drawing.Size(929, 555);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(945, 594);
             this.Name = "frmApplicant";
             this.Text = "UDM Student Portal | Applicant";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmApplicant_FormClosing);

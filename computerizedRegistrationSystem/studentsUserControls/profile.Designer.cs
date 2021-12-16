@@ -106,6 +106,7 @@
             // 
             // textBoxEmail
             // 
+            this.textBoxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxEmail.Enabled = false;
             this.textBoxEmail.Font = new System.Drawing.Font("Arial", 12F);
@@ -116,6 +117,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,6 +131,7 @@
             // 
             // btnUploadTOR
             // 
+            this.btnUploadTOR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUploadTOR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
             this.btnUploadTOR.Enabled = false;
             this.btnUploadTOR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -150,6 +153,7 @@
             // 
             // labelAge
             // 
+            this.labelAge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelAge.AutoSize = true;
             this.labelAge.BackColor = System.Drawing.Color.White;
             this.labelAge.Font = new System.Drawing.Font("Arial", 14F);
@@ -163,6 +167,7 @@
             // 
             // label28
             // 
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.White;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
@@ -176,6 +181,7 @@
             // 
             // comboBoxCourse1
             // 
+            this.comboBoxCourse1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCourse1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCourse1.Enabled = false;
             this.comboBoxCourse1.Font = new System.Drawing.Font("Arial", 8F);
@@ -193,6 +199,7 @@
             // 
             // comboBoxCollege
             // 
+            this.comboBoxCollege.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCollege.Enabled = false;
             this.comboBoxCollege.Font = new System.Drawing.Font("Arial", 8F);
@@ -206,6 +213,7 @@
             // 
             // label24
             // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.White;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,6 +227,7 @@
             // 
             // label23
             // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.White;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,6 +241,7 @@
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.White;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,6 +255,7 @@
             // 
             // textBoxStudentContactNo
             // 
+            this.textBoxStudentContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxStudentContactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxStudentContactNo.Enabled = false;
             this.textBoxStudentContactNo.Font = new System.Drawing.Font("Arial", 12F);
@@ -258,6 +269,7 @@
             // 
             // pictureBox1x1Image
             // 
+            this.pictureBox1x1Image.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1x1Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1x1Image.Location = new System.Drawing.Point(10, 6);
             this.pictureBox1x1Image.Name = "pictureBox1x1Image";
@@ -267,6 +279,7 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox3);
@@ -291,6 +304,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(569, 207);
             this.pictureBox3.Name = "pictureBox3";
@@ -301,6 +315,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(456, 207);
             this.pictureBox2.Name = "pictureBox2";
@@ -311,6 +326,7 @@
             // 
             // comboBoxStrand
             // 
+            this.comboBoxStrand.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxStrand.Enabled = false;
             this.comboBoxStrand.Font = new System.Drawing.Font("Arial", 12F);
@@ -322,6 +338,7 @@
             // 
             // label27
             // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
@@ -334,6 +351,7 @@
             // 
             // lblUploadImage
             // 
+            this.lblUploadImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUploadImage.AutoSize = true;
             this.lblUploadImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadImage.ForeColor = System.Drawing.Color.Red;
@@ -346,6 +364,7 @@
             // 
             // lblUploadDiploma
             // 
+            this.lblUploadDiploma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUploadDiploma.AutoSize = true;
             this.lblUploadDiploma.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadDiploma.ForeColor = System.Drawing.Color.Red;
@@ -358,6 +377,7 @@
             // 
             // btnUploadImage
             // 
+            this.btnUploadImage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUploadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
             this.btnUploadImage.Enabled = false;
             this.btnUploadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -379,6 +399,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(328, 16);
             this.pictureBox1.Name = "pictureBox1";
@@ -388,6 +409,7 @@
             // 
             // comboBoxTrack
             // 
+            this.comboBoxTrack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxTrack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTrack.Enabled = false;
             this.comboBoxTrack.Font = new System.Drawing.Font("Arial", 12F);
@@ -405,6 +427,7 @@
             // 
             // btnUploadDiploma
             // 
+            this.btnUploadDiploma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUploadDiploma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(168)))), ((int)(((byte)(66)))));
             this.btnUploadDiploma.Enabled = false;
             this.btnUploadDiploma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -426,6 +449,7 @@
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
@@ -438,6 +462,7 @@
             // 
             // textBoxHonors
             // 
+            this.textBoxHonors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxHonors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxHonors.Enabled = false;
             this.textBoxHonors.Font = new System.Drawing.Font("Arial", 12F);
@@ -448,6 +473,7 @@
             // 
             // lblUploadTOR
             // 
+            this.lblUploadTOR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUploadTOR.AutoSize = true;
             this.lblUploadTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
             this.lblUploadTOR.ForeColor = System.Drawing.Color.Red;
@@ -460,6 +486,7 @@
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
@@ -472,6 +499,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.labelAge);
@@ -503,6 +531,7 @@
             // 
             // dateTimePickerBirthDate
             // 
+            this.dateTimePickerBirthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerBirthDate.Enabled = false;
             this.dateTimePickerBirthDate.Font = new System.Drawing.Font("Arial", 12F);
             this.dateTimePickerBirthDate.Location = new System.Drawing.Point(533, 137);
@@ -516,6 +545,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -529,6 +559,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -542,6 +573,7 @@
             // 
             // comboBoxGender
             // 
+            this.comboBoxGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGender.Enabled = false;
             this.comboBoxGender.Font = new System.Drawing.Font("Arial", 12F);
@@ -556,6 +588,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -569,6 +602,7 @@
             // 
             // textBoxLName
             // 
+            this.textBoxLName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxLName.Enabled = false;
             this.textBoxLName.Font = new System.Drawing.Font("Arial", 12F);
@@ -580,6 +614,7 @@
             // 
             // textBoxFName
             // 
+            this.textBoxFName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFName.Enabled = false;
             this.textBoxFName.Font = new System.Drawing.Font("Arial", 12F);
@@ -591,6 +626,7 @@
             // 
             // textBoxMName
             // 
+            this.textBoxMName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxMName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMName.Enabled = false;
             this.textBoxMName.Font = new System.Drawing.Font("Arial", 12F);
@@ -602,6 +638,7 @@
             // 
             // labelUserName
             // 
+            this.labelUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUserName.AutoSize = true;
             this.labelUserName.BackColor = System.Drawing.Color.White;
             this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -615,6 +652,7 @@
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.White;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
@@ -628,6 +666,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -641,6 +680,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(15, 283);
@@ -650,6 +690,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(15, 411);
@@ -659,6 +700,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(55)))), ((int)(((byte)(27)))));
@@ -671,6 +713,7 @@
             // 
             // textBoxLastSchool
             // 
+            this.textBoxLastSchool.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxLastSchool.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxLastSchool.Enabled = false;
             this.textBoxLastSchool.Font = new System.Drawing.Font("Arial", 12F);
@@ -681,6 +724,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.White;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -694,6 +738,7 @@
             // 
             // textBoxMotherNo
             // 
+            this.textBoxMotherNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxMotherNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMotherNo.Enabled = false;
             this.textBoxMotherNo.Font = new System.Drawing.Font("Arial", 12F);
@@ -706,6 +751,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -719,6 +765,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.White;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -732,6 +779,7 @@
             // 
             // textBoxFatherNo
             // 
+            this.textBoxFatherNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFatherNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFatherNo.Enabled = false;
             this.textBoxFatherNo.Font = new System.Drawing.Font("Arial", 12F);
@@ -744,6 +792,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -757,6 +806,7 @@
             // 
             // textBoxMotherWork
             // 
+            this.textBoxMotherWork.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxMotherWork.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMotherWork.Enabled = false;
             this.textBoxMotherWork.Font = new System.Drawing.Font("Arial", 12F);
@@ -768,6 +818,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.White;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -781,6 +832,7 @@
             // 
             // textBoxMotherName
             // 
+            this.textBoxMotherName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxMotherName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMotherName.Enabled = false;
             this.textBoxMotherName.Font = new System.Drawing.Font("Arial", 12F);
@@ -792,6 +844,7 @@
             // 
             // textBoxFatherWork
             // 
+            this.textBoxFatherWork.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFatherWork.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFatherWork.Enabled = false;
             this.textBoxFatherWork.Font = new System.Drawing.Font("Arial", 12F);
@@ -803,6 +856,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -816,6 +870,7 @@
             // 
             // textBoxFatherName
             // 
+            this.textBoxFatherName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxFatherName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxFatherName.Enabled = false;
             this.textBoxFatherName.Font = new System.Drawing.Font("Arial", 12F);
@@ -827,6 +882,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -840,6 +896,7 @@
             // 
             // comboBoxBrgy
             // 
+            this.comboBoxBrgy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxBrgy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBrgy.Enabled = false;
             this.comboBoxBrgy.Font = new System.Drawing.Font("Arial", 12F);
@@ -851,6 +908,7 @@
             // 
             // comboBoxDistrict
             // 
+            this.comboBoxDistrict.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxDistrict.BackColor = System.Drawing.Color.White;
             this.comboBoxDistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDistrict.Enabled = false;
@@ -871,6 +929,7 @@
             // 
             // comboBoxTown
             // 
+            this.comboBoxTown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTown.Enabled = false;
             this.comboBoxTown.Font = new System.Drawing.Font("Arial", 12F);
@@ -882,6 +941,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -895,6 +955,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -908,6 +969,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -921,6 +983,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -934,6 +997,7 @@
             // 
             // textBoxStreet
             // 
+            this.textBoxStreet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxStreet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxStreet.Enabled = false;
             this.textBoxStreet.Font = new System.Drawing.Font("Arial", 12F);
@@ -944,6 +1008,7 @@
             // 
             // textBoxZipCode
             // 
+            this.textBoxZipCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxZipCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxZipCode.Enabled = false;
             this.textBoxZipCode.Font = new System.Drawing.Font("Arial", 12F);
@@ -955,6 +1020,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -968,6 +1034,7 @@
             // 
             // textBoxHouseNo
             // 
+            this.textBoxHouseNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxHouseNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxHouseNo.Enabled = false;
             this.textBoxHouseNo.Font = new System.Drawing.Font("Arial", 12F);
@@ -978,6 +1045,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 20F);
             this.label1.Location = new System.Drawing.Point(20, 17);
